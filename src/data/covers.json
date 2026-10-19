@@ -1,0 +1,781 @@
+{
+ "auguria": {
+  "kpis": [
+   {
+    "v": "1,071",
+    "ves": "1.071",
+    "l": {
+     "en": "commits in five months",
+     "es": "commits en cinco meses"
+    }
+   },
+   {
+    "v": "~900",
+    "l": {
+     "en": "tests",
+     "es": "tests"
+    }
+   },
+   {
+    "v": "1,000+",
+    "ves": "+1.000",
+    "l": {
+     "en": "assets in the screener",
+     "es": "activos en el screener"
+    }
+   }
+  ],
+  "brand": "#2BB673"
+ },
+ "auguria-studio": {
+  "kpis": [
+   {
+    "v": "~45",
+    "l": {
+     "en": "short videos",
+     "es": "vídeos cortos"
+    }
+   },
+   {
+    "v": "0",
+    "l": {
+     "en": "figures typed by hand",
+     "es": "cifras escritas a mano"
+    }
+   }
+  ],
+  "brand": "#3DD68C"
+ },
+ "briefly": {
+  "kpis": [
+   {
+    "v": "232/232",
+    "l": {
+     "en": "figures traced to a source",
+     "es": "cifras con su fuente"
+    }
+   },
+   {
+    "v": "6.4 s",
+    "ves": "6,4 s",
+    "l": {
+     "en": "spoken answer",
+     "es": "respuesta por voz"
+    }
+   },
+   {
+    "v": "€0.034",
+    "ves": "0,034 €",
+    "l": {
+     "en": "per briefing",
+     "es": "por briefing"
+    }
+   }
+  ],
+  "brand": "#F05A28"
+ },
+ "stator": {
+  "kpis": [
+   {
+    "v": "0",
+    "l": {
+     "en": "of 2,938 orders out of limits",
+     "es": "de 2.938 órdenes fuera de límites"
+    }
+   },
+   {
+    "v": "1 s",
+    "l": {
+     "en": "kill switch",
+     "es": "kill switch"
+    }
+   },
+   {
+    "v": "6 wk",
+    "ves": "6 sem.",
+    "l": {
+     "en": "to the MVP",
+     "es": "hasta el MVP"
+    }
+   }
+  ],
+  "brand": "#E0524A"
+ },
+ "telegram-task-agent": {
+  "kpis": [
+   {
+    "v": "8:30",
+    "l": {
+     "en": "morning summary",
+     "es": "resumen de la mañana"
+    }
+   },
+   {
+    "v": "17:00",
+    "l": {
+     "en": "closing summary",
+     "es": "resumen de cierre"
+    }
+   },
+   {
+    "v": "daily",
+    "ves": "a diario",
+    "l": {
+     "en": "used by the team",
+     "es": "lo usa el equipo"
+    }
+   }
+  ],
+  "brand": "#4FA3E0"
+ },
+ "miax-asesor": {
+  "kpis": [
+   {
+    "v": "105",
+    "l": {
+     "en": "topics",
+     "es": "temas"
+    }
+   },
+   {
+    "v": "~4,200",
+    "ves": "~4.200",
+    "l": {
+     "en": "sub-concepts",
+     "es": "subconceptos"
+    }
+   },
+   {
+    "v": "3",
+    "l": {
+     "en": "agents that debate",
+     "es": "agentes que debaten"
+    }
+   }
+  ],
+  "brand": "#9D8CF7"
+ },
+ "tenk-agent": {
+  "kpis": [
+   {
+    "v": "8/10",
+    "l": {
+     "en": "blind questions right",
+     "es": "preguntas a ciegas"
+    }
+   },
+   {
+    "v": "35→65%",
+    "ves": "35→65 %",
+    "l": {
+     "en": "accuracy vs baseline",
+     "es": "acierto frente a la base"
+    }
+   }
+  ],
+  "brand": "#38C3D6"
+ },
+ "market-regimes": {
+  "kpis": [
+   {
+    "v": "16/17",
+    "l": {
+     "en": "crises caught",
+     "es": "crisis detectadas"
+    }
+   },
+   {
+    "v": "12",
+    "l": {
+     "en": "detectors compared",
+     "es": "detectores comparados"
+    }
+   },
+   {
+    "v": "1962–2026",
+    "l": {
+     "en": "of data",
+     "es": "de datos"
+    }
+   }
+  ],
+  "keywords": {
+   "en": "regime detection, walk-forward, HMM, Markov switching",
+   "es": "detección de regímenes, walk-forward, HMM, Markov switching"
+  }
+ },
+ "stock-contest": {
+  "kpis": [
+   {
+    "v": "452",
+    "l": {
+     "en": "historical windows",
+     "es": "ventanas históricas"
+    }
+   },
+   {
+    "v": "23",
+    "l": {
+     "en": "sessions each",
+     "es": "sesiones cada una"
+    }
+   },
+   {
+    "v": "12 Nov",
+    "ves": "12 nov",
+    "l": {
+     "en": "results after",
+     "es": "resultados tras"
+    }
+   }
+  ],
+  "keywords": {
+   "en": "simulation, Monte Carlo, contest scoring",
+   "es": "simulación, Monte Carlo, puntuación del concurso"
+  }
+ },
+ "polymarket": {
+  "kpis": [
+   {
+    "v": "<50%",
+    "ves": "<50 %",
+    "l": {
+     "en": "candles repeat colour",
+     "es": "velas que repiten color"
+    }
+   },
+   {
+    "v": "€0",
+    "ves": "0 €",
+    "l": {
+     "en": "put at risk",
+     "es": "arriesgados"
+    }
+   }
+  ],
+  "keywords": {
+   "en": "prediction markets, momentum, look-ahead bias",
+   "es": "mercados de predicción, momentum, sesgo de anticipación"
+  }
+ },
+ "ibex-newsletter": {
+  "kpis": [
+   {
+    "v": "4",
+    "l": {
+     "en": "Claude agents",
+     "es": "agentes Claude"
+    }
+   },
+   {
+    "v": "7",
+    "l": {
+     "en": "pages a day",
+     "es": "páginas al día"
+    }
+   },
+   {
+    "v": "17:35",
+    "l": {
+     "en": "every trading day",
+     "es": "cada día de mercado"
+    }
+   }
+  ],
+  "keywords": {
+   "en": "multi-agent, reporting, newsletter",
+   "es": "multiagente, informes, newsletter"
+  }
+ },
+ "chatbot-experiments": {
+  "kpis": [
+   {
+    "v": "WhatsApp",
+    "l": {
+     "en": "via Meta's webhook",
+     "es": "por el webhook de Meta"
+    }
+   }
+  ],
+  "keywords": {
+   "en": "chatbot, FastAPI, Claude",
+   "es": "chatbot, FastAPI, Claude"
+  }
+ },
+ "fair-credit": {
+  "kpis": [
+   {
+    "v": "−72%",
+    "ves": "−72 %",
+    "l": {
+     "en": "gender gap",
+     "es": "brecha de género"
+    }
+   },
+   {
+    "v": "−0.6",
+    "ves": "−0,6",
+    "l": {
+     "en": "AUC points",
+     "es": "puntos de AUC"
+    }
+   }
+  ],
+  "tech": {
+   "en": "Neural network with a fairness penalty",
+   "es": "Red neuronal con penalización de equidad"
+  },
+  "data": {
+   "en": "Home Credit, 307,000 loans",
+   "es": "Home Credit, 307.000 préstamos"
+  }
+ },
+ "xai-credit": {
+  "kpis": [
+   {
+    "v": "−51%",
+    "ves": "−51 %",
+    "l": {
+     "en": "cost, 10:1 scenario",
+     "es": "coste, escenario 10:1"
+    }
+   }
+  ],
+  "tech": {
+   "en": "XGBoost, SHAP, LIME, counterfactuals",
+   "es": "XGBoost, SHAP, LIME, contrafactuales"
+  },
+  "data": {
+   "en": "Credit approvals, two cost scenarios",
+   "es": "Concesión de crédito, dos escenarios de coste"
+  }
+ },
+ "synthetic-data": {
+  "kpis": [
+   {
+    "v": "7",
+    "l": {
+     "en": "generators",
+     "es": "generadores"
+    }
+   },
+   {
+    "v": "570",
+    "l": {
+     "en": "training runs",
+     "es": "entrenamientos"
+    }
+   }
+  ],
+  "tech": {
+   "en": "GAN, VAE, diffusion, flow matching",
+   "es": "GAN, VAE, difusión, flow matching"
+  },
+  "data": {
+   "en": "Market crises, few real examples",
+   "es": "Crisis de mercado, pocos casos reales"
+  }
+ },
+ "equity-arbitrage": {
+  "kpis": [
+   {
+    "v": "2,719",
+    "ves": "2.719",
+    "l": {
+     "en": "opportunities",
+     "es": "oportunidades"
+    }
+   },
+   {
+    "v": "4",
+    "l": {
+     "en": "venues merged",
+     "es": "mercados unidos"
+    }
+   }
+  ],
+  "tech": {
+   "en": "Consolidated order book, latency simulation",
+   "es": "Libro consolidado, simulación de latencia"
+  },
+  "data": {
+   "en": "BME, Aquis, Cboe and Turquoise quotes",
+   "es": "Cotizaciones de BME, Aquis, Cboe y Turquoise"
+  }
+ },
+ "nn-sp500": {
+  "kpis": [
+   {
+    "v": "256",
+    "l": {
+     "en": "trainings",
+     "es": "entrenamientos"
+    }
+   },
+   {
+    "v": "16",
+    "l": {
+     "en": "architectures",
+     "es": "arquitecturas"
+    }
+   }
+  ],
+  "tech": {
+   "en": "Dense, recurrent, convolutional, hybrid nets",
+   "es": "Redes densas, recurrentes, convolucionales e híbridas"
+  },
+  "data": {
+   "en": "Returns of 23 S&P 500 stocks",
+   "es": "Rentabilidades de 23 valores del S&P 500"
+  }
+ },
+ "risk-var": {
+  "kpis": [
+   {
+    "v": "10,000",
+    "ves": "10.000",
+    "l": {
+     "en": "Monte Carlo paths",
+     "es": "trayectorias Monte Carlo"
+    }
+   },
+   {
+    "v": "18",
+    "l": {
+     "en": "assets",
+     "es": "activos"
+    }
+   }
+  ],
+  "tech": {
+   "en": "Two-state HMM, copulas, VaR and CVaR",
+   "es": "HMM de dos estados, cópulas, VaR y CVaR"
+  },
+  "data": {
+   "en": "2006–2026, calm and crisis",
+   "es": "2006–2026, calma y crisis"
+  }
+ },
+ "derivatives": {
+  "kpis": [
+   {
+    "v": "SPY",
+    "l": {
+     "en": "options",
+     "es": "opciones"
+    }
+   },
+   {
+    "v": "Δ",
+    "l": {
+     "en": "hedged daily",
+     "es": "cubierta a diario"
+    }
+   }
+  ],
+  "tech": {
+   "en": "Black-Scholes, Greeks, implied volatility",
+   "es": "Black-Scholes, griegas, volatilidad implícita"
+  },
+  "data": {
+   "en": "Long straddle, with and without delta hedge",
+   "es": "Long straddle, con y sin cobertura delta"
+  }
+ },
+ "backtesting": {
+  "kpis": [
+   {
+    "v": "10.93%",
+    "ves": "10,93 %",
+    "l": {
+     "en": "a year",
+     "es": "al año"
+    }
+   },
+   {
+    "v": "25M",
+    "ves": "25 M",
+    "l": {
+     "en": "random portfolios beaten",
+     "es": "carteras aleatorias batidas"
+    }
+   }
+  ],
+  "tech": {
+   "en": "Monthly momentum, survivorship-safe",
+   "es": "Momentum mensual, sin sesgo de supervivencia"
+  },
+  "data": {
+   "en": "S&P 500 since 2015, 0.23% per trade",
+   "es": "S&P 500 desde 2015, 0,23 % por operación"
+  }
+ },
+ "causal-graphs": {
+  "kpis": [
+   {
+    "v": "6",
+    "l": {
+     "en": "sector ETFs",
+     "es": "ETF sectoriales"
+    }
+   },
+   {
+    "v": "4",
+    "l": {
+     "en": "discovery methods",
+     "es": "métodos de descubrimiento"
+    }
+   }
+  ],
+  "tech": {
+   "en": "PC, Hill Climbing, LiNGAM, Granger",
+   "es": "PC, Hill Climbing, LiNGAM, Granger"
+  },
+  "data": {
+   "en": "US sectors, 2000–2024",
+   "es": "Sectores de EE. UU., 2000–2024"
+  }
+ },
+ "portfolio-mgmt": {
+  "kpis": [
+   {
+    "v": "1.16",
+    "ves": "1,16",
+    "l": {
+     "en": "max Sharpe (train)",
+     "es": "Sharpe máximo (train)"
+    }
+   },
+   {
+    "v": "50",
+    "l": {
+     "en": "assets",
+     "es": "activos"
+    }
+   }
+  ],
+  "tech": {
+   "en": "Markowitz optimisation, asset selection",
+   "es": "Optimización de Markowitz, selección de activos"
+  },
+  "data": {
+   "en": "50 anonymised assets",
+   "es": "50 activos anonimizados"
+  }
+ },
+ "fund-of-funds": {
+  "kpis": [
+   {
+    "v": "70%",
+    "ves": "70 %",
+    "l": {
+     "en": "in Asia",
+     "es": "en Asia"
+    }
+   },
+   {
+    "v": "≤5%",
+    "ves": "≤5 %",
+    "l": {
+     "en": "per fund",
+     "es": "por fondo"
+    }
+   }
+  ],
+  "tech": {
+   "en": "Fama-French factors, clustering",
+   "es": "Factores Fama-French, clustering"
+  },
+  "data": {
+   "en": "Daily fund prices",
+   "es": "Precios diarios de fondos"
+  }
+ },
+ "data-preprocessing": {
+  "kpis": [
+   {
+    "v": "d = 0.4",
+    "ves": "d = 0,4",
+    "l": {
+     "en": "stationary from",
+     "es": "estacionaria desde"
+    }
+   }
+  ],
+  "tech": {
+   "en": "Dollar bars, fractional differentiation, triple barrier",
+   "es": "Barras dólar, diferenciación fraccional, triple barrera"
+  },
+  "data": {
+   "en": "Tick-level market data",
+   "es": "Datos de mercado a nivel de tick"
+  }
+ },
+ "heterogeneous-nn": {
+  "kpis": [
+   {
+    "v": "7/9",
+    "l": {
+     "en": "stores with R² > 0.6",
+     "es": "tiendas con R² > 0,6"
+    }
+   }
+  ],
+  "tech": {
+   "en": "LSTM + embeddings",
+   "es": "LSTM + embeddings"
+  },
+  "data": {
+   "en": "Daily sales of nine Rossmann stores",
+   "es": "Ventas diarias de nueve tiendas Rossmann"
+  }
+ },
+ "nn-competition": {
+  "kpis": [
+   {
+    "v": "252",
+    "l": {
+     "en": "steps ahead",
+     "es": "pasos hacia delante"
+    }
+   },
+   {
+    "v": "6",
+    "l": {
+     "en": "indices",
+     "es": "índices"
+    }
+   }
+  ],
+  "tech": {
+   "en": "Autoregressive forecasting, baselines first",
+   "es": "Predicción autorregresiva, primero las bases"
+  },
+  "data": {
+   "en": "Six stock indices",
+   "es": "Seis índices bursátiles"
+  }
+ },
+ "fixed-income": {
+  "kpis": [
+   {
+    "v": "IG / HY",
+    "l": {
+     "en": "split by rating",
+     "es": "reparto por rating"
+    }
+   }
+  ],
+  "tech": {
+   "en": "Ratings, default probability, concentration",
+   "es": "Ratings, probabilidad de impago, concentración"
+  },
+  "data": {
+   "en": "A bond portfolio",
+   "es": "Una cartera de bonos"
+  }
+ },
+ "python-fundamentals": {
+  "kpis": [
+   {
+    "v": "10",
+    "l": {
+     "en": "sample portfolios",
+     "es": "carteras de ejemplo"
+    }
+   }
+  ],
+  "tech": {
+   "en": "Data classes, Monte Carlo, reporting",
+   "es": "Data classes, Monte Carlo, informes"
+  },
+  "data": {
+   "en": "Yahoo Finance and Alpha Vantage prices",
+   "es": "Precios de Yahoo Finance y Alpha Vantage"
+  }
+ },
+ "fraud-detection": {
+  "kpis": [
+   {
+    "v": "0.696",
+    "ves": "0,696",
+    "l": {
+     "en": "AUPRC so far",
+     "es": "AUPRC por ahora"
+    }
+   },
+   {
+    "v": "0.17%",
+    "ves": "0,17 %",
+    "l": {
+     "en": "of transactions are fraud",
+     "es": "de transacciones fraudulentas"
+    }
+   }
+  ],
+  "tech": {
+   "en": "Anomaly detection, precision-recall",
+   "es": "Detección de anomalías, precisión-recall"
+  },
+  "data": {
+   "en": "170,884 bank transactions",
+   "es": "170.884 transacciones bancarias"
+  }
+ },
+ "web-triarii": {
+  "facts": {
+   "en": "AI and finance consultancy · Madrid",
+   "es": "Consultora de IA y finanzas · Madrid"
+  }
+ },
+ "web-albujon": {
+  "facts": {
+   "en": "Solar energy · bilingual",
+   "es": "Energía solar · bilingüe"
+  }
+ },
+ "web-arcaunion": {
+  "facts": {
+   "en": "Holding company · 5 languages",
+   "es": "Sociedad holding · 5 idiomas"
+  }
+ },
+ "web-co2capital": {
+  "facts": {
+   "en": "EU emission allowances · Bilbao",
+   "es": "Derechos de emisión · Bilbao"
+  }
+ },
+ "web-molonlabe": {
+  "facts": {
+   "en": "Holding company · Madrid",
+   "es": "Sociedad holding · Madrid"
+  }
+ },
+ "doc-systems": {
+  "brand": "#F2A65A",
+  "kpis": [
+   {
+    "v": "5",
+    "l": {
+     "en": "companies",
+     "es": "empresas"
+    }
+   },
+   {
+    "v": "1",
+    "l": {
+     "en": "ordered archive each",
+     "es": "archivo ordenado en cada una"
+    }
+   }
+  ]
+ },
+ "web-thesoleclub": {
+  "facts": {
+   "en": "Sneaker shop · Bilbao · archived",
+   "es": "Tienda de zapatillas · Bilbao · archivada"
+  },
+  "domain": "thesoleclub.com"
+ }
+}

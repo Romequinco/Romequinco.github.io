@@ -1,0 +1,17 @@
+---
+import Base from '../../layouts/Base.astro';
+import Shell from '../../components/Shell.astro';
+import ProjectPage from '../../components/ProjectPage.astro';
+import { pageProjects } from '../../lib/data';
+import { plain, paths } from '../../lib/i18n';
+
+export function getStaticPaths() {
+  return pageProjects.map(({ project, group }) => ({ params: { slug: project.slug }, props: { project, group } }));
+}
+const { project, group } = Astro.props;
+const img = project.images.find((i) => i.src)?.src;
+const alt = paths.project(project.slug, 'es');
+---
+<Base lang="en" title={`${plain(project.name, 'en')} — Óscar Romero Quincoces`} description={plain(project.say ?? project.short, 'en')} alternate={alt} image={img}>
+  <Shell lang="en" current={project.slug} alternate={alt}><ProjectPage lang="en" project={project} group={group} /></Shell>
+</Base>

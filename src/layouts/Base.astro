@@ -1,0 +1,88 @@
+---
+import '@fontsource/schibsted-grotesk/400.css';
+import '@fontsource/schibsted-grotesk/500.css';
+import '@fontsource/schibsted-grotesk/600.css';
+import '@fontsource-variable/archivo/wdth.css';
+import '@fontsource-variable/source-serif-4/wght.css';
+import '../styles/global.css';
+import { type Lang, ui } from '../lib/i18n';
+import font400 from '@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-400-normal.woff2?url';
+import font600 from '@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-600-normal.woff2?url';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description?: string;
+  /** Same page in the other language, as a path. */
+  alternate: string;
+  image?: string;
+  /** Keep the page out of search results. */
+  noindex?: boolean;
+}
+const { lang, title, description = ui.siteDescription[lang], alternate, image = lang === 'es' ? '/og-es.png' : '/og.png', noindex = false } = Astro.props;
+const site = Astro.site!;
+const canonical = new URL(Astro.url.pathname, site).href;
+const alt = new URL(alternate, site).href;
+const en = lang === 'en' ? canonical : alt;
+const es = lang === 'es' ? canonical : alt;
+// Structured data so search engines know who the site is about.
+const person = {
+  '@type': 'Person',
+  '@id': new URL('/#person', site).href,
+  name: 'Óscar Romero Quincoces',
+  jobTitle: lang === 'en' ? 'Quantitative analyst, financial markets and AI' : 'Analista cuantitativo, mercados financieros e IA',
+  url: new URL(lang === 'en' ? '/' : '/es/', site).href,
+  email: 'mailto:romequinco@gmail.com',
+  image: new URL('/og.png', site).href,
+  address: { '@type': 'PostalAddress', addressLocality: 'Bilbao', addressCountry: 'ES' },
+  worksFor: { '@type': 'Organization', name: 'Triarii Consulting', url: 'https://triariiconsulting.es' },
+  alumniOf: [
+    { '@type': 'CollegeOrUniversity', name: 'Universidad de Deusto' },
+    { '@type': 'EducationalOrganization', name: 'Instituto BME' },
+  ],
+  knowsLanguage: ['es', 'en', 'eu', 'fr', 'zh'],
+  knowsAbout: ['Large language models', 'Retrieval-augmented generation', 'Quantitative finance', 'Machine learning', 'Financial markets'],
+  sameAs: ['https://linkedin.com/in/oscarromeroquincoces', 'https://github.com/Romequinco'],
+};
+const ld = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'WebSite', '@id': new URL('/#website', site).href, url: site.href, name: 'Óscar Romero Quincoces', inLanguage: ['en', 'es'], publisher: { '@id': person['@id'] } },
+    person,
+  ],
+};
+---
+<!doctype html>
+<html lang={lang}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  {noindex && <meta name="robots" content="noindex">}
+  <link rel="canonical" href={canonical}>
+  <link rel="alternate" hreflang="en" href={en}>
+  <link rel="alternate" hreflang="es" href={es}>
+  <link rel="alternate" hreflang="x-default" href={en}>
+  <link rel="preload" href={font400} as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href={font600} as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#2C302E">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonical}>
+  <meta property="og:image" content={new URL(image, site).href}>
+  <meta property="og:locale" content={lang === 'en' ? 'en_GB' : 'es_ES'}>
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  <slot name="head" />
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#A3A69F"/></marker></defs></svg>
+  <slot />
+</body>
+</html>

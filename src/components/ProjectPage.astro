@@ -1,0 +1,169 @@
+---
+import { type Lang, t, plain, paths, ui, groupShort } from '../lib/i18n';
+import { type Project, type Group, type Img, detailOf, neighbours, externalLinks } from '../lib/data';
+
+interface Props { lang: Lang; project: Project; group: Group }
+const { lang, project: p, group } = Astro.props;
+const d = detailOf(p.slug);
+const { prev, next } = neighbours(p.slug);
+const links = externalLinks(p);
+const tall = (im: Img) => !!im.w && !!im.h && im.h > im.w;
+// Portrait images (video frames) open the page side by side instead of one narrow image.
+const lead: Img[] = [];
+for (const im of p.images) { if (lead.length < 3 && im.src && tall(im) && (lead.length === 0 ? true : tall(lead[0]))) lead.push(im); else break; }
+const heroRow = lead.length > 1 ? lead : p.images.slice(0, 1);
+const hero = heroRow[0];
+const rest = p.images.slice(heroRow.length);
+const svgLabel = (im: Img) => im.svg!.replace('<svg ', `<svg aria-label="${plain(im.caption, lang).replace(/"/g, '&quot;')}" `);
+
+const sections = [
+  { id: 'summary', title: ui.summary[lang], html: [t(p.say, lang), t(p.how, lang)].filter(Boolean).map((x) => `<p>${x}</p>`).join('') },
+  ...(d.sections ?? []).map((s, i) => ({ id: `s${i + 1}`, title: t(s.title, lang), html: t(s.body, lang) })),
+];
+const toc = [
+  ...sections.map((s) => ({ id: s.id, title: s.title })),
+  ...(rest.length ? [{ id: 'figures', title: ui.figures[lang] }] : []),
+  ...(d.stack?.length ? [{ id: 'stack', title: ui.stack[lang] }] : []),
+];
+const groupHome = `${paths.home(lang)}#g-${group.id}`;
+---
+<article class="doc">
+  <header class="doc-head">
+    <p class="crumb"><a href={`${paths.home(lang)}#projects`}>{ui.projects[lang]}</a> / <a href={groupHome}>{t(groupShort[group.id] ?? group.title, lang)}</a></p>
+    <h1 set:html={t(p.name, lang)} />
+    <p class="lede" set:html={t(p.short, lang)} />
+    <div class="badges">
+      {p.status && <span class="badge" set:html={t(p.status, lang)} />}
+      {d.year && <span class="badge">{d.year}</span>}
+      {d.context && <span class="badge" set:html={t(d.context, lang)} />}
+    </div>
+    {links.length > 0 && (
+      <div class="actions">
+        {links.map((l, i) => <a class:list={['btn', { pri: i === 0 }]} href={l.href} set:html={t(l.label, lang)} />)}
+      </div>
+    )}
+    {heroRow.length > 1 ? (
+      <div class="lead-row">
+        {heroRow.map((im, i) => (
+          <figure class="fig">
+            <a href={im.src}><img src={im.src} width={im.w} height={im.h} alt={plain(im.caption, lang)} decoding="async" /></a>
+            {im.caption && <figcaption><b>{ui.figure[lang]} {i + 1}.</b> <Fragment set:html={t(im.caption, lang)} /></figcaption>}
+          </figure>
+        ))}
+      </div>
+    ) : hero && (
+      <figure class:list={['fig', { tall: tall(hero) }]}>
+        {hero.src
+          ? <a href={hero.src}><img src={hero.src} width={hero.w} height={hero.h} alt={plain(hero.caption, lang)} decoding="async" /></a>
+          : <Fragment set:html={svgLabel(hero)} />}
+        {hero.caption && <figcaption><b>{ui.figure[lang]} 1.</b> <Fragment set:html={t(hero.caption, lang)} /></figcaption>}
+      </figure>
+    )}
+  </header>
+
+  <aside class="rail" aria-label={ui.aboutProject[lang]}>
+    <div class="box">
+      <h2>{ui.aboutProject[lang]}</h2>
+      <dl class="kv">
+        {d.year && <div><dt>{ui.year[lang]}</dt><dd>{d.year}</dd></div>}
+        {d.role && <div><dt>{ui.role[lang]}</dt><dd set:html={t(d.role, lang)} /></div>}
+        {d.context && <div><dt>{ui.context[lang]}</dt><dd set:html={t(d.context, lang)} /></div>}
+        {p.status && <div><dt>{ui.status[lang]}</dt><dd set:html={t(p.status, lang)} /></div>}
+        {links.length > 0 && (
+          <div><dt>{ui.links[lang]}</dt><dd class="links">{links.map((l) => <a href={l.href} set:html={t(l.label, lang)} />)}</dd></div>
+        )}
+      </dl>
+    </div>
+    <div class="box">
+      <h2>{ui.onThisPage[lang]}</h2>
+      <nav class="toc" id="toc">
+        {toc.map((x) => <a href={`#${x.id}`}>{x.title}</a>)}
+      </nav>
+    </div>
+  </aside>
+
+  <div class="doc-body">
+    {sections.map((s) => (
+      <section id={s.id} data-toc>
+        <h2 set:html={s.title} />
+        <div class="prose" set:html={s.html} />
+      </section>
+    ))}
+
+    {rest.length > 0 && (
+      <section id="figures" data-toc>
+        <h2>{ui.figures[lang]}</h2>
+        <div class:list={[{ figs: rest.length > 1, tallfirst: rest.length >= 3 && tall(rest[0]) && !tall(rest[1]) && !tall(rest[2]) }]}>
+          {rest.map((im, i) => (
+            <figure class:list={['fig', { tall: tall(im) }]}>
+              {im.src
+                ? <a href={im.src}><img src={im.src} width={im.w} height={im.h} alt={plain(im.caption, lang)} loading="lazy" decoding="async" /></a>
+                : <Fragment set:html={svgLabel(im)} />}
+              {im.caption && <figcaption><b>{ui.figure[lang]} {i + 1 + heroRow.length}.</b> <Fragment set:html={t(im.caption, lang)} /></figcaption>}
+            </figure>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {d.stack && d.stack.length > 0 && (
+      <section id="stack" data-toc>
+        <h2>{ui.stack[lang]}</h2>
+        <div class="chips">{d.stack.map((s) => <span class="chip">{s}</span>)}</div>
+      </section>
+    )}
+
+    <nav class="pn" aria-label={lang === 'en' ? 'More projects' : 'Más proyectos'}>
+      <a href={paths.project(prev.slug, lang)}><small>{ui.previous[lang]}</small><b set:html={t(prev.name, lang)} /></a>
+      <a class="nx" href={paths.project(next.slug, lang)}><small>{ui.next[lang]}</small><b set:html={t(next.name, lang)} /></a>
+    </nav>
+  </div>
+</article>
+
+<dialog class="viewer" id="viewer" aria-label={ui.images[lang]}>
+  <button type="button" class="v-x" data-v="close" aria-label={lang === 'en' ? 'Close' : 'Cerrar'}><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+  <button type="button" class="v-nav v-prev" data-v="-1" aria-label={ui.previous[lang]}><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3L5 8l5 5"/></svg></button>
+  <figure><img alt="" /><figcaption></figcaption></figure>
+  <button type="button" class="v-nav v-next" data-v="1" aria-label={ui.next[lang]}><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></button>
+</dialog>
+
+<script>
+  // Image viewer: figures open large inside the page; arrows step, Esc or X closes.
+  const dlg = document.getElementById('viewer') as HTMLDialogElement;
+  const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('.doc figure > a[href]'));
+  const vImg = dlg.querySelector('img')!;
+  const vCap = dlg.querySelector('figcaption')!;
+  let at = 0;
+  const show = (i: number) => {
+    at = (i + links.length) % links.length;
+    const a = links[at];
+    const img = a.querySelector('img')!;
+    vImg.src = a.href;
+    vImg.alt = img.alt;
+    vCap.innerHTML = a.parentElement!.querySelector('figcaption')?.innerHTML ?? '';
+  };
+  links.forEach((a, i) => a.addEventListener('click', (e) => { e.preventDefault(); show(i); dlg.showModal(); }));
+  dlg.addEventListener('click', (e) => {
+    const b = (e.target as HTMLElement).closest<HTMLElement>('[data-v]');
+    if (b) { if (b.dataset.v === 'close') dlg.close(); else show(at + Number(b.dataset.v)); }
+    else if (e.target === dlg) dlg.close();
+  });
+  dlg.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') show(at + 1);
+    if (e.key === 'ArrowLeft') show(at - 1);
+  });
+  dlg.querySelectorAll('.v-nav').forEach((b) => ((b as HTMLElement).hidden = links.length < 2));
+</script>
+
+<script>
+  // "On this page": mark the section being read.
+  const links = new Map(Array.from(document.querySelectorAll<HTMLAnchorElement>('#toc a')).map((a) => [a.hash.slice(1), a]));
+  const secs = Array.from(document.querySelectorAll<HTMLElement>('[data-toc]'));
+  const mark = () => {
+    let cur = secs[0]?.id;
+    for (const s of secs) if (s.getBoundingClientRect().top < window.innerHeight * 0.3) cur = s.id;
+    links.forEach((a, id) => a.classList.toggle('on', id === cur));
+  };
+  addEventListener('scroll', mark, { passive: true });
+  mark();
+</script>

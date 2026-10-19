@@ -1,0 +1,138 @@
+---
+import Cover from './Cover.astro';
+import { type Lang, t, paths, contact, ui, groupShort } from '../lib/i18n';
+import { groups, work, study, languages, intro, closing, hasPage, externalLinks, detailOf, coverOf, kpiValue } from '../lib/data';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const about = {
+  bio: {
+    en: [
+      'I come from the markets. For three years I executed equities on mandate at a private investment office, and before that I studied International Relations, which left me with the habit of watching macro and geopolitics.',
+      'Today I build AI software for markets and for companies: agents that read reports and cite their source, systems that put a company’s documentation in order, and a product in production, Auguria, that explains the market in Spanish without giving recommendations.',
+    ],
+    es: [
+      'Vengo de los mercados. Durante tres años ejecuté renta variable sobre mandato en una oficina de inversión privada, y antes estudié Relaciones Internacionales, que me dejó la costumbre de mirar la macro y la geopolítica.',
+      'Hoy construyo software de IA para los mercados y para empresas: agentes que leen informes y citan su fuente, sistemas que ordenan la documentación de una empresa y un producto en producción, Auguria, que explica el mercado en español sin dar recomendaciones.',
+    ],
+  },
+  nowTitle: { en: 'Right now', es: 'Ahora mismo' },
+  now: [
+    { g: 'g-products', t: { en: 'Founder, Triarii Consulting', es: 'Fundador, Triarii Consulting' }, d: { en: 'AI and finance consultancy in Madrid', es: 'Consultora de IA y finanzas en Madrid' } },
+    { g: 'g-research', t: { en: 'Head of AI, Albujón Energy', es: 'Responsable de IA, Albujón Energy' }, d: { en: 'A task bot and a RAG the team uses every day', es: 'Bot de tareas y RAG que el equipo usa a diario' } },
+    { g: 'g-course', t: { en: 'MIAX master’s, Instituto BME', es: 'Máster MIAX, Instituto BME' }, d: { en: 'AI and quantum computing for markets', es: 'IA y computación cuántica para mercados' } },
+  ],
+  langTitle: { en: 'Languages', es: 'Idiomas' },
+  langs: {
+    en: ['Spanish', 'English B2', 'Basque', 'French B1', 'Chinese HSK 3'],
+    es: ['Español', 'Inglés B2', 'Euskera', 'Francés B1', 'Chino HSK 3'],
+  },
+};
+---
+<div class="wrap">
+  <section id="about" class="about">
+    <div class="about-bio">
+      <h1>Óscar Romero Quincoces</h1>
+      <p class="role">{ui.role_line[lang]}<span class="where">{ui.where[lang]}</span></p>
+      {about.bio[lang].map((para) => <p class="bio-p">{para}</p>)}
+      <div class="actions">
+        <a class="btn pri" href="#projects">{ui.seeProjects[lang]}</a>
+        <button type="button" class="btn" popovertarget="contact-pop">{contact.email}</button>
+      </div>
+    </div>
+    <aside class="about-now">
+      <div>
+        <h2>{about.nowTitle[lang]}</h2>
+        <ul class="now">
+          {about.now.map((n) => (
+            <li class={n.g}><i></i><div><b>{n.t[lang]}</b><span>{n.d[lang]}</span></div></li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2>{about.langTitle[lang]}</h2>
+        <div class="chips">{about.langs[lang].map((l) => <span class="chip">{l}</span>)}</div>
+      </div>
+    </aside>
+  </section>
+
+
+  <section id="projects" class="sec">
+    <div class="sec-h"><h2>{ui.projects[lang]}</h2></div>
+    <div class="filters" role="group" aria-label={lang === 'en' ? 'Show projects by group' : 'Ver proyectos por grupo'}>
+      <button type="button" class="flt" data-f="all" aria-pressed="true">{lang === 'en' ? 'All' : 'Todos'} <span>{groups.reduce((n, g) => n + g.projects.length, 0)}</span></button>
+      {groups.map((g) => (
+        <button type="button" class:list={['flt', `g-${g.id}`]} data-f={g.id} aria-pressed="false"><i></i>{t(groupShort[g.id] ?? g.title, lang)} <span>{g.projects.length}</span></button>
+      ))}
+    </div>
+    {groups.map((g) => (
+      <div class:list={['grp', `g-${g.id}`]} id={`g-${g.id}`}>
+        <div class="grp-h"><span class="sw"></span><h3 set:html={t(g.title, lang)} /><span>{g.projects.length}</span></div>
+        <ul class="fichas">
+          {g.projects.map((p) => {
+            const d = detailOf(p.slug);
+            const k = coverOf(p.slug).kpis?.[0];
+            const page = hasPage(g);
+            const href = page ? paths.project(p.slug, lang) : externalLinks(p)[0]?.href;
+            return (
+              <li style="display:contents">
+                <a class="ficha" href={href}>
+                  <Cover lang={lang} project={p} group={g} />
+                  <div class="ficha-b">
+                    <div class="ficha-t"><b set:html={t(p.name, lang)} />{p.status && <span set:html={t(p.status, lang)} />}</div>
+                    <p class="ficha-d" set:html={t(p.short, lang)} />
+                    {k && <p class="ficha-k"><b>{kpiValue(k, lang)}</b> {t(k.l, lang)}</p>}
+                    {d.stack && d.stack.length > 0 && <div class="chips">{d.stack.slice(0, 5).map((s) => <span class="chip">{s}</span>)}</div>}
+                    <span class="ficha-go">{page ? ui.openProject[lang] : (externalLinks(p)[0]?.label ? t(externalLinks(p)[0].label, lang).replace(/<[^>]+>/g, '') : ui.liveSite[lang])}</span>
+                  </div>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    ))}
+  </section>
+
+  <div class="two sec" id="career">
+    <section id="experience">
+      <div class="sec-h"><h2>{ui.experience[lang]}</h2></div>
+      <ul class="tl">
+        {work.map((w) => (
+          <li><span class="when" set:html={t(w.when, lang)} /><span><b set:html={t(w.title, lang)} /><small set:html={t(w.note, lang)} /></span></li>
+        ))}
+      </ul>
+    </section>
+    <section id="education">
+      <div class="sec-h"><h2>{ui.education[lang]}</h2></div>
+      <ul class="tl">
+        {study.map((w) => (
+          <li><span class="when" set:html={t(w.when, lang)} /><span><b set:html={t(w.title, lang)} /><small set:html={t(w.note, lang)} /></span></li>
+        ))}
+      </ul>
+      <p class="langs" set:html={t(languages, lang)} />
+    </section>
+  </div>
+
+  <section id="contact" class="sec">
+    <div class="sec-h"><h2>{ui.contactNav[lang]}</h2></div>
+    <p class="closing" set:html={t(closing, lang)} />
+    <div class="actions">
+      <button type="button" class="btn pri" popovertarget="contact-pop">{contact.email}</button>
+      <a class="btn" href={contact.linkedin}>LinkedIn</a>
+      <a class="btn" href={contact.github}>GitHub</a>
+    </div>
+  </section>
+</div>
+
+<script>
+  // Project filters: show one group or all of them. A link to a group (#g-...) always shows everything.
+  const btns = Array.from(document.querySelectorAll<HTMLButtonElement>('.flt'));
+  const grps = Array.from(document.querySelectorAll<HTMLElement>('#projects .grp'));
+  const apply = (f: string) => {
+    btns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.f === f)));
+    grps.forEach((g) => { g.hidden = f !== 'all' && g.id !== `g-${f}`; });
+  };
+  btns.forEach((b) => b.addEventListener('click', () => apply(b.dataset.f!)));
+  addEventListener('hashchange', () => { if (location.hash.startsWith('#g-')) apply('all'); });
+</script>

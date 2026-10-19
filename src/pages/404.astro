@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import Shell from '../components/Shell.astro';
+---
+<Base lang="en" title="404 — Óscar Romero Quincoces" alternate="/es/" noindex>
+  <Shell lang="en" current="404" alternate="/es/">
+    <div class="nf">
+      <p class="nf-code">404</p>
+      <div class="nf-cols">
+        <section>
+          <h1>This page does not exist</h1>
+          <p>The link may be old or mistyped. Everything on the site starts from the home page.</p>
+          <div class="actions"><a class="btn pri" href="/">Go to the home page</a><a class="btn" href="/#projects">See the projects</a></div>
+        </section>
+        <section lang="es">
+          <h1>Esta página no existe</h1>
+          <p>Puede que el enlace sea antiguo o tenga una errata. Todo en la web parte de la portada.</p>
+          <div class="actions"><a class="btn pri" href="/es/">Ir a la portada</a><a class="btn" href="/es/#projects">Ver los proyectos</a></div>
+        </section>
+      </div>
+    </div>
+  </Shell>
+</Base>
+
+<style>
+  .nf{max-width:1000px}
+  .nf-code{font-size:96px;line-height:1;font-weight:600;color:var(--pencil);letter-spacing:-.02em}
+  .nf-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;margin-top:28px}
+  .nf h1{font-size:30px;line-height:1.15;font-weight:600}
+  .nf section p{color:var(--pencil);margin:12px 0 18px;max-width:34em}
+  @media (max-width:800px){.nf-cols{grid-template-columns:minmax(0,1fr);gap:36px}.nf-code{font-size:72px}}
+</style>

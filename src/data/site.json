@@ -1,0 +1,2215 @@
+{
+ "groups": [
+  {
+   "id": "products",
+   "title": {
+    "en": "Products and tools",
+    "es": "Productos y herramientas"
+   },
+   "projects": [
+    {
+     "name": {
+      "en": "Auguria",
+      "es": "Auguria"
+     },
+     "short": {
+      "en": "Market analysis in Spanish",
+      "es": "Análisis de mercados en español"
+     },
+     "status": {
+      "en": "In production",
+      "es": "En producción"
+     },
+     "images": [
+      {
+       "src": "/img/p/auguria/1.webp",
+       "w": 1600,
+       "h": 1000,
+       "caption": {
+        "en": "Market overview: indices, session status and the S&amp;P 500 heat map",
+        "es": "Vista general: índices, estado de las sesiones y mapa de calor del S&amp;P 500"
+       }
+      },
+      {
+       "src": "/img/p/auguria/activo.webp",
+       "w": 1600,
+       "h": 1000,
+       "caption": {
+        "en": "An asset page: candlestick chart with events and indicators, and the tabs of the technical, fundamental and news agents",
+        "es": "La ficha de un activo: gráfico de velas con eventos e indicadores, y las pestañas de los agentes técnico, fundamental y de noticias"
+       }
+      },
+      {
+       "src": "/img/p/auguria/3.webp",
+       "w": 1440,
+       "h": 900,
+       "caption": {
+        "en": "The public closing briefing, with the day's key charts",
+        "es": "El briefing público de cierre, con los gráficos clave del día"
+       }
+      },
+      {
+       "src": "/img/screener.webp",
+       "w": 2160,
+       "h": 1350,
+       "caption": {
+        "en": "Factor screener across more than 1,000 assets",
+        "es": "Screener de factores sobre más de 1.000 activos"
+       }
+      },
+      {
+       "src": "/img/agentes.webp",
+       "w": 2160,
+       "h": 1350,
+       "caption": {
+        "en": "The news, technical, fundamental and macro agents",
+        "es": "Los agentes de noticias, técnico, fundamental y macro"
+       }
+      }
+     ],
+     "say": {
+      "en": "Market dashboards, a factor screener across more than 1,000 assets, four AI agents and a daily closing briefing by web and email. A deterministic filter blocks any buy or sell wording. I built it on my own: about 1,070 commits in five months and around 900 tests.",
+      "es": "Paneles de mercado, un screener de factores con más de 1.000 activos, cuatro agentes de IA y un briefing diario de cierre por web y correo. Un filtro determinista bloquea cualquier frase de compra o venta. Lo he hecho yo solo: unos 1.070 commits en cinco meses y cerca de 900 tests."
+     },
+     "how": {
+      "en": "Next.js, Supabase and a FastAPI service with self-hosted FinBERT, over a cascade of six LLM providers.",
+      "es": "Next.js, Supabase y un servicio FastAPI con FinBERT propio, sobre una cascada de seis proveedores de LLM."
+     },
+     "links": [
+      {
+       "href": "https://auguria.es",
+       "label": {
+        "en": "auguria.es",
+        "es": "auguria.es"
+       }
+      }
+     ],
+     "slug": "auguria"
+    },
+    {
+     "name": {
+      "en": "Auguria Studio",
+      "es": "Auguria Studio"
+     },
+     "short": {
+      "en": "Teaching videos built from real data",
+      "es": "Vídeos didácticos hechos con datos reales"
+     },
+     "status": {
+      "en": "Part of Auguria",
+      "es": "Parte de Auguria"
+     },
+     "images": [
+      {
+       "src": "/img/p/auguria-studio/1.webp",
+       "w": 900,
+       "h": 1600,
+       "caption": {
+        "en": "Video frame: compound interest if you start saving at 25 or at 35",
+        "es": "Fotograma: el interés compuesto si empiezas a ahorrar a los 25 o a los 35"
+       }
+      },
+      {
+       "src": "/img/p/auguria-studio/2.webp",
+       "w": 900,
+       "h": 1600,
+       "caption": {
+        "en": "Video frame: the S&amp;P 500 a year after a golden cross, 81.6% against 74.6% on any day",
+        "es": "Fotograma: el S&amp;P 500 un año después de una cruz dorada, 81,6 % frente a 74,6 % cualquier día"
+       }
+      },
+      {
+       "src": "/img/p/auguria-studio/3.webp",
+       "w": 900,
+       "h": 1600,
+       "caption": {
+        "en": "Video frame: how much the Nasdaq-100 moves in each trading hour",
+        "es": "Fotograma: cuánto se mueve el Nasdaq-100 en cada hora de sesión"
+       }
+      },
+      {
+       "src": "/img/p/auguria-studio/4.webp",
+       "w": 900,
+       "h": 1600,
+       "caption": {
+        "en": "Carousel slide: the S&amp;P 500's lost decade, 1999 to 2013",
+        "es": "Diapositiva de carrusel: la década perdida del S&amp;P 500, de 1999 a 2013"
+       }
+      },
+      {
+       "src": "/img/p/auguria-studio/carrusel-mejores-dias.webp",
+       "w": 1000,
+       "h": 810,
+       "caption": {
+        "en": "Chart from a carousel: the S&P 500’s 10 best and 10 worst days fall in the same crises",
+        "es": "Gráfico de un carrusel: los 10 mejores y los 10 peores días del S&P 500 caen en las mismas crisis"
+       }
+      },
+      {
+       "src": "/img/p/auguria-studio/carrusel-caida-2007.webp",
+       "w": 1000,
+       "h": 660,
+       "caption": {
+        "en": "Chart from a carousel: the S&P 500’s 2007–2013 episode, a 56.8% fall and the way back to the high",
+        "es": "Gráfico de un carrusel: el episodio 2007–2013 del S&P 500, una caída del 56,8 % y la vuelta al máximo"
+       }
+      }
+     ],
+     "say": {
+      "en": "The studio inside Auguria where agents produce short educational videos and carousels. No figure is typed in by hand: every number on screen is recalculated from the data before it is rendered.",
+      "es": "El estudio dentro de Auguria en el que unos agentes producen vídeos cortos y carruseles educativos. Ninguna cifra se escribe a mano: cada número que sale en pantalla se recalcula a partir de los datos antes de renderizar."
+     },
+     "how": null,
+     "links": [],
+     "slug": "auguria-studio"
+    },
+    {
+     "name": {
+      "en": "Briefly",
+      "es": "Briefly"
+     },
+     "short": {
+      "en": "A two-voice podcast on your stocks",
+      "es": "Podcast a dos voces de tus valores"
+     },
+     "status": {
+      "en": "Live demo",
+      "es": "Demo en directo"
+     },
+     "images": [
+      {
+       "src": "/img/p/briefly-demo/1.webp",
+       "w": 1440,
+       "h": 900,
+       "caption": {
+        "en": "Today's briefing: the two-voice audio player, market tone and quotes",
+        "es": "El briefing del día: reproductor a dos voces, tono del mercado y cotizaciones"
+       }
+      },
+      {
+       "src": "/img/p/briefly-demo/2.webp",
+       "w": 1440,
+       "h": 900,
+       "caption": {
+        "en": "Key points, each with its source cited",
+        "es": "Puntos clave, cada uno con su fuente citada"
+       }
+      },
+      {
+       "src": "/img/p/briefly-demo/3.webp",
+       "w": 1440,
+       "h": 900,
+       "caption": {
+        "en": "Asking the two hosts about the briefing, in the guided demo",
+        "es": "Preguntas a los dos presentadores sobre el briefing, en la demo guiada"
+       }
+      },
+      {
+       "src": "/img/p/briefly/2.webp",
+       "w": 1600,
+       "h": 478,
+       "caption": {
+        "en": "Architecture: inputs, processing, AI agents, outputs and delivery",
+        "es": "Arquitectura: entradas, procesado, agentes de IA, salidas y entrega"
+       }
+      }
+     ],
+     "say": {
+      "en": "Four minutes of audio on how your stocks closed. It also reads your PDFs, charts and broker screenshots, and answers out loud in 6.4 seconds. 232 of 232 figures trace back to their source, and not one sentence is a recommendation. 1,301 tests, €0.034 per briefing. Built in a team of 3.",
+      "es": "Cuatro minutos de audio con el cierre de tus valores. También lee tus PDFs, gráficos y capturas del broker, y responde por voz en 6,4 segundos. Las 232 cifras se pueden rastrear hasta su fuente y no hay ni una frase de recomendación. 1.301 tests y 0,034 € por briefing. Hecho en un equipo de 3."
+     },
+     "how": {
+      "en": "Claude, Gemini TTS and Whisper, with CLIP and FinBERT running locally.",
+      "es": "Claude, Gemini TTS y Whisper, con CLIP y FinBERT en local."
+     },
+     "links": [
+      {
+       "href": "https://multimodal-market-briefer-production.up.railway.app/",
+       "label": {
+        "en": "Try the live demo",
+        "es": "Probar la demo"
+       }
+      },
+      {
+       "href": "https://github.com/Romequinco/multimodal-market-briefer",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "briefly"
+    },
+    {
+     "name": {
+      "en": "STATOR",
+      "es": "STATOR"
+     },
+     "short": {
+      "en": "Liquidity engine for illiquid stocks",
+      "es": "Motor de liquidez para valores poco líquidos"
+     },
+     "status": {
+      "en": "Paper trading",
+      "es": "Paper trading"
+     },
+     "images": [
+      {
+       "src": "/img/p/stator/1.webp",
+       "w": 1600,
+       "h": 884,
+       "caption": {
+        "en": "Desk view design: quote ladders and risk limits, with anonymised sample data",
+        "es": "Diseño de la vista de mesa: escaleras de precios y límites de riesgo, con datos de ejemplo anonimizados"
+       }
+      },
+      {
+       "src": "/img/p/stator/2.webp",
+       "w": 1600,
+       "h": 900,
+       "caption": {
+        "en": "On-call panel design: do I need to act, and the status of each security",
+        "es": "Diseño del panel de guardia: si hay que actuar y el estado de cada valor"
+       }
+      },
+      {
+       "src": "/img/p/stator/3.webp",
+       "w": 1600,
+       "h": 900,
+       "caption": {
+        "en": "Session timeline design: processes, incidents, quoting state, position and P&amp;L",
+        "es": "Diseño de la línea de la sesión: procesos, incidencias, estado de cotización, posición y P&amp;L"
+       }
+      }
+     ],
+     "say": {
+      "en": "It quotes buy and sell prices continuously for illiquid BME Growth stocks, with hard risk limits, a kill switch and a hash-chained audit log with a daily timestamp. In the paper-trading session it sent 2,938 orders and none went outside its limits; the kill switch cancels everything in one second. MVP in six weeks, at Triarii.",
+      "es": "Cotiza compra y venta de forma continua en valores poco líquidos de BME Growth, con límites de riesgo duros, kill switch y un registro encadenado por hash con sellado de tiempo diario. En la sesión de paper trading envió 2.938 órdenes, ninguna fuera de límites, y el kill switch lo cancela todo en un segundo. MVP en seis semanas, en Triarii."
+     },
+     "how": {
+      "en": "Python, Interactive Brokers and Claude agents. The screens are design mockups with sample data.",
+      "es": "Python, Interactive Brokers y agentes de Claude. Las pantallas son maquetas de diseño con datos de ejemplo."
+     },
+     "links": [],
+     "slug": "stator"
+    },
+    {
+     "name": {
+      "en": "Telegram task agent",
+      "es": "Agente de tareas en Telegram"
+     },
+     "short": {
+      "en": "Turns team chat into a task list",
+      "es": "Convierte el chat del equipo en tareas"
+     },
+     "status": {
+      "en": "In daily use",
+      "es": "En uso a diario"
+     },
+     "images": [
+      {
+       "svg": "<svg class=\"dg\" preserveaspectratio=\"xMinYMin meet\" role=\"img\" viewbox=\"0 0 520 330\">\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"230\" x=\"1\" y=\"1\"></rect>\n<text x=\"16\" y=\"28\"><tspan lang=\"en\">Team group on Telegram</tspan><tspan lang=\"es\">Grupo del equipo en Telegram</tspan></text>\n<text class=\"s\" x=\"16\" y=\"48\"><tspan lang=\"en\">text messages and voice notes</tspan><tspan lang=\"es\">mensajes de texto y notas de voz</tspan></text>\n<path class=\"l\" d=\"M116,64 V128\" marker-end=\"url(#ah)\"></path>\n<text class=\"s\" x=\"126\" y=\"92\"><tspan lang=\"en\">voice notes: Gemini</tspan><tspan lang=\"es\">notas de voz: Gemini</tspan></text>\n<text class=\"s\" x=\"126\" y=\"108\"><tspan lang=\"en\">transcribes them first</tspan><tspan lang=\"es\">las transcribe antes</tspan></text>\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"230\" x=\"1\" y=\"132\"></rect>\n<text x=\"16\" y=\"159\"><tspan lang=\"en\">Claude classifies</tspan><tspan lang=\"es\">Claude clasifica</tspan></text>\n<text class=\"s\" x=\"16\" y=\"179\"><tspan lang=\"en\">new task, update, done or noise</tspan><tspan lang=\"es\">tarea nueva, avance, hecha o ruido</tspan></text>\n<path class=\"l\" d=\"M116,195 V258\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"230\" x=\"1\" y=\"262\"></rect>\n<text x=\"16\" y=\"289\"><tspan lang=\"en\">Postgres</tspan><tspan lang=\"es\">Postgres</tspan></text>\n<text class=\"s\" x=\"16\" y=\"309\"><tspan lang=\"en\">every task and its status</tspan><tspan lang=\"es\">cada tarea y su estado</tspan></text>\n<path class=\"l\" d=\"M232,293 H372 V198\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"230\" x=\"288\" y=\"132\"></rect>\n<text x=\"303\" y=\"159\"><tspan lang=\"en\">Weekday schedule</tspan><tspan lang=\"es\">Horario de lunes a viernes</tspan></text>\n<text class=\"s\" x=\"303\" y=\"179\"><tspan lang=\"en\">8:30 open tasks, 17:00 review</tspan><tspan lang=\"es\">8:30 tareas abiertas, 17:00 repaso</tspan></text>\n<path class=\"l\" d=\"M403,131 V32 H236\" marker-end=\"url(#ah)\"></path>\n<text class=\"s\" text-anchor=\"end\" x=\"393\" y=\"78\"><tspan lang=\"en\">posts the summary,</tspan><tspan lang=\"es\">publica el resumen,</tspan></text>\n<text class=\"s\" text-anchor=\"end\" x=\"393\" y=\"94\"><tspan lang=\"en\">with buttons to</tspan><tspan lang=\"es\">con botones para</tspan></text>\n<text class=\"s\" text-anchor=\"end\" x=\"393\" y=\"110\"><tspan lang=\"en\">confirm what's done</tspan><tspan lang=\"es\">confirmar lo hecho</tspan></text>\n</svg>",
+       "caption": {
+        "en": "How the bot works. It has no screen of its own, so this is a diagram rather than a screenshot",
+        "es": "Cómo funciona el bot. No tiene pantalla propia, así que esto es un diagrama y no una captura"
+       }
+      }
+     ],
+     "say": {
+      "en": "A bot in Albujón Energy's team group. It reads every message and voice note, picks out new tasks, updates and finished work, and posts a summary at 8:30 and 17:00 on weekdays, with buttons to confirm what got done. The team uses it every day.",
+      "es": "Un bot en el grupo del equipo de Albujón Energy. Lee cada mensaje y nota de voz, detecta tareas nuevas, avances y trabajo terminado, y publica un resumen a las 8:30 y a las 17:00 de lunes a viernes, con botones para confirmar lo que está hecho. El equipo lo usa a diario."
+     },
+     "how": {
+      "en": "Python, Claude for classification, Gemini for voice notes and Postgres, running on Railway.",
+      "es": "Python, Claude para clasificar, Gemini para las notas de voz y Postgres, en Railway."
+     },
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/CHATBOT_ORGANIZACION",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "telegram-task-agent"
+    },
+    {
+     "name": {
+      "en": "Document systems for companies",
+      "es": "Documentación ordenada para empresas"
+     },
+     "short": {
+      "en": "Ordered archives and an AI assistant for 5 companies",
+      "es": "Archivo ordenado y asistente con IA para 5 empresas"
+     },
+     "status": {
+      "en": "In use",
+      "es": "En uso"
+     },
+     "images": [
+      {
+       "svg": "<svg class=\"dg\" preserveAspectRatio=\"xMinYMin meet\" role=\"img\" viewBox=\"0 0 620 320\">\n<rect class=\"b\" height=\"64\" rx=\"3\" width=\"270\" x=\"1\" y=\"1\"></rect>\n<text x=\"16\" y=\"28\"><tspan lang=\"en\">Scattered documents</tspan><tspan lang=\"es\">Documentos dispersos</tspan></text>\n<text class=\"s\" x=\"16\" y=\"49\"><tspan lang=\"en\">contracts, invoices, emails, PDFs</tspan><tspan lang=\"es\">contratos, facturas, correos, PDF</tspan></text>\n<path class=\"l\" d=\"M136,66 V118\" marker-end=\"url(#ah)\"></path>\n<text class=\"s\" x=\"148\" y=\"97\"><tspan lang=\"en\">sorted and renamed</tspan><tspan lang=\"es\">clasificados y renombrados</tspan></text>\n<rect class=\"b\" height=\"64\" rx=\"3\" width=\"270\" x=\"1\" y=\"122\"></rect>\n<text x=\"16\" y=\"149\"><tspan lang=\"en\">One ordered archive</tspan><tspan lang=\"es\">Un archivo ordenado</tspan></text>\n<text class=\"s\" x=\"16\" y=\"170\"><tspan lang=\"en\">by area, company and date</tspan><tspan lang=\"es\">por área, empresa y fecha</tspan></text>\n<path class=\"l\" d=\"M272,154 H334\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"64\" rx=\"3\" width=\"280\" x=\"338\" y=\"122\"></rect>\n<text x=\"353\" y=\"149\"><tspan lang=\"en\">AI assistant (RAG)</tspan><tspan lang=\"es\">Asistente con IA (RAG)</tspan></text>\n<text class=\"s\" x=\"353\" y=\"170\"><tspan lang=\"en\">answers from the company’s files</tspan><tspan lang=\"es\">responde con sus propios archivos</tspan></text>\n<path class=\"l\" d=\"M478,187 V240\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"64\" rx=\"3\" width=\"280\" x=\"338\" y=\"244\"></rect>\n<text x=\"353\" y=\"271\"><tspan lang=\"en\">The team asks</tspan><tspan lang=\"es\">El equipo pregunta</tspan></text>\n<text class=\"s\" x=\"353\" y=\"292\"><tspan lang=\"en\">and finds any document</tspan><tspan lang=\"es\">y encuentra cualquier documento</tspan></text>\n<text class=\"s\" x=\"1\" y=\"282\"><tspan lang=\"en\">Set up for five companies</tspan><tspan lang=\"es\">Montado para cinco empresas</tspan></text>\n</svg>",
+       "caption": {
+        "en": "How it works: scattered documents, one ordered archive, an assistant the team can ask",
+        "es": "Cómo funciona: documentos dispersos, un archivo ordenado y un asistente al que pregunta el equipo"
+       }
+      }
+     ],
+     "say": {
+      "en": "For five companies I took documentation spread across folders, emails and PDFs, sorted it into one ordered archive and set up an AI assistant on top, so anyone on the team can ask a question and get the answer from the company’s own documents.",
+      "es": "Para cinco empresas reuní la documentación que tenían repartida entre carpetas, correos y PDF, la ordené en un único archivo y monté encima un asistente con IA, para que cualquiera del equipo pregunte y obtenga la respuesta a partir de los documentos de la propia empresa."
+     },
+     "how": {
+      "en": "Document classification and clean-up, and retrieval-augmented generation over each company’s files.",
+      "es": "Clasificación y limpieza documental, y generación aumentada por recuperación (RAG) sobre los archivos de cada empresa."
+     },
+     "links": [],
+     "slug": "doc-systems"
+    },
+    {
+     "name": {
+      "en": "MIAX Asesor",
+      "es": "MIAX Asesor"
+     },
+     "short": {
+      "en": "Study aid with debating agents",
+      "es": "Estudio con agentes que debaten"
+     },
+     "status": {
+      "en": "Personal tool",
+      "es": "Uso personal"
+     },
+     "images": [
+      {
+       "src": "/img/p/miax-asesor/1.webp",
+       "w": 1440,
+       "h": 900,
+       "caption": {
+        "en": "3D knowledge graph: 352 concepts and 2,198 links, coloured by field",
+        "es": "Grafo de conocimiento en 3D: 352 conceptos y 2.198 enlaces, coloreados por área"
+       }
+      },
+      {
+       "src": "/img/p/miax-asesor/3.webp",
+       "w": 1440,
+       "h": 900,
+       "caption": {
+        "en": "The same graph in 2D, with topic labels",
+        "es": "El mismo grafo en 2D, con las etiquetas de cada tema"
+       }
+      },
+      {
+       "src": "/img/p/miax-asesor/2.webp",
+       "w": 1440,
+       "h": 900,
+       "caption": {
+        "en": "Library of consolidated concept sheets",
+        "es": "Biblioteca de fichas de conceptos consolidadas"
+       }
+      }
+     ],
+     "say": {
+      "en": "It turns the master's material into a knowledge base of 105 topics and about 4,200 sub-concepts. Three specialist agents, for finance, AI and maths, and engineering, debate each question and then write a summary you can download.",
+      "es": "Convierte el material del máster en una base de conocimiento de 105 temas y unos 4.200 subconceptos. Tres agentes especialistas, de finanzas, de IA y matemáticas y de ingeniería, debaten cada pregunta y luego escriben una síntesis que se puede descargar."
+     },
+     "how": {
+      "en": "RAG over ChromaDB, a FastAPI backend with streaming and a React dashboard.",
+      "es": "RAG sobre ChromaDB, un backend FastAPI con streaming y un panel en React."
+     },
+     "links": [],
+     "slug": "miax-asesor"
+    },
+    {
+     "name": {
+      "en": "10-K agent",
+      "es": "Agente 10-K"
+     },
+     "short": {
+      "en": "Answers questions from SEC filings",
+      "es": "Responde sobre informes de la SEC"
+     },
+     "status": {
+      "en": "Master's project",
+      "es": "Proyecto del máster"
+     },
+     "images": [
+      {
+       "src": "/img/p/tenk-agent/3.webp",
+       "w": 1600,
+       "h": 900,
+       "caption": {
+        "en": "Results: from 7 to 13 of 20 correct, with a verified citation in every answer",
+        "es": "Resultados: de 7 a 13 aciertos sobre 20, con una cita verificada en cada respuesta"
+       }
+      },
+      {
+       "src": "/img/p/tenk-agent/2.webp",
+       "w": 1600,
+       "h": 900,
+       "caption": {
+        "en": "The agent loop: decide, call a tool, read, decide again, within a call budget",
+        "es": "El bucle del agente: decide, llama a una herramienta, lee y vuelve a decidir, con un límite de llamadas"
+       }
+      },
+      {
+       "src": "/img/p/tenk-agent/1.webp",
+       "w": 1600,
+       "h": 900,
+       "caption": {
+        "en": "Retrieval improves from 2 to 5 of 13 paragraphs, one change at a time",
+        "es": "La búsqueda pasa de encontrar 2 a 5 de 13 párrafos, un cambio cada vez"
+       }
+      }
+     ],
+     "say": {
+      "en": "It answers financial questions about 10-K reports, cites the exact source and checks every figure against XBRL, with search that mixes vectors and BM25. Accuracy went from 35% to 65% over the baseline, and it got 8 of 10 blind questions right. Team of 3.",
+      "es": "Responde preguntas financieras sobre informes 10-K, cita la fuente exacta y comprueba cada cifra contra XBRL, con una búsqueda que combina vectores y BM25. El acierto pasó del 35 % al 65 % frente a la versión base, y acertó 8 de 10 preguntas a ciegas. Equipo de 3."
+     },
+     "how": {
+      "en": "LangGraph, FAISS and BM25.",
+      "es": "LangGraph, FAISS y BM25."
+     },
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/10k-financial-agent",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "tenk-agent"
+    }
+   ]
+  },
+  {
+   "id": "research",
+   "title": {
+    "en": "Research and experiments",
+    "es": "Investigación y experimentos"
+   },
+   "projects": [
+    {
+     "name": {
+      "en": "Market regimes",
+      "es": "Regímenes de mercado"
+     },
+     "short": {
+      "en": "12 detectors, 60 years of data",
+      "es": "12 detectores, 60 años de datos"
+     },
+     "status": {
+      "en": "Master's thesis",
+      "es": "TFM"
+     },
+     "images": [
+      {
+       "src": "/img/p/market-regimes/1.webp",
+       "w": 1600,
+       "h": 900,
+       "caption": {
+        "en": "60 years of S&amp;P 500 crises and which of the 12 detectors caught each one",
+        "es": "60 años de crisis del S&amp;P 500 y qué detector de los 12 captó cada una"
+       }
+      },
+      {
+       "src": "/img/p/market-regimes/4.webp",
+       "w": 1430,
+       "h": 880,
+       "caption": {
+        "en": "S&amp;P 500 from 1927 to 2026, with 22 catalogued crises, NBER recessions and drawdowns",
+        "es": "S&amp;P 500 de 1927 a 2026, con 22 crisis catalogadas, recesiones del NBER y caídas"
+       }
+      },
+      {
+       "src": "/img/p/market-regimes/3.webp",
+       "w": 1600,
+       "h": 793,
+       "caption": {
+        "en": "The Mahalanobis turbulence detector, out of sample",
+        "es": "El detector de turbulencia de Mahalanobis, fuera de muestra"
+       }
+      }
+     ],
+     "say": {
+      "en": "A test bench with no look-ahead leaks, and the first part of my master's thesis. A simple rule won: Mahalanobis turbulence caught 16 of 17 crises. Simple models beat the complex ones.",
+      "es": "Un banco de pruebas sin fugas de información futura, y la primera parte de mi TFM. Ganó una regla simple: la turbulencia de Mahalanobis detectó 16 de 17 crisis. Los modelos simples baten a los complejos."
+     },
+     "how": {
+      "en": "Walk-forward evaluation with hmmlearn, statsmodels and arch.",
+      "es": "Evaluación walk-forward con hmmlearn, statsmodels y arch."
+     },
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/PRUEBAS_DETECCION_REGIMENES_DE_MERCADO_TFM",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "market-regimes"
+    },
+    {
+     "name": {
+      "en": "Stock contest",
+      "es": "Concurso de Bolsa"
+     },
+     "short": {
+      "en": "Plays for the podium, not for return",
+      "es": "Busca el podio, no la rentabilidad"
+     },
+     "status": {
+      "en": "In progress",
+      "es": "En curso"
+     },
+     "images": [
+      {
+       "src": "/img/p/stock-contest/2.webp",
+       "w": 1600,
+       "h": 557,
+       "caption": {
+        "en": "Data cleaning: from raw sessions to a clean panel where only past data decides eligibility",
+        "es": "Limpieza de datos: de las sesiones en bruto a un panel limpio en el que solo los datos pasados deciden qué valor es elegible"
+       }
+      },
+      {
+       "src": "/img/p/stock-contest/3.webp",
+       "w": 1600,
+       "h": 1491,
+       "caption": {
+        "en": "Clustered correlations of liquid Spanish stocks, by macro-sector",
+        "es": "Correlaciones agrupadas de los valores españoles líquidos, por macrosector"
+       }
+      },
+      {
+       "src": "/img/p/stock-contest/1.webp",
+       "w": 657,
+       "h": 638,
+       "caption": {
+        "en": "How many points separate rivals on return and on volatility, across 108 simulated fields",
+        "es": "Cuántos puntos separan a los rivales por rentabilidad y por volatilidad, en 108 campos simulados"
+       }
+      }
+     ],
+     "say": {
+      "en": "For El Concurso de Bolsa 2026. A simulator replays 452 historical windows of 23 sessions against thousands of synthetic rivals under the contest's exact scoring, so the strategy aims for the podium rather than for the highest return. Every day it sends the orders by Telegram and I place them by hand, because the rules don't allow bots. I'll publish the results after 12 November.",
+      "es": "Para El Concurso de Bolsa 2026. Un simulador repite 452 ventanas históricas de 23 sesiones contra miles de rivales sintéticos con la puntuación exacta del concurso, para que la estrategia busque el podio y no la máxima rentabilidad. Cada día manda las órdenes por Telegram y yo las meto a mano, porque las bases no permiten bots. Publicaré los resultados después del 12 de noviembre."
+     },
+     "how": null,
+     "links": [],
+     "slug": "stock-contest"
+    },
+    {
+     "name": {
+      "en": "Polymarket",
+      "es": "Polymarket"
+     },
+     "short": {
+      "en": "Do Bitcoin candles have momentum?",
+      "es": "¿Tienen inercia las velas de bitcoin?"
+     },
+     "status": {
+      "en": "Ruled out",
+      "es": "Descartada"
+     },
+     "images": [
+      {
+       "src": "/img/p/polymarket/1.webp",
+       "w": 1490,
+       "h": 985,
+       "caption": {
+        "en": "Hypothesis test on 15-minute candles: win rate against the 50% baseline",
+        "es": "Contraste sobre velas de 15 minutos: tasa de acierto frente al 50 % de referencia"
+       }
+      },
+      {
+       "src": "/img/p/polymarket/3.webp",
+       "w": 1390,
+       "h": 490,
+       "caption": {
+        "en": "Win rate by candle-body percentile, and its gap to the baseline",
+        "es": "Tasa de acierto por percentil del cuerpo de la vela y su diferencia con la referencia"
+       }
+      },
+      {
+       "src": "/img/p/polymarket/2.webp",
+       "w": 1490,
+       "h": 985,
+       "caption": {
+        "en": "First look at 1-hour candles: price, returns, body size and volatility",
+        "es": "Primer análisis de las velas de 1 hora: precio, retornos, tamaño del cuerpo y volatilidad"
+       }
+      }
+     ],
+     "say": {
+      "en": "An experiment on Polymarket's \"Bitcoin up or down\" markets. The hypothesis was momentum, and the data said no: candles repeat their colour less than half the time. The edges in my first version came from look-ahead leaks, so I shelved the bot before putting any money in.",
+      "es": "Un experimento sobre los mercados «Bitcoin up or down» de Polymarket. La hipótesis era la inercia y los datos dijeron que no: las velas repiten color menos de la mitad de las veces. Las ventajas de mi primera versión venían de fugas de información futura, así que aparqué el bot antes de meter dinero."
+     },
+     "how": {
+      "en": "Python on Binance candles, with a test that watches for look-ahead.",
+      "es": "Python sobre velas de Binance, con un test que vigila las fugas de información futura."
+     },
+     "links": [],
+     "slug": "polymarket"
+    },
+    {
+     "name": {
+      "en": "IBEX 35 newsletter",
+      "es": "Newsletter del IBEX 35"
+     },
+     "short": {
+      "en": "A daily report written by agents",
+      "es": "Un informe diario escrito por agentes"
+     },
+     "status": {
+      "en": "First prototype",
+      "es": "Primer prototipo"
+     },
+     "images": [
+      {
+       "src": "/img/p/ibex-newsletter/1.webp",
+       "w": 1132,
+       "h": 1600,
+       "caption": {
+        "en": "Page 1: headline, market panel, 52-week chart and summary",
+        "es": "Página 1: titular, panel de mercado, gráfico de 52 semanas y resumen"
+       }
+      },
+      {
+       "src": "/img/p/ibex-newsletter/2.webp",
+       "w": 1132,
+       "h": 1600,
+       "caption": {
+        "en": "Page 2: IBEX 35 heat map and European macro context",
+        "es": "Página 2: mapa de calor del IBEX 35 y contexto macro europeo"
+       }
+      },
+      {
+       "src": "/img/p/ibex-newsletter/3.webp",
+       "w": 1132,
+       "h": 1600,
+       "caption": {
+        "en": "Page 3: contribution by stock and by sector",
+        "es": "Página 3: aportación por valor y por sector"
+       }
+      }
+     ],
+     "say": {
+      "en": "The forerunner of Auguria. Every trading day at 17:35, four Claude agents (a leader, a researcher, an analyst and a writer) produced a seven-page report on the Spanish market and sent it out as an email newsletter.",
+      "es": "El precursor de Auguria. Cada día hábil a las 17:35, cuatro agentes de Claude (un líder, un investigador, un analista y un redactor) preparaban un informe de siete páginas sobre la bolsa española y lo enviaban como newsletter por correo."
+     },
+     "how": {
+      "en": "Claude Opus and Sonnet, GitHub Actions, PostgreSQL and SendGrid.",
+      "es": "Claude Opus y Sonnet, GitHub Actions, PostgreSQL y SendGrid."
+     },
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/llm-agents-lab",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "ibex-newsletter"
+    },
+    {
+     "name": {
+      "en": "Chatbot experiments",
+      "es": "Pruebas de chatbot"
+     },
+     "short": {
+      "en": "A WhatsApp bot answered by Claude",
+      "es": "Un bot de WhatsApp que responde con Claude"
+     },
+     "status": {
+      "en": "Prototype",
+      "es": "Prototipo"
+     },
+     "images": [
+      {
+       "svg": "<svg class=\"dg\" preserveaspectratio=\"xMinYMin meet\" role=\"img\" viewbox=\"0 0 520 300\">\n<rect class=\"b\" height=\"56\" rx=\"3\" width=\"290\" x=\"1\" y=\"1\"></rect>\n<text x=\"16\" y=\"25\"><tspan lang=\"en\">Someone writes on WhatsApp</tspan><tspan lang=\"es\">Alguien escribe por WhatsApp</tspan></text>\n<text class=\"s\" x=\"16\" y=\"44\"><tspan lang=\"en\">Meta sends it to the webhook</tspan><tspan lang=\"es\">Meta lo envía al webhook</tspan></text>\n<path class=\"l\" d=\"M146,58 V76\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"56\" rx=\"3\" width=\"290\" x=\"1\" y=\"80\"></rect>\n<text x=\"16\" y=\"104\"><tspan lang=\"en\">FastAPI /webhook</tspan><tspan lang=\"es\">FastAPI /webhook</tspan></text>\n<text class=\"s\" x=\"16\" y=\"123\"><tspan lang=\"en\">reads the message from the payload</tspan><tspan lang=\"es\">saca el mensaje del payload</tspan></text>\n<path class=\"l\" d=\"M146,137 V155\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"56\" rx=\"3\" width=\"290\" x=\"1\" y=\"159\"></rect>\n<text x=\"16\" y=\"183\"><tspan lang=\"en\">Conversation history</tspan><tspan lang=\"es\">Historial de la conversación</tspan></text>\n<text class=\"s\" x=\"16\" y=\"202\"><tspan lang=\"en\">last 20 messages per number, in memory</tspan><tspan lang=\"es\">20 últimos mensajes por número, en memoria</tspan></text>\n<path class=\"l\" d=\"M146,216 V234\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"56\" rx=\"3\" width=\"290\" x=\"1\" y=\"238\"></rect>\n<text x=\"16\" y=\"262\"><tspan lang=\"en\">Claude writes the answer</tspan><tspan lang=\"es\">Claude escribe la respuesta</tspan></text>\n<text class=\"s\" x=\"16\" y=\"281\"><tspan lang=\"en\">Anthropic SDK</tspan><tspan lang=\"es\">SDK de Anthropic</tspan></text>\n<path class=\"l\" d=\"M292,266 H370 V29 H296\" marker-end=\"url(#ah)\"></path>\n<text class=\"s\" x=\"382\" y=\"140\"><tspan lang=\"en\">the reply goes back</tspan><tspan lang=\"es\">la respuesta vuelve</tspan></text>\n<text class=\"s\" x=\"382\" y=\"157\"><tspan lang=\"en\">to the same chat</tspan><tspan lang=\"es\">al mismo chat</tspan></text>\n</svg>",
+       "caption": {
+        "en": "How the prototype works, as a diagram: it only ran against simulated messages",
+        "es": "Cómo funciona el prototipo, en diagrama: solo se probó con mensajes simulados"
+       }
+      },
+      {
+       "svg": "<svg class=\"dg\" preserveAspectRatio=\"xMinYMin meet\" role=\"img\" viewBox=\"0 0 620 250\">\n<rect class=\"b\" height=\"64\" rx=\"3\" width=\"270\" x=\"1\" y=\"1\"></rect>\n<text x=\"16\" y=\"28\"><tspan lang=\"en\">New WhatsApp message</tspan><tspan lang=\"es\">Mensaje nuevo de WhatsApp</tspan></text>\n<text class=\"s\" x=\"16\" y=\"49\"><tspan lang=\"en\">from one phone number</tspan><tspan lang=\"es\">desde un número de teléfono</tspan></text>\n<rect class=\"b\" height=\"64\" rx=\"3\" width=\"270\" x=\"1\" y=\"120\"></rect>\n<text x=\"16\" y=\"147\"><tspan lang=\"en\">Recent history</tspan><tspan lang=\"es\">Historial reciente</tspan></text>\n<text class=\"s\" x=\"16\" y=\"168\"><tspan lang=\"en\">of that conversation, in memory</tspan><tspan lang=\"es\">de esa conversación, en memoria</tspan></text>\n<path class=\"l\" d=\"M272,33 H330 V80\" marker-end=\"url(#ah)\"></path>\n<path class=\"l\" d=\"M272,152 H330 V112\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"64\" rx=\"3\" width=\"280\" x=\"338\" y=\"64\"></rect>\n<text x=\"353\" y=\"91\"><tspan lang=\"en\">Claude writes the reply</tspan><tspan lang=\"es\">Claude escribe la respuesta</tspan></text>\n<text class=\"s\" x=\"353\" y=\"112\"><tspan lang=\"en\">with the whole context</tspan><tspan lang=\"es\">con todo el contexto</tspan></text>\n<path class=\"l\" d=\"M478,129 V184\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"56\" rx=\"3\" width=\"280\" x=\"338\" y=\"188\"></rect>\n<text x=\"353\" y=\"212\"><tspan lang=\"en\">Reply sent and saved</tspan><tspan lang=\"es\">Respuesta enviada y guardada</tspan></text>\n<text class=\"s\" x=\"353\" y=\"232\"><tspan lang=\"en\">back into the history</tspan><tspan lang=\"es\">de vuelta al historial</tspan></text>\n</svg>",
+       "caption": {
+        "en": "What goes to Claude with each message: the new text plus that conversation’s recent history",
+        "es": "Qué recibe Claude con cada mensaje: el texto nuevo y el historial reciente de esa conversación"
+       }
+      }
+     ],
+     "say": {
+      "en": "The tests I ran before the production Telegram bot: a backend that receives WhatsApp messages through Meta's webhook, keeps each conversation's recent history and answers with Claude.",
+      "es": "Las pruebas que hice antes del bot de Telegram en producción: un backend que recibe mensajes de WhatsApp por el webhook de Meta, guarda el historial reciente de cada conversación y responde con Claude."
+     },
+     "how": {
+      "en": "Python, FastAPI and the Anthropic SDK.",
+      "es": "Python, FastAPI y el SDK de Anthropic."
+     },
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/chatbot-experiments",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "chatbot-experiments"
+    }
+   ]
+  },
+  {
+   "id": "course",
+   "title": {
+    "en": "Master's coursework, MIAX at Instituto BME",
+    "es": "Trabajos del máster MIAX, Instituto BME"
+   },
+   "projects": [
+    {
+     "name": {
+      "en": "Fair credit",
+      "es": "Crédito justo"
+     },
+     "short": {
+      "en": "Credit scoring with a smaller gender gap",
+      "es": "Scoring de crédito con menos brecha de género"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/fair-credit/1.webp",
+       "w": 1133,
+       "h": 613,
+       "caption": {
+        "en": "As the fairness penalty grows, the gender gap falls while AUC barely moves",
+        "es": "Al subir la penalización de equidad, la brecha de género cae y el AUC apenas se mueve"
+       }
+      },
+      {
+       "src": "/img/p/fair-credit/3.webp",
+       "w": 1244,
+       "h": 819,
+       "caption": {
+        "en": "Pareto front from Keras Tuner: accuracy against fairness",
+        "es": "Frontera de Pareto de Keras Tuner: precisión frente a equidad"
+       }
+      },
+      {
+       "src": "/img/p/fair-credit/2.webp",
+       "w": 1187,
+       "h": 1364,
+       "caption": {
+        "en": "A custom trainable layer that computes the debt ratio inside the network",
+        "es": "Una capa entrenable propia que calcula el ratio de endeudamiento dentro de la red"
+       }
+      }
+     ],
+     "say": {
+      "en": "A neural network for credit risk that cuts the gender gap by 72% while losing only 0.6 points of AUC, and estimates its own uncertainty. Team of 3.",
+      "es": "Una red neuronal de riesgo de crédito que reduce un 72 % la brecha de género perdiendo solo 0,6 puntos de AUC, y que estima su propia incertidumbre. Equipo de 3."
+     },
+     "how": {
+      "en": "Keras on Home Credit data, with MC Dropout for uncertainty.",
+      "es": "Keras sobre los datos de Home Credit, con MC Dropout para la incertidumbre."
+     },
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/fair-credit-risk-nn",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "fair-credit"
+    },
+    {
+     "name": {
+      "en": "Explainable credit",
+      "es": "Crédito explicable"
+     },
+     "short": {
+      "en": "Credit decisions audited with SHAP and LIME",
+      "es": "Decisiones de crédito auditadas con SHAP y LIME"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/xai-credit/3.webp",
+       "w": 1027,
+       "h": 637,
+       "caption": {
+        "en": "Expected cost against the decision threshold when a bad loan costs ten times more",
+        "es": "Coste esperado según el umbral de decisión cuando un mal préstamo cuesta diez veces más"
+       }
+      },
+      {
+       "src": "/img/p/xai-credit/1.webp",
+       "w": 1600,
+       "h": 1251,
+       "caption": {
+        "en": "Global SHAP importance in the 10:1 cost scenario",
+        "es": "Importancia global SHAP en el escenario de coste 10:1"
+       }
+      },
+      {
+       "src": "/img/p/xai-credit/2.webp",
+       "w": 1274,
+       "h": 850,
+       "caption": {
+        "en": "LIME and SHAP on a denied application: same direction, but LIME changes between runs",
+        "es": "LIME y SHAP sobre una solicitud denegada: misma dirección, pero LIME cambia entre ejecuciones"
+       }
+      },
+      {
+       "src": "/img/p/xai-credit/4.webp",
+       "w": 1600,
+       "h": 692,
+       "caption": {
+        "en": "Partial dependence of age and 30–59-day arrears, in both scenarios",
+        "es": "Dependencia parcial de la edad y los impagos de 30 a 59 días, en los dos escenarios"
+       }
+      }
+     ],
+     "say": {
+      "en": "A credit-approval model under two cost scenarios, audited with SHAP, LIME, counterfactuals and a surrogate tree. When approving a bad payer costs ten times more than turning down a good one, choosing the threshold by expected cost cut the cost by 51%. XGBoost won in both scenarios. Team of 3.",
+      "es": "Un modelo de concesión de crédito con dos escenarios de coste, auditado con SHAP, LIME, contrafactuales y un árbol subrogado. Cuando conceder a un moroso cuesta diez veces más que rechazar a un buen cliente, elegir el umbral por coste esperado redujo el coste un 51 %. XGBoost ganó en los dos escenarios. Equipo de 3."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/xai-modelos-financieros",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "xai-credit"
+    },
+    {
+     "name": {
+      "en": "Synthetic data",
+      "es": "Datos sintéticos"
+     },
+     "short": {
+      "en": "Seven generators for scarce crisis data",
+      "es": "Siete generadores para datos de crisis escasos"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/synthetic-data/2.webp",
+       "w": 1600,
+       "h": 666,
+       "caption": {
+        "en": "Fidelity against usefulness: the most faithful generator is not the most useful",
+        "es": "Fidelidad frente a utilidad: el generador más fiel no es el más útil"
+       }
+      },
+      {
+       "src": "/img/p/synthetic-data/1.webp",
+       "w": 1600,
+       "h": 542,
+       "caption": {
+        "en": "Real and synthetic crisis windows from the seven generators, in PCA space",
+        "es": "Ventanas de crisis reales y sintéticas de los siete generadores, en el espacio PCA"
+       }
+      },
+      {
+       "src": "/img/p/synthetic-data/4.webp",
+       "w": 1600,
+       "h": 609,
+       "caption": {
+        "en": "Crisis recall by amount of real data and share of synthetic data",
+        "es": "Recall de crisis según la cantidad de datos reales y la proporción de sintéticos"
+       }
+      }
+     ],
+     "say": {
+      "en": "Can synthetic data help when real crises are rare? Seven generators, from added noise to diffusion, and 570 training runs. Synthetic data lifts balanced accuracy from 0.575 to 0.612, but the gain sits inside the noise band, and the most faithful generator came seventh in usefulness. Team of 3.",
+      "es": "¿Ayudan los datos sintéticos cuando las crisis reales son raras? Siete generadores, del ruido añadido a la difusión, y 570 entrenamientos. Los sintéticos suben la balanced accuracy de 0,575 a 0,612, pero la mejora cae dentro del ruido, y el generador más fiel quedó séptimo en utilidad. Equipo de 3."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/synthetic-financial-data",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "synthetic-data"
+    },
+    {
+     "name": {
+      "en": "Equity arbitrage",
+      "es": "Arbitraje en renta variable"
+     },
+     "short": {
+      "en": "Order books from four European venues",
+      "es": "Libros de órdenes de cuatro mercados europeos"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/equity-arbitrage/1.webp",
+       "w": 1600,
+       "h": 952,
+       "caption": {
+        "en": "Profit as a share of the zero-latency case: below break-even within a few milliseconds",
+        "es": "Beneficio como porcentaje del caso sin latencia: por debajo del punto muerto en pocos milisegundos"
+       }
+      },
+      {
+       "src": "/img/p/equity-arbitrage/2.webp",
+       "w": 989,
+       "h": 590,
+       "caption": {
+        "en": "Profit or loss in euros against latency",
+        "es": "Beneficio o pérdida en euros según la latencia"
+       }
+      }
+     ],
+     "say": {
+      "en": "It merges the order books of BME, Aquis, Cboe and Turquoise into one consolidated tape and looks for prices that cross between venues. It found 2,719 opportunities, and showed that a few milliseconds of latency are enough to wipe out the profit.",
+      "es": "Une los libros de órdenes de BME, Aquis, Cboe y Turquoise en una cinta consolidada y busca precios que se cruzan entre mercados. Encontró 2.719 oportunidades y demostró que bastan unos pocos milisegundos de latencia para que desaparezca el beneficio."
+     },
+     "how": {
+      "en": "pandas, with a latency simulator.",
+      "es": "pandas, con un simulador de latencia."
+     },
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/equity-arbitrage-oportunities",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "equity-arbitrage"
+    },
+    {
+     "name": {
+      "en": "S&amp;P 500 forecasting",
+      "es": "Predicción del S&amp;P 500"
+     },
+     "short": {
+      "en": "256 trainings, none beat a linear model",
+      "es": "256 entrenamientos, ninguno bate a uno lineal"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/nn-sp500/1.webp",
+       "w": 1600,
+       "h": 993,
+       "caption": {
+        "en": "Best test error for each input and output window: identical rows, so the input window doesn't matter",
+        "es": "Mejor error de test para cada ventana de entrada y de salida: filas idénticas, así que la ventana de entrada no importa"
+       }
+      },
+      {
+       "src": "/img/p/nn-sp500/ffd.webp",
+       "w": 689,
+       "h": 390,
+       "caption": {
+        "en": "Sweep of the fractional differencing order: the lowest test error is at d = 0.2",
+        "es": "Barrido del orden de diferenciación fraccional: el menor error de test aparece con d = 0,2"
+       }
+      },
+      {
+       "src": "/img/p/nn-sp500/2.webp",
+       "w": 1600,
+       "h": 609,
+       "caption": {
+        "en": "2025 cumulative return: the network's portfolio against equal-weight buy and hold",
+        "es": "Rentabilidad acumulada en 2025: la cartera de la red frente a comprar y mantener a partes iguales"
+       }
+      }
+     ],
+     "say": {
+      "en": "Sixteen architectures, dense, recurrent, convolutional and hybrid, predicting the returns of 23 S&amp;P 500 stocks: 256 trainings in all. None beat a linear regression, and the write-up explains why: the returns are close to noise, so every network ends up predicting the mean. Team of 3.",
+      "es": "Dieciséis arquitecturas, densas, recurrentes, convolucionales e híbridas, para predecir los retornos de 23 valores del S&amp;P 500: 256 entrenamientos en total. Ninguna bate a una regresión lineal, y el trabajo explica por qué: los retornos se parecen mucho al ruido, así que todas las redes acaban prediciendo la media. Equipo de 3."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/neural-networks-workshop",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "nn-sp500"
+    },
+    {
+     "name": {
+      "en": "Stress testing and VaR",
+      "es": "Stress testing y VaR"
+     },
+     "short": {
+      "en": "Crisis scenarios for an 18-asset portfolio",
+      "es": "Escenarios de crisis para una cartera de 18 activos"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/risk-var/1.webp",
+       "w": 1589,
+       "h": 590,
+       "caption": {
+        "en": "S&amp;P 500 coloured by regime, crisis or calm",
+        "es": "El S&amp;P 500 coloreado por régimen, crisis o calma"
+       }
+      },
+      {
+       "src": "/img/p/risk-var/3.webp",
+       "w": 936,
+       "h": 790,
+       "caption": {
+        "en": "How much each asset's volatility rises in a crisis",
+        "es": "Cuánto sube la volatilidad de cada activo en crisis"
+       }
+      },
+      {
+       "src": "/img/p/risk-var/4.webp",
+       "w": 1189,
+       "h": 590,
+       "caption": {
+        "en": "Pairwise correlations by regime",
+        "es": "Correlaciones entre pares de activos por régimen"
+       }
+      },
+      {
+       "src": "/img/p/risk-var/2.webp",
+       "w": 1189,
+       "h": 590,
+       "caption": {
+        "en": "99% VaR across the Monte Carlo runs, against the real VaR",
+        "es": "VaR al 99 % en las simulaciones de Monte Carlo, frente al VaR real"
+       }
+      }
+     ],
+     "say": {
+      "en": "A two-state hidden Markov model separates calm from crisis over 2006–2026, copulas model how 18 assets move together, and 10,000 Monte Carlo paths of 126 days give VaR and CVaR for each stress scenario. In a crisis, volatility rises two to four times and correlations go up, just when diversification is needed most.",
+      "es": "Un modelo oculto de Markov de dos estados separa calma y crisis entre 2006 y 2026, las cópulas modelan cómo se mueven juntos 18 activos y 10.000 trayectorias de Monte Carlo de 126 días dan el VaR y el CVaR de cada escenario de estrés. En crisis, la volatilidad se multiplica por entre dos y cuatro y las correlaciones suben, justo cuando más falta hace diversificar."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/risk-management-var",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "risk-var"
+    },
+    {
+     "name": {
+      "en": "Options on SPY",
+      "es": "Opciones sobre SPY"
+     },
+     "short": {
+      "en": "A long straddle, with and without delta hedging",
+      "es": "Un long straddle, con y sin cobertura delta"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/derivatives/4.webp",
+       "w": 1600,
+       "h": 793,
+       "caption": {
+        "en": "Cumulative P&amp;L: the straddle unhedged and delta-hedged",
+        "es": "P&amp;L acumulado: el straddle sin cubrir y con cobertura delta"
+       }
+      },
+      {
+       "src": "/img/p/derivatives/1.webp",
+       "w": 1600,
+       "h": 908,
+       "caption": {
+        "en": "Long straddle payoff on SPY, with its break-even points",
+        "es": "Perfil de pagos del long straddle sobre SPY, con sus puntos muertos"
+       }
+      },
+      {
+       "src": "/img/p/derivatives/3.webp",
+       "w": 1600,
+       "h": 1197,
+       "caption": {
+        "en": "Sensitivity to the strike: premium, delta, gamma and break-even range",
+        "es": "Sensibilidad al strike: prima, delta, gamma y rango hasta el punto muerto"
+       }
+      },
+      {
+       "src": "/img/p/derivatives/2.webp",
+       "w": 1600,
+       "h": 1398,
+       "caption": {
+        "en": "Option price and Greeks through to expiry",
+        "es": "Precio de la opción y griegas hasta el vencimiento"
+       }
+      }
+     ],
+     "say": {
+      "en": "Black-Scholes pricing, Greeks and implied volatility on SPY options, used to build a long straddle and a version hedged every day. The hedge turns the straddle from a bet on direction into a pure bet on volatility. It also compares sending a combo order with legging in.",
+      "es": "Valoración con Black-Scholes, griegas y volatilidad implícita sobre opciones de SPY, para montar un long straddle y una versión cubierta cada día. La cobertura convierte el straddle de una apuesta de dirección en una apuesta pura sobre volatilidad. También compara enviar la orden combinada con meter las patas por separado."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/derivatives-pricing",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "derivatives"
+    },
+    {
+     "name": {
+      "en": "Momentum backtest",
+      "es": "Backtest de momentum"
+     },
+     "short": {
+      "en": "The 20 strongest S&amp;P 500 stocks, monthly",
+      "es": "Los 20 valores más fuertes del S&amp;P 500, cada mes"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/backtesting/1.webp",
+       "w": 1389,
+       "h": 590,
+       "caption": {
+        "en": "Cumulative return of the strategy against SPY",
+        "es": "Rentabilidad acumulada de la estrategia frente a SPY"
+       }
+      },
+      {
+       "src": "/img/p/backtesting/2.webp",
+       "w": 1389,
+       "h": 590,
+       "caption": {
+        "en": "Annual return of 25 million random portfolios, with the strategy in red",
+        "es": "Rentabilidad anual de 25 millones de carteras aleatorias, con la estrategia en rojo"
+       }
+      },
+      {
+       "src": "/img/p/backtesting/4.webp",
+       "w": 989,
+       "h": 790,
+       "caption": {
+        "en": "Quarterly returns of the strategy against SPY",
+        "es": "Rentabilidades trimestrales de la estrategia frente a SPY"
+       }
+      },
+      {
+       "src": "/img/p/backtesting/3.webp",
+       "w": 1389,
+       "h": 989,
+       "caption": {
+        "en": "Eligible universe over time and range of momentum scores",
+        "es": "Universo elegible a lo largo del tiempo y rango de puntuaciones de momentum"
+       }
+      }
+     ],
+     "say": {
+      "en": "Each month it buys the 20 S&amp;P 500 stocks with the strongest 6- and 12-month momentum, from 2015 on, paying 0.23% per trade and handling stocks that get delisted. Its 10.93% a year beat every one of 25 million random portfolios, which averaged 4.54%.",
+      "es": "Cada mes compra los 20 valores del S&amp;P 500 con más momentum a 6 y 12 meses, desde 2015, pagando un 0,23 % por operación y gestionando los valores que dejan de cotizar. Su 10,93 % anual batió a los 25 millones de carteras aleatorias, que de media hicieron un 4,54 %."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/backtesting-framework",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "backtesting"
+    },
+    {
+     "name": {
+      "en": "Causal graphs",
+      "es": "Grafos causales"
+     },
+     "short": {
+      "en": "Correlation against causation, by sector",
+      "es": "Correlación frente a causalidad, por sectores"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/causal-graphs/1.webp",
+       "w": 1189,
+       "h": 989,
+       "caption": {
+        "en": "Causal graphs between sectors in four market periods, with the PC algorithm",
+        "es": "Grafos causales entre sectores en cuatro periodos de mercado, con el algoritmo PC"
+       }
+      },
+      {
+       "src": "/img/p/causal-graphs/4.webp",
+       "w": 585,
+       "h": 490,
+       "caption": {
+        "en": "Sector correlations, 2000–2024: symmetric, with no direction",
+        "es": "Correlaciones entre sectores, 2000–2024: simétricas y sin dirección"
+       }
+      },
+      {
+       "src": "/img/p/causal-graphs/2.webp",
+       "w": 1289,
+       "h": 490,
+       "caption": {
+        "en": "Granger p-values and a lagged PC graph",
+        "es": "p-valores de Granger y grafo PC con retardo"
+       }
+      },
+      {
+       "src": "/img/p/causal-graphs/3.webp",
+       "w": 536,
+       "h": 290,
+       "caption": {
+        "en": "The factor mirage: what controlling for a collider does to an estimate",
+        "es": "El espejismo de factores: lo que le pasa a una estimación al controlar por un colisionador"
+       }
+      }
+     ],
+     "say": {
+      "en": "Learns causal graphs between six US sector ETFs from 2000 to 2024 with PC, Hill Climbing, LiNGAM and Granger tests. The graph changes between calm and crisis periods, and a worked example shows how controlling for the wrong variable distorts the result.",
+      "es": "Aprende grafos causales entre seis ETF sectoriales de EE. UU. de 2000 a 2024 con PC, Hill Climbing, LiNGAM y tests de Granger. El grafo cambia entre periodos de calma y de crisis, y un ejemplo muestra cómo controlar por la variable equivocada distorsiona el resultado."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/causal-graphs-finance",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "causal-graphs"
+    },
+    {
+     "name": {
+      "en": "Portfolio optimisation",
+      "es": "Optimización de carteras"
+     },
+     "short": {
+      "en": "Markowitz and asset selection for a Sharpe contest",
+      "es": "Markowitz y selección de activos para un concurso de Sharpe"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/portfolio-mgmt/2.webp",
+       "w": 1600,
+       "h": 1062,
+       "caption": {
+        "en": "Efficient frontier with the maximum-Sharpe portfolio",
+        "es": "Frontera eficiente con la cartera de Sharpe máximo"
+       }
+      },
+      {
+       "src": "/img/p/portfolio-mgmt/1.webp",
+       "w": 1600,
+       "h": 593,
+       "caption": {
+        "en": "Total risk against number of assets, split into specific and systematic risk",
+        "es": "Riesgo total según el número de activos, separado en riesgo específico y sistemático"
+       }
+      },
+      {
+       "src": "/img/p/portfolio-mgmt/3.webp",
+       "w": 1600,
+       "h": 990,
+       "caption": {
+        "en": "Weights of the optimised portfolios by size",
+        "es": "Pesos de las carteras optimizadas según su tamaño"
+       }
+      },
+      {
+       "src": "/img/p/portfolio-mgmt/4.webp",
+       "w": 1600,
+       "h": 791,
+       "caption": {
+        "en": "The 15 assets with the lowest beta",
+        "es": "Los 15 activos con menor beta"
+       }
+      }
+     ],
+     "say": {
+      "en": "Diversification analysis, Markowitz optimisation and asset selection over 50 anonymised assets, for a class competition scored on annualised Sharpe ratio. The maximum-Sharpe portfolio reached 1.16 on the training data.",
+      "es": "Análisis de diversificación, optimización de Markowitz y selección de activos sobre 50 activos anonimizados, para una competición de clase puntuada por el ratio de Sharpe anualizado. La cartera de Sharpe máximo llegó a 1,16 con los datos de entrenamiento."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/portfolio-management",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "portfolio-mgmt"
+    },
+    {
+     "name": {
+      "en": "Fund of funds",
+      "es": "Fondo de fondos"
+     },
+     "short": {
+      "en": "A portfolio of funds tilted towards Asia",
+      "es": "Una cartera de fondos con sesgo a Asia"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/fund-of-funds/1.webp",
+       "w": 1384,
+       "h": 983,
+       "caption": {
+        "en": "Cumulative return against an Asia ETF benchmark, with drawdown",
+        "es": "Rentabilidad acumulada frente a un ETF de Asia como referencia, con la caída máxima"
+       }
+      },
+      {
+       "src": "/img/p/fund-of-funds/2.webp",
+       "w": 984,
+       "h": 684,
+       "caption": {
+        "en": "K-means clusters of funds in PCA space",
+        "es": "Clústeres K-means de fondos en el espacio PCA"
+       }
+      },
+      {
+       "src": "/img/p/fund-of-funds/3.webp",
+       "w": 1584,
+       "h": 684,
+       "caption": {
+        "en": "Hierarchical clustering of the funds",
+        "es": "Agrupación jerárquica de los fondos"
+       }
+      },
+      {
+       "src": "/img/p/fund-of-funds/4.webp",
+       "w": 575,
+       "h": 484,
+       "caption": {
+        "en": "Correlation between the funds' Fama-French factor betas",
+        "es": "Correlación entre las betas de los fondos a los factores de Fama-French"
+       }
+      }
+     ],
+     "say": {
+      "en": "From daily fund prices and Fama-French factors to a portfolio with 70% in Asia, 30% to diversify and no fund above 5%. Funds are grouped by clustering before they are picked, and the result is measured against an Asia ETF.",
+      "es": "De los valores liquidativos diarios y los factores de Fama-French a una cartera con un 70 % en Asia, un 30 % para diversificar y ningún fondo por encima del 5 %. Los fondos se agrupan con clustering antes de elegirlos, y el resultado se mide frente a un ETF de Asia."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/supervised-learning-finance",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "fund-of-funds"
+    },
+    {
+     "name": {
+      "en": "Data preprocessing",
+      "es": "Preprocesado de datos"
+     },
+     "short": {
+      "en": "López de Prado's methods, step by step",
+      "es": "Los métodos de López de Prado, paso a paso"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/data-preprocessing/4.webp",
+       "w": 1387,
+       "h": 616,
+       "caption": {
+        "en": "The same close series as time, tick, volume and dollar bars",
+        "es": "La misma serie de cierres en barras de tiempo, de ticks, de volumen y de dólares"
+       }
+      },
+      {
+       "src": "/img/p/data-preprocessing/2.webp",
+       "w": 1389,
+       "h": 1000,
+       "caption": {
+        "en": "Fractional differentiation by degree d: stationary from d = 0.4",
+        "es": "Diferenciación fraccional según el grado d: estacionaria desde d = 0,4"
+       }
+      },
+      {
+       "src": "/img/p/data-preprocessing/3.webp",
+       "w": 1389,
+       "h": 886,
+       "caption": {
+        "en": "Triple-barrier labels for three thresholds",
+        "es": "Etiquetas de triple barrera con tres umbrales"
+       }
+      },
+      {
+       "src": "/img/p/data-preprocessing/1.webp",
+       "w": 1104,
+       "h": 1600,
+       "caption": {
+        "en": "Purged cross-validation with an embargo, fold by fold",
+        "es": "Validación cruzada purgada con embargo, pliegue a pliegue"
+       }
+      }
+     ],
+     "say": {
+      "en": "Tick, volume and dollar bars, fractional differentiation, covariance cleaning with Marchenko–Pastur, triple-barrier labels and splits that respect time. Dollar bars were chosen as the base, and the series turns stationary from d = 0.4 while keeping part of its memory. Done in a pair.",
+      "es": "Barras de ticks, de volumen y de dólares, diferenciación fraccional, limpieza de la covarianza con Marchenko–Pastur, etiquetas de triple barrera y particiones que respetan el tiempo. Se eligieron las barras de dólares como base, y la serie se vuelve estacionaria desde d = 0,4 conservando parte de su memoria. Hecho en pareja."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/financial-data-preprocessing",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "data-preprocessing"
+    },
+    {
+     "name": {
+      "en": "Mixed-input network",
+      "es": "Red con entradas mixtas"
+     },
+     "short": {
+      "en": "Daily sales for nine Rossmann stores",
+      "es": "Ventas diarias de nueve tiendas Rossmann"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/heterogeneous-nn/2.webp",
+       "w": 1489,
+       "h": 984,
+       "caption": {
+        "en": "Predicted against real sales per store, January to July 2015",
+        "es": "Ventas previstas frente a reales por tienda, de enero a julio de 2015"
+       }
+      },
+      {
+       "src": "/img/p/heterogeneous-nn/1.webp",
+       "w": 889,
+       "h": 690,
+       "caption": {
+        "en": "The store embeddings the network learned, in 2D",
+        "es": "Los embeddings de tienda que aprendió la red, en 2D"
+       }
+      }
+     ],
+     "say": {
+      "en": "One LSTM branch reads the last 30 open days and an embedding branch reads each store's fixed traits, such as type, range and competition. On the 2015 test period, R² was above 0.6 in seven of the nine stores and negative in one. Team of 3.",
+      "es": "Una rama LSTM lee los últimos 30 días de apertura y otra de embeddings lee los rasgos fijos de cada tienda, como el tipo, el surtido o la competencia. En el periodo de test de 2015, el R² pasó de 0,6 en siete de las nueve tiendas y fue negativo en una. Equipo de 3."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/heterogeneous-inputs-nn",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "heterogeneous-nn"
+    },
+    {
+     "name": {
+      "en": "Forecasting hackathon",
+      "es": "Hackathon de predicción"
+     },
+     "short": {
+      "en": "252 days ahead for six indices",
+      "es": "252 días hacia delante en seis índices"
+     },
+     "status": null,
+     "images": [
+      {
+       "svg": "<svg class=\"dg\" preserveaspectratio=\"xMinYMin meet\" role=\"img\" viewbox=\"0 0 520 250\">\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"150\" x=\"1\" y=\"1\"></rect>\n<text x=\"14\" y=\"28\"><tspan lang=\"en\">Recent window</tspan><tspan lang=\"es\">Ventana reciente</tspan></text>\n<text class=\"s\" x=\"14\" y=\"48\"><tspan lang=\"en\">last days of one index</tspan><tspan lang=\"es\">días recientes</tspan></text>\n<path class=\"l\" d=\"M152,32 H190\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"130\" x=\"194\" y=\"1\"></rect>\n<text x=\"207\" y=\"28\"><tspan lang=\"en\">Model</tspan><tspan lang=\"es\">Modelo</tspan></text>\n<text class=\"s\" x=\"207\" y=\"48\"><tspan lang=\"en\">baseline or LSTM</tspan><tspan lang=\"es\">baseline o LSTM</tspan></text>\n<path class=\"l\" d=\"M325,32 H363\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"150\" x=\"367\" y=\"1\"></rect>\n<text x=\"380\" y=\"28\"><tspan lang=\"en\">Next day</tspan><tspan lang=\"es\">Día siguiente</tspan></text>\n<text class=\"s\" x=\"380\" y=\"48\"><tspan lang=\"en\">one predicted value</tspan><tspan lang=\"es\">un valor previsto</tspan></text>\n<path class=\"l\" d=\"M442,64 V110 H76 V68\" marker-end=\"url(#ah)\"></path>\n<text class=\"s\" x=\"120\" y=\"102\"><tspan lang=\"en\">the prediction joins the window, which slides one day</tspan><tspan lang=\"es\">la predicción entra en la ventana, que avanza un día</tspan></text>\n<text x=\"3\" y=\"158\"><tspan lang=\"en\">Repeated 252 times for each of the 6 indices</tspan><tspan lang=\"es\">Se repite 252 veces en cada uno de los 6 índices</tspan></text>\n<text class=\"s\" x=\"3\" y=\"182\"><tspan lang=\"en\">Errors compound, because no real data comes in after day one.</tspan><tspan lang=\"es\">Los errores se acumulan: tras el primer día no entra ningún dato real.</tspan></text>\n<text class=\"s\" x=\"3\" y=\"202\"><tspan lang=\"en\">Score: average RMSE over the six indices.</tspan><tspan lang=\"es\">Puntuación: RMSE medio de los seis índices.</tspan></text>\n</svg>",
+       "caption": {
+        "en": "The task as a diagram: each prediction feeds the next one",
+        "es": "La tarea en diagrama: cada predicción alimenta la siguiente"
+       }
+      },
+      {
+       "src": "/img/p/nn-competition/corr.webp",
+       "w": 926,
+       "h": 490,
+       "caption": {
+        "en": "Correlation of index D with the other indices by lag, from 0 to 30 days",
+        "es": "Correlación del índice D con los demás índices según el desfase, de 0 a 30 días"
+       }
+      },
+      {
+       "src": "/img/p/nn-competition/3.webp",
+       "w": 989,
+       "h": 390,
+       "caption": {
+        "en": "Error of the flat, drift and random-walk baselines on each index",
+        "es": "Error de los baselines plano, con deriva y paseo aleatorio en cada índice"
+       }
+      },
+      {
+       "src": "/img/p/nn-competition/2.webp",
+       "w": 1486,
+       "h": 711,
+       "caption": {
+        "en": "Raw prices of the six competition indices",
+        "es": "Precios en bruto de los seis índices de la competición"
+       }
+      }
+     ],
+     "say": {
+      "en": "A team hackathon: forecast six indices day by day for 252 steps, each prediction feeding the next, scored by average RMSE. We set flat, drift and random-walk baselines first and spent the network effort on the indices that needed it. Team of 3.",
+      "es": "Un hackathon por equipos: predecir seis índices día a día durante 252 pasos, en los que cada predicción alimenta la siguiente, con el RMSE medio como nota. Primero fijamos baselines plano, con deriva y de paseo aleatorio, y dedicamos las redes a los índices que lo necesitaban. Equipo de 3."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/nn-competition-miax",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "nn-competition"
+    },
+    {
+     "name": {
+      "en": "Bond portfolio",
+      "es": "Cartera de bonos"
+     },
+     "short": {
+      "en": "Ratings, default risk and concentration",
+      "es": "Ratings, riesgo de impago y concentración"
+     },
+     "status": null,
+     "images": [
+      {
+       "svg": "<svg class=\"dg\" preserveaspectratio=\"xMinYMin meet\" role=\"img\" viewbox=\"0 0 520 250\">\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"150\" x=\"1\" y=\"94\"></rect>\n<text x=\"14\" y=\"121\"><tspan lang=\"en\">Bond portfolio</tspan><tspan lang=\"es\">Cartera de bonos</tspan></text>\n<text class=\"s\" x=\"14\" y=\"141\"><tspan lang=\"en\">one row per bond</tspan><tspan lang=\"es\">una fila por bono</tspan></text>\n<path class=\"l\" d=\"M152,125 H186 V32 H222\" marker-end=\"url(#ah)\"></path>\n<path class=\"l\" d=\"M186,125 H222\" marker-end=\"url(#ah)\"></path>\n<path class=\"l\" d=\"M186,125 V218 H222\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"292\" x=\"226\" y=\"1\"></rect>\n<text x=\"239\" y=\"28\"><tspan lang=\"en\">Credit quality</tspan><tspan lang=\"es\">Calidad crediticia</tspan></text>\n<text class=\"s\" x=\"239\" y=\"48\"><tspan lang=\"en\">rating mix, investment grade or high yield</tspan><tspan lang=\"es\">rating, grado de inversión o high yield</tspan></text>\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"292\" x=\"226\" y=\"94\"></rect>\n<text x=\"239\" y=\"121\"><tspan lang=\"en\">Default risk</tspan><tspan lang=\"es\">Riesgo de impago</tspan></text>\n<text class=\"s\" x=\"239\" y=\"141\"><tspan lang=\"en\">one-year default probability by rating</tspan><tspan lang=\"es\">probabilidad de impago a un año por rating</tspan></text>\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"292\" x=\"226\" y=\"187\"></rect>\n<text x=\"239\" y=\"214\"><tspan lang=\"en\">Concentration</tspan><tspan lang=\"es\">Concentración</tspan></text>\n<text class=\"s\" x=\"239\" y=\"234\"><tspan lang=\"en\">by sector and by issuer</tspan><tspan lang=\"es\">por sector y por emisor</tspan></text>\n</svg>",
+       "caption": {
+        "en": "What the analysis looks at, as a diagram; the original notebook charts follow",
+        "es": "Qué mira el análisis, en diagrama; después vienen los gráficos originales del notebook"
+       }
+      },
+      {
+       "src": "/img/p/fixed-income/1.webp",
+       "w": 1589,
+       "h": 1189,
+       "caption": {
+        "en": "Notebook charts: ratings, investment grade against high yield, and default probability",
+        "es": "Gráficos del notebook: ratings, grado de inversión frente a high yield y probabilidad de impago"
+       }
+      },
+      {
+       "src": "/img/p/fixed-income/2.webp",
+       "w": 1590,
+       "h": 1189,
+       "caption": {
+        "en": "Notebook charts: top sectors and issuers, and issuer concentration",
+        "es": "Gráficos del notebook: principales sectores y emisores, y concentración por emisor"
+       }
+      }
+     ],
+     "say": {
+      "en": "The first fixed-income exercise: reading a bond portfolio by rating, investment grade against high yield, one-year default probability, and how concentrated it is by sector and issuer.",
+      "es": "El primer ejercicio de renta fija: leer una cartera de bonos por rating, grado de inversión frente a high yield, probabilidad de impago a un año y concentración por sector y emisor."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/fixed-income-analysis",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "fixed-income"
+    },
+    {
+     "name": {
+      "en": "Python fundamentals",
+      "es": "Fundamentos de Python"
+     },
+     "short": {
+      "en": "A toolkit for market data",
+      "es": "Un kit para datos de mercado"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/python-fundamentals/1.webp",
+       "w": 1037,
+       "h": 824,
+       "caption": {
+        "en": "Simulated efficient frontier coloured by Sharpe ratio",
+        "es": "Frontera eficiente simulada, coloreada por ratio de Sharpe"
+       }
+      },
+      {
+       "src": "/img/p/python-fundamentals/3.webp",
+       "w": 1600,
+       "h": 1064,
+       "caption": {
+        "en": "Return against volatility for ten hypothetical portfolios",
+        "es": "Rentabilidad frente a volatilidad de diez carteras hipotéticas"
+       }
+      },
+      {
+       "src": "/img/p/python-fundamentals/2.webp",
+       "w": 1600,
+       "h": 907,
+       "caption": {
+        "en": "Sharpe ratio of the ten portfolios",
+        "es": "Ratio de Sharpe de las diez carteras"
+       }
+      },
+      {
+       "src": "/img/p/python-fundamentals/4.webp",
+       "w": 1600,
+       "h": 1220,
+       "caption": {
+        "en": "How the weights are spread across the portfolios",
+        "es": "Cómo se reparten los pesos en cada cartera"
+       }
+      }
+     ],
+     "say": {
+      "en": "The master's first block: it downloads prices from Yahoo Finance or Alpha Vantage, cleans them into data classes, runs Monte Carlo simulations and writes the reports, shown here on ten hypothetical portfolios.",
+      "es": "El primer bloque del máster: descarga precios de Yahoo Finance o Alpha Vantage, los limpia en clases de datos, ejecuta simulaciones de Monte Carlo y genera los informes, aquí sobre diez carteras hipotéticas."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/python-fundamentals-miax",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "python-fundamentals"
+    },
+    {
+     "name": {
+      "en": "Fraud detection",
+      "es": "Detección de fraude"
+     },
+     "short": {
+      "en": "Scoring bank transactions for fraud",
+      "es": "Puntuar el fraude en transacciones bancarias"
+     },
+     "status": {
+      "en": "In progress",
+      "es": "En curso"
+     },
+     "images": [
+      {
+       "src": "/img/p/fraud-detection/1.webp",
+       "w": 781,
+       "h": 443,
+       "caption": {
+        "en": "Mahalanobis distance to normal transactions, by class",
+        "es": "Distancia de Mahalanobis a las transacciones normales, por clase"
+       }
+      },
+      {
+       "src": "/img/p/fraud-detection/3.webp",
+       "w": 699,
+       "h": 434,
+       "caption": {
+        "en": "PCA fitted on normal transactions, with fraud highlighted",
+        "es": "PCA ajustado sobre transacciones normales, con el fraude destacado"
+       }
+      },
+      {
+       "src": "/img/p/fraud-detection/2.webp",
+       "w": 632,
+       "h": 650,
+       "caption": {
+        "en": "How well each variable separates fraud on its own (AUPR)",
+        "es": "Cuánto separa el fraude cada variable por sí sola (AUPR)"
+       }
+      }
+     ],
+     "say": {
+      "en": "170,884 transactions, 0.17% of them fraud, scored by area under the precision-recall curve. So far it reaches 0.696 against the 0.567 starting baseline; the final version is due on 29 October. Team of 3.",
+      "es": "170.884 transacciones, un 0,17 % de ellas fraudulentas, evaluadas por el área bajo la curva precisión-recall. Por ahora llega a 0,696 frente al 0,567 de partida; la versión final se entrega el 29 de octubre. Equipo de 3."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/fraud-detection-banking",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "fraud-detection"
+    }
+   ]
+  },
+  {
+   "id": "webs",
+   "title": {
+    "en": "Websites for companies",
+    "es": "Webs para empresas"
+   },
+   "projects": [
+    {
+     "name": {
+      "en": "Triarii Consulting",
+      "es": "Triarii Consulting"
+     },
+     "short": {
+      "en": "My AI and finance consultancy",
+      "es": "Mi consultora de IA y finanzas"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/web-triarii/1.webp",
+       "w": 1440,
+       "h": 900,
+       "caption": {
+        "en": "Home page on desktop",
+        "es": "Portada en escritorio"
+       }
+      },
+      {
+       "src": "/img/p/web-triarii/2.webp",
+       "w": 739,
+       "h": 1600,
+       "caption": {
+        "en": "Home page on a phone",
+        "es": "Portada en el móvil"
+       }
+      }
+     ],
+     "say": {
+      "en": "The website of my own consultancy in Madrid, designed and built by me.",
+      "es": "La web de mi propia consultora en Madrid, diseñada y hecha por mí."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://triariiconsulting.es",
+       "label": {
+        "en": "Visit triariiconsulting.es",
+        "es": "Ver triariiconsulting.es"
+       }
+      }
+     ],
+     "slug": "web-triarii"
+    },
+    {
+     "name": {
+      "en": "Albujón Energy",
+      "es": "Albujón Energy"
+     },
+     "short": {
+      "en": "A solar energy company",
+      "es": "Una empresa fotovoltaica"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/web-albujon/1.webp",
+       "w": 1440,
+       "h": 900,
+       "caption": {
+        "en": "Home page on desktop",
+        "es": "Portada en escritorio"
+       }
+      },
+      {
+       "src": "/img/p/web-albujon/2.webp",
+       "w": 739,
+       "h": 1600,
+       "caption": {
+        "en": "Home page on a phone",
+        "es": "Portada en el móvil"
+       }
+      }
+     ],
+     "say": {
+      "en": "The corporate website of the solar company where I lead AI and administration.",
+      "es": "La web corporativa de la empresa fotovoltaica en la que llevo la IA y la administración."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://albujon.es",
+       "label": {
+        "en": "Visit albujon.es",
+        "es": "Ver albujon.es"
+       }
+      }
+     ],
+     "slug": "web-albujon"
+    },
+    {
+     "name": {
+      "en": "ArcaUnion",
+      "es": "ArcaUnion"
+     },
+     "short": {
+      "en": "A holding company in Tenerife",
+      "es": "Una sociedad holding en Tenerife"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/web-arcaunion/1.webp",
+       "w": 1440,
+       "h": 897,
+       "caption": {
+        "en": "Home page on desktop",
+        "es": "Portada en escritorio"
+       }
+      },
+      {
+       "src": "/img/p/web-arcaunion/2.webp",
+       "w": 780,
+       "h": 1688,
+       "caption": {
+        "en": "The mobile version",
+        "es": "La versión para móvil"
+       }
+      }
+     ],
+     "say": {
+      "en": "Website for a holding company that takes long-term stakes in established businesses.",
+      "es": "Web para una sociedad holding que toma participaciones con vocación de permanencia en compañías sólidas."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://arcaunion.com",
+       "label": {
+        "en": "Visit arcaunion.com",
+        "es": "Ver arcaunion.com"
+       }
+      }
+     ],
+     "slug": "web-arcaunion"
+    },
+    {
+     "name": {
+      "en": "CO₂ Capital",
+      "es": "CO₂ Capital"
+     },
+     "short": {
+      "en": "Carbon emission allowances, Bilbao",
+      "es": "Derechos de emisión de CO₂, Bilbao"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/web-co2capital/1.webp",
+       "w": 1440,
+       "h": 900,
+       "caption": {
+        "en": "Home page on desktop",
+        "es": "Portada en escritorio"
+       }
+      },
+      {
+       "src": "/img/p/web-co2capital/2.webp",
+       "w": 780,
+       "h": 1688,
+       "caption": {
+        "en": "The mobile version",
+        "es": "La versión para móvil"
+       }
+      }
+     ],
+     "say": {
+      "en": "Website for a Bilbao firm that trades EU emission allowances and advises industrial plants covered by the EU ETS.",
+      "es": "Web para una empresa de Bilbao que compra y vende derechos de emisión y asesora a instalaciones industriales sujetas al EU ETS."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://co2capital.es",
+       "label": {
+        "en": "Visit co2capital.es",
+        "es": "Ver co2capital.es"
+       }
+      }
+     ],
+     "slug": "web-co2capital"
+    },
+    {
+     "name": {
+      "en": "Molonlabe Capital",
+      "es": "Molonlabe Capital"
+     },
+     "short": {
+      "en": "A holding company in Madrid",
+      "es": "Una sociedad holding en Madrid"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/web-molonlabe/1.webp",
+       "w": 1440,
+       "h": 900,
+       "caption": {
+        "en": "Home page on desktop",
+        "es": "Portada en escritorio"
+       }
+      },
+      {
+       "src": "/img/p/web-molonlabe/2.webp",
+       "w": 780,
+       "h": 1688,
+       "caption": {
+        "en": "The mobile version",
+        "es": "La versión para móvil"
+       }
+      }
+     ],
+     "say": {
+      "en": "Website for a Madrid holding company that manages stakes and investments in listed markets.",
+      "es": "Web para una sociedad holding de Madrid que gestiona participaciones e inversiones en el mercado de valores."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://molonlabecapital.es",
+       "label": {
+        "en": "Visit molonlabecapital.es",
+        "es": "Ver molonlabecapital.es"
+       }
+      }
+     ],
+     "slug": "web-molonlabe"
+    },
+    {
+     "name": {
+      "en": "The Sole Club",
+      "es": "The Sole Club"
+     },
+     "short": {
+      "en": "The online shop of my sneaker store in Bilbao",
+      "es": "La tienda online de mi tienda de zapatillas en Bilbao"
+     },
+     "status": {
+      "en": "Archived",
+      "es": "Archivada"
+     },
+     "images": [
+      {
+       "src": "/img/p/web-thesoleclub/1.webp",
+       "w": 1440,
+       "h": 900,
+       "caption": {
+        "en": "Home page, as archived in May 2023",
+        "es": "La portada, según la copia archivada de mayo de 2023"
+       }
+      },
+      {
+       "src": "/img/p/web-thesoleclub/2.webp",
+       "w": 780,
+       "h": 1688,
+       "caption": {
+        "en": "The mobile version",
+        "es": "La versión para móvil"
+       }
+      },
+      {
+       "src": "/img/p/web-thesoleclub/3.webp",
+       "w": 1440,
+       "h": 900,
+       "caption": {
+        "en": "A product page with sizes and cart",
+        "es": "Una ficha de producto con tallas y carrito"
+       }
+      }
+     ],
+     "say": {
+      "en": "The online shop of The Sole Club, the sneaker store I ran in Bilbao: catalogue with size and price filters, product pages, orders and a section to buy customers’ sneakers. The site is offline now; these images come from the Internet Archive copy of May 2023.",
+      "es": "La tienda online de The Sole Club, la tienda de zapatillas que dirigí en Bilbao: catálogo con filtros por talla y precio, fichas de producto, encargos y una sección para comprar zapatillas a los clientes. La web ya no está en línea; estas imágenes son de la copia de Internet Archive de mayo de 2023."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://web.archive.org/web/20230501202520/https://thesoleclub.com/",
+       "label": {
+        "en": "Archived copy",
+        "es": "Copia archivada"
+       }
+      }
+     ],
+     "slug": "web-thesoleclub"
+    }
+   ]
+  }
+ ],
+ "work": [
+  {
+   "when": {
+    "en": "2026–now",
+    "es": "2026–hoy"
+   },
+   "title": {
+    "en": "Founder, Triarii Consulting",
+    "es": "Fundador, Triarii Consulting"
+   },
+   "note": {
+    "en": "AI and finance consultancy in Madrid. Auguria and STATOR come from here.",
+    "es": "Consultora de IA y finanzas en Madrid. De aquí salen Auguria y STATOR."
+   }
+  },
+  {
+   "when": {
+    "en": "2025–now",
+    "es": "2025–hoy"
+   },
+   "title": {
+    "en": "Head of AI and Administration, Albujón Energy",
+    "es": "Responsable de IA y Administración, Albujón Energy"
+   },
+   "note": {
+    "en": "A solar company. I built the Telegram bot and the RAG over internal documents that the team uses every day.",
+    "es": "Empresa fotovoltaica. Hice el bot de Telegram y el RAG sobre la documentación interna que el equipo usa a diario."
+   }
+  },
+  {
+   "when": {
+    "en": "2022–2025",
+    "es": "2022–2025"
+   },
+   "title": {
+    "en": "Execution Trader, equities",
+    "es": "Execution Trader, renta variable"
+   },
+   "note": {
+    "en": "At a private investment office: block execution on mandate, intraday trading and risk control.",
+    "es": "En una oficina de inversión privada: ejecución de bloques sobre mandato, intradía y control de riesgo."
+   }
+  },
+  {
+   "when": {
+    "en": "2022–2026",
+    "es": "2022–2026"
+   },
+   "title": {
+    "en": "Managing Director, The Sole Club",
+    "es": "Director gerente, The Sole Club"
+   },
+   "note": {
+    "en": "A shop in Bilbao. I ran the P&amp;L for four years and set prices and stock rotation from sales data.",
+    "es": "Una tienda en Bilbao. Llevé la cuenta de resultados cuatro ejercicios y fijaba precios y rotación de stock con los datos de venta."
+   }
+  }
+ ],
+ "study": [
+  {
+   "when": {
+    "en": "2025–2027",
+    "es": "2025–2027"
+   },
+   "title": {
+    "en": "MIAX master's, Instituto BME",
+    "es": "Máster MIAX, Instituto BME"
+   },
+   "note": {
+    "en": "AI and quantum computing for markets. Thesis on a multi-agent RAG system with regime detection.",
+    "es": "IA y computación cuántica aplicada a mercados. TFM sobre un sistema multiagente con RAG y detección de regímenes."
+   }
+  },
+  {
+   "when": {
+    "en": "2026",
+    "es": "2026"
+   },
+   "title": {
+    "en": "Financial Advisor, Instituto BME",
+    "es": "Asesor Financiero, Instituto BME"
+   },
+   "note": {
+    "en": "Recognised by the CNMV, equivalent to MiFID II.",
+    "es": "Reconocido por la CNMV, equivalente a MiFID II."
+   }
+  },
+  {
+   "when": {
+    "en": "2026",
+    "es": "2026"
+   },
+   "title": {
+    "en": "Claude Code in Action, Anthropic",
+    "es": "Claude Code in Action, Anthropic"
+   },
+   "note": {
+    "en": "Course on building software with Claude Code.",
+    "es": "Curso sobre cómo construir software con Claude Code."
+   }
+  },
+  {
+   "when": {
+    "en": "2021–2025",
+    "es": "2021–2025"
+   },
+   "title": {
+    "en": "International Relations, Universidad de Deusto",
+    "es": "Relaciones Internacionales, Universidad de Deusto"
+   },
+   "note": {
+    "en": "Bachelor's degree, with an Erasmus at Masaryk University in Brno.",
+    "es": "Grado, con un Erasmus en la Masaryk University de Brno."
+   }
+  }
+ ],
+ "languages": {
+  "en": "Spanish is my first language. I also speak English (B2, Cambridge First), intermediate Basque, French (B1) and Chinese (HSK 3).",
+  "es": "Español nativo. También hablo inglés (B2, Cambridge First), euskera de nivel intermedio, francés (B1) y chino (HSK 3)."
+ },
+ "intro": {
+  "en": "I'm a quantitative analyst in financial markets. I spent three years executing equity orders on a trading desk, and now I build AI software for markets: tools that explain what happened and never tell anyone what to buy.",
+  "es": "Soy analista cuantitativo de mercados financieros. Pasé tres años ejecutando órdenes de renta variable en una mesa y ahora hago software de IA para los mercados: herramientas que explican lo que ha pasado y nunca le dicen a nadie qué comprar."
+ },
+ "closing": {
+  "en": "For work, or for a project with Triarii, write to me.",
+  "es": "Para trabajo, o para un proyecto con Triarii, escríbeme."
+ }
+}

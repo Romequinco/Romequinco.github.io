@@ -1,0 +1,117 @@
+---
+import { type Lang, t, paths, contact, ui } from '../lib/i18n';
+import { groups, work, study, languages } from '../lib/data';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+
+const headline = {
+  en: 'Quantitative analyst in financial markets. Research, trading experience and AI tools for markets.',
+  es: 'Analista cuantitativo de mercados financieros. Investigación, experiencia en mesa y herramientas de IA para los mercados.',
+};
+const summary = {
+  en: 'Three years executing equities on mandate on a trading desk, and now building AI products for markets: LLM agents and RAG systems that cite their sources, check their own figures and never give investment advice. Founder of Triarii Consulting; currently on the MIAX master’s at Instituto BME.',
+  es: 'Tres años ejecutando renta variable sobre mandato en una mesa, y ahora construyo productos de IA para los mercados: agentes LLM y sistemas RAG que citan sus fuentes, comprueban sus propias cifras y nunca dan consejos de inversión. Fundador de Triarii Consulting; ahora en el máster MIAX del Instituto BME.',
+};
+const skills: { k: { en: string; es: string }; v: string }[] = [
+  { k: { en: 'Languages', es: 'Lenguajes' }, v: 'Python, SQL, TypeScript, HTML' },
+  { k: { en: 'Machine learning', es: 'Machine learning' }, v: 'scikit-learn, XGBoost, PyTorch, Keras, statsmodels, hmmlearn, arch, SHAP' },
+  { k: { en: 'LLMs', es: 'LLM' }, v: 'Multi-agent systems, RAG, tool calling, LangGraph, ChromaDB, FinBERT, Anthropic API, Claude Code' },
+  { k: { en: 'Data and infrastructure', es: 'Datos e infraestructura' }, v: 'pandas, NumPy, PostgreSQL, Supabase, FastAPI, Next.js, Docker, Railway, Git' },
+  { k: { en: 'Markets', es: 'Mercados' }, v: lang === 'en'
+      ? 'Backtesting without look-ahead, VaR and CVaR, copulas, fixed income, options and Greeks, market microstructure'
+      : 'Backtesting sin look-ahead, VaR y CVaR, cópulas, renta fija, opciones y griegas, microestructura de mercado' },
+];
+const selected = groups.filter((g) => g.id === 'products' || g.id === 'research').flatMap((g) => g.projects);
+---
+<div class="cvp">
+  <div class="actions noprint"><a class="btn pri" href={paths.cvPdf(lang)}>{ui.printCv[lang]}</a></div>
+
+  <header class="cvh">
+    <h1>Óscar Romero Quincoces</h1>
+    <p>{headline[lang]}</p>
+    <p class="cvc">
+      <a href={`mailto:${contact.email}`}>{contact.email}</a>
+      <a href={`https://${contact.site}`}>{contact.site}</a>
+      <a href={contact.linkedin}>linkedin.com/in/oscarromeroquincoces</a>
+      <a href={contact.github}>github.com/Romequinco</a>
+      <span>{ui.where[lang]}</span>
+    </p>
+  </header>
+
+  <p class="cvs">{summary[lang]}</p>
+
+  <section>
+    <h2>{ui.work[lang]}</h2>
+    <ul class="cvl">
+      {work.map((w) => (
+        <li><span class="when" set:html={t(w.when, lang)} /><span><strong set:html={t(w.title, lang)} /><small set:html={t(w.note, lang)} /></span></li>
+      ))}
+    </ul>
+  </section>
+
+  <section>
+    <h2>{lang === 'en' ? 'Selected projects' : 'Proyectos destacados'}</h2>
+    <ul class="cvl">
+      {selected.map((p) => (
+        <li><span class="when" set:html={p.status ? t(p.status, lang) : ''} /><span><strong set:html={t(p.name, lang)} /><small set:html={t(p.say ?? p.short, lang)} /></span></li>
+      ))}
+    </ul>
+  </section>
+
+  <section>
+    <h2>{ui.study[lang]}</h2>
+    <ul class="cvl">
+      {study.map((w) => (
+        <li><span class="when" set:html={t(w.when, lang)} /><span><strong set:html={t(w.title, lang)} /><small set:html={t(w.note, lang)} /></span></li>
+      ))}
+    </ul>
+    <p class="cvs2" set:html={t(languages, lang)} />
+  </section>
+
+  <section>
+    <h2>{lang === 'en' ? 'Skills' : 'Competencias'}</h2>
+    <dl class="cvk">
+      {skills.map((s) => (<div><dt>{s.k[lang]}</dt><dd>{s.v}</dd></div>))}
+    </dl>
+  </section>
+</div>
+
+<style>
+  .cvp{max-width:900px}
+  .cvh{margin-top:32px}
+  .cvh h1{font-size:34px;font-weight:600;line-height:1.1}
+  .cvh p{margin-top:6px}
+  .cvc{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:15px;color:var(--pencil);margin-top:12px!important}
+  .cvs{margin-top:28px;max-width:46em}
+  .cvp section{margin-top:36px}
+  .cvl{display:grid;gap:10px}
+  .cvl li{display:grid;grid-template-columns:8.5em minmax(0,1fr);gap:20px}
+  .cvl strong{font-weight:600;display:block}
+  .cvl small{display:block;font-size:15px;color:var(--pencil);margin-top:2px;max-width:46em}
+  .cvs2{margin-top:14px;font-size:15px;color:var(--pencil)}
+  .cvk{display:grid;gap:8px}
+  .cvk div{display:grid;grid-template-columns:12em minmax(0,1fr);gap:20px}
+  .cvk dt{color:var(--pencil)}
+  @media (max-width:560px){
+    .cvl li,.cvk div{grid-template-columns:minmax(0,1fr);gap:0}
+  }
+  @media print{
+    @page{size:A4;margin:14mm 15mm}
+    :global(body){background:#fff;color:#111;font-size:10pt;line-height:1.38}
+    :global(a){text-decoration:none;color:inherit}
+    .noprint,:global(.sb),:global(.tb),:global(.scrim){display:none!important}
+    :global(.main){margin:0!important;padding:0!important;min-height:0!important}
+    .cvp{padding:0;max-width:none}
+    .cvh{margin-top:0}
+    .cvh h1{font-size:20pt}
+    .cvc,.cvl small,.cvs2,.cvk dt,:global(.when){color:#555}
+    .cvc{font-size:9pt}
+    .cvl small{font-size:9pt}
+    .cvp section{margin-top:14pt;break-inside:auto}
+    .cvp :global(h2){color:#555;font-size:9pt;margin-bottom:5pt}
+    .cvl{gap:5pt}
+    .cvl li{break-inside:avoid}
+    .cvs{margin-top:12pt}
+  }
+</style>

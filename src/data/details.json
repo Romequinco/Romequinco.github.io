@@ -1,0 +1,1358 @@
+{
+ "auguria": {
+  "year": "2026",
+  "role": {
+   "en": "Solo, design to production",
+   "es": "En solitario, del diseño a producción"
+  },
+  "context": {
+   "en": "Triarii Consulting",
+   "es": "Triarii Consulting"
+  },
+  "stack": [
+   "Next.js 15",
+   "React 19",
+   "TypeScript",
+   "Supabase (Postgres, Auth, RLS)",
+   "Python · FastAPI",
+   "FinBERT",
+   "mDeBERTa-v3",
+   "n8n",
+   "Stripe",
+   "Railway"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "What it does",
+     "es": "Qué hace"
+    },
+    "body": {
+     "en": "<p>Auguria brings global markets together in one place, in Spanish, and explains them in plain language. It never tells anyone to buy or sell.</p><ul><li><strong>Markets:</strong> the session handover from Asia to Europe to the US, heat maps of the S&amp;P 500 and the IBEX 35, and market breadth.</li><li><strong>Assets:</strong> candlestick charts with indicators, dividends, splits, insider trades, the options chain and price alerts.</li><li><strong>Macro and screener:</strong> FRED and Eurostat data, the yield curve, COT positioning, and a factor screener over more than 1,000 assets (value, quality, solvency and momentum).</li><li><strong>AI:</strong> news, technical, fundamental and macro agents, plus a closing briefing published on the web and sent by email.</li></ul>",
+     "es": "<p>Auguria reúne los mercados globales en un sitio, en español, y los explica con palabras claras. Nunca le dice a nadie que compre o venda.</p><ul><li><strong>Mercados:</strong> el relevo de sesiones de Asia a Europa y EE. UU., mapas de calor del S&amp;P 500 y del IBEX 35 y la amplitud del mercado.</li><li><strong>Activos:</strong> gráfico de velas con indicadores, dividendos, splits, operaciones de directivos, cadena de opciones y alertas de precio.</li><li><strong>Macro y screener:</strong> datos de FRED y Eurostat, curva de tipos, posicionamiento COT y un screener de factores con más de 1.000 activos (valor, calidad, solvencia y momentum).</li><li><strong>IA:</strong> agentes de noticias, técnico, fundamental y macro, y un briefing de cierre que se publica en la web y llega por correo.</li></ul>"
+    }
+   },
+   {
+    "title": {
+     "en": "How it's built",
+     "es": "Cómo está hecho"
+    },
+    "body": {
+     "en": "<p>Market data is never fetched on a user's visit. A scheduled job fills a cache in Postgres through a Python data service, and the pages only read from it. Every figure declares whether it is official, derived or a proxy, and how fresh it really is.</p><p>Every call to a language model goes through one function: a fixed cascade of six providers with a bounded queue, retries and health checks. A truncated answer counts as a failure and is never cached. News sentiment and classification run on my own FinBERT and mDeBERTa services; if they go down, the feed keeps working without tags. A deterministic filter rewrites any buy or sell wording in the AI output, and the legal notice is a fixed string in the code that never goes through the model.</p>",
+     "es": "<p>Los datos de mercado nunca se piden cuando entra un usuario. Una tarea programada llena una caché en Postgres desde un servicio de datos en Python, y las páginas solo leen de ahí. Cada cifra indica si es oficial, derivada o aproximada, y cuándo se obtuvo de verdad.</p><p>Toda llamada a un modelo de lenguaje pasa por una sola función: una cascada fija de seis proveedores con cola acotada, reintentos y control de salud. Una respuesta cortada cuenta como fallo y nunca se guarda en caché. El sentimiento y la clasificación de noticias corren en mis propios servicios de FinBERT y mDeBERTa; si se caen, el feed sigue funcionando sin etiquetas. Un filtro determinista reescribe cualquier fórmula de compra o venta en lo que genera la IA, y el aviso legal es un texto fijo del código que nunca pasa por el modelo.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Where it stands",
+     "es": "En qué punto está"
+    },
+    "body": {
+     "en": "<p>It is live at auguria.es, on seven services on Railway. I built it on my own: about 1,070 commits between May and October 2026, around 900 tests and CI on every commit. An encrypted daily backup is checked by an automatic restore drill.</p><p>The rule I care most about: a failure must never look like missing data. Every route returns the same error fields, so a broken source shows up as broken, not as an empty chart.</p>",
+     "es": "<p>Está en producción en auguria.es, con siete servicios en Railway. Lo he hecho yo solo: unos 1.070 commits entre mayo y octubre de 2026, cerca de 900 tests e integración continua en cada commit. La copia de seguridad diaria va cifrada y se comprueba con un simulacro de restauración automático.</p><p>La regla que más me importa: un fallo nunca puede parecer falta de datos. Todas las rutas devuelven los mismos campos de error: una fuente rota se ve rota, no como un gráfico vacío.</p>"
+    }
+   }
+  ]
+ },
+ "auguria-studio": {
+  "year": "2026",
+  "role": {
+   "en": "Solo, with Claude Code agents",
+   "es": "En solitario, con agentes de Claude Code"
+  },
+  "context": {
+   "en": "Triarii Consulting · part of Auguria",
+   "es": "Triarii Consulting · parte de Auguria"
+  },
+  "stack": [
+   "Claude Code agents",
+   "Python",
+   "HyperFrames (HTML + GSAP)",
+   "edge-tts",
+   "ffmpeg",
+   "whisperX",
+   "KaTeX",
+   "Headless Chrome"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "What it is",
+     "es": "Qué es"
+    },
+    "body": {
+     "en": "<p>The studio where Auguria's educational content is made: short vertical videos and carousels styled as technical notes, for TikTok. Three Claude Code agents do the work. One builds videos, one builds carousels, and a separate verifier checks both. So far it has produced 49 videos and 14 carousels.</p><p>Each piece is a descriptive test of the past, never advice. Typical questions: what it costs to miss the ten best days, whether September really is the worst month, whether price stops at Fibonacci's 61.8%.</p>",
+     "es": "<p>El estudio donde se hace el contenido educativo de Auguria: vídeos verticales cortos y carruseles con aspecto de nota técnica, para TikTok. El trabajo lo hacen tres agentes de Claude Code. Uno monta los vídeos, otro los carruseles y un verificador aparte revisa los dos. Hasta ahora ha producido 49 vídeos y 14 carruseles.</p><p>Cada pieza es una prueba descriptiva del pasado, nunca un consejo. Preguntas típicas: cuánto cuesta perderse los diez mejores días, si septiembre es de verdad el peor mes o si el precio se frena en el 61,8 % de Fibonacci.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Numbers nobody types by hand",
+     "es": "Cifras que nadie escribe a mano"
+    },
+    "body": {
+     "en": "<p>Every study starts with a concrete question that can be proved wrong. A reproducible script computes all the figures into a results file, and the script that builds the video or carousel recalculates them and fails if anything differs. The method is fixed: independent events, a matched reference without the event, a fixed horizon, the number of comparisons stated, and the market, period, sample and limits on screen.</p>",
+     "es": "<p>Cada estudio empieza con una pregunta concreta que se pueda refutar. Un script reproducible calcula todas las cifras en un fichero de resultados, y el script que monta el vídeo o el carrusel las vuelve a calcular y falla si algo no cuadra. El método es siempre el mismo: eventos independientes, una referencia emparejada sin el evento, un horizonte fijo, el número de comparaciones declarado y, en pantalla, el mercado, el periodo, la muestra y los límites.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "How a piece gets checked",
+     "es": "Cómo se revisa una pieza"
+    },
+    "body": {
+     "en": "<p>An agent's report is not proof. Before a video is done, ffprobe checks format and duration, silencedetect looks for dead air, frames around every transition are looked at, and the final value of every on-screen counter must match both the data and the voiceover. A search for buy, sell, signal and recommendation wording in every file must come back empty, or each match is listed and justified.</p>",
+     "es": "<p>El informe de un agente no es una prueba. Antes de dar un vídeo por bueno, ffprobe comprueba el formato y la duración, silencedetect busca silencios muertos, se miran los fotogramas de cada transición y el valor final de cada contador en pantalla tiene que coincidir con los datos y con lo que dice la voz. Una búsqueda de las palabras compra, venta, señal y recomendación en todos los ficheros tiene que salir vacía, o cada coincidencia se lista y se justifica.</p>"
+    }
+   }
+  ]
+ },
+ "briefly": {
+  "year": "2026",
+  "role": {
+   "en": "Team of 3 — most of the commits are mine",
+   "es": "Equipo de 3 — la mayoría de los commits son míos"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "Streamlit",
+   "Claude Sonnet and Haiku",
+   "Gemini TTS",
+   "edge-tts",
+   "OpenAI speech-to-text",
+   "CLIP (local)",
+   "FinBERT (local)",
+   "Docker",
+   "Railway"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "The problem",
+     "es": "El problema"
+    },
+    "body": {
+     "en": "<p>A retail investor gets market information scattered across formats: headlines, 40-page results PDFs, candlestick charts. There is no time to read it all every day, and generic summaries don't talk about their own portfolio. Briefly turns the close of the stocks you follow into a podcast of about four minutes, with two synthetic voices, Toro and Osa, that you can listen to, read, watch as a vertical video, get on Telegram and question out loud.</p>",
+     "es": "<p>El inversor minorista recibe la información de mercado dispersa y en formatos distintos: titulares, PDFs de resultados de 40 páginas, gráficos de velas. No da tiempo a leerlo todo cada día, y los resúmenes genéricos no hablan de su cartera. Briefly convierte el cierre de los valores que sigues en un podcast de unos cuatro minutos, con dos voces sintéticas, Toro y Osa, que se escucha, se lee, se ve como vídeo vertical, llega por Telegram y admite preguntas por voz.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "How it's built",
+     "es": "Cómo está hecho"
+    },
+    "body": {
+     "en": "<p>A chain of models, each doing what it does best at the lowest cost: an analyst agent on Claude Sonnet, a scriptwriter on Haiku, then voice, transcript, charts, cover and video. It also reads your PDFs, chart screenshots and broker screenshots, which makes 15 input and output modalities. A local CLIP model decides whether an image is worth sending to the paid vision model, so a non-financial picture is rejected at no cost.</p><p>Every step has a typed contract and a mock provider, so 1,301 tests run without network and the demo works without keys. Gates check the output: every figure must appear in the sources or the sentence is removed, recommendations are detected deterministically, and a red-team set of 31 cases tests it. The model for each agent was picked by a blind judge: Haiku as analyst added unsupported facts, so the analyst stayed on Sonnet.</p>",
+     "es": "<p>Una cadena de modelos en la que cada uno hace lo que mejor hace al menor coste: un agente analista con Claude Sonnet, un guionista con Haiku y, después, voz, transcripción, gráficos, portada y vídeo. También lee tus PDFs, capturas de gráficos y capturas del broker, y suma así 15 modalidades de entrada y salida. Un modelo CLIP en local decide si una imagen merece pasar al modelo de visión de pago, de modo que una foto que no es financiera se descarta sin coste.</p><p>Cada paso tiene un contrato tipado y un proveedor simulado, así que los 1.301 tests corren sin red y la demo funciona sin claves. Unas puertas revisan la salida: toda cifra tiene que estar en las fuentes o la frase se quita, las recomendaciones se detectan de forma determinista y un banco de 31 casos de red team lo pone a prueba. El modelo de cada agente se eligió con un juez ciego: Haiku como analista añadía hechos sin respaldo, y por eso el analista se quedó en Sonnet.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Results",
+     "es": "Resultados"
+    },
+    "body": {
+     "en": "<p>Measured on six real briefings: 232 of 232 figures traceable to a source, no sentence with a recommendation and 35 of 35 key points with their source. A basic briefing costs €0.034 and takes 52.7 seconds (median); a full one with the premium voice, cover and video costs €0.11 to €0.15. A spoken question is answered out loud in 6.4 seconds, end to end. The demo is live on Railway.</p>",
+     "es": "<p>Medido sobre seis briefings reales: 232 de 232 cifras trazables hasta su fuente, ninguna frase de recomendación y 35 de 35 puntos clave con su fuente. Un briefing básico cuesta 0,034 € y tarda 52,7 segundos (mediana); uno completo, con voz premium, portada y vídeo, cuesta entre 0,11 y 0,15 €. Una pregunta por voz se responde en voz alta en 6,4 segundos, de punta a punta. La demo está en directo en Railway.</p>"
+    }
+   }
+  ]
+ },
+ "stator": {
+  "year": "2026",
+  "role": {
+   "en": "Solo, design to paper trading",
+   "es": "En solitario, del diseño al paper trading"
+  },
+  "context": {
+   "en": "Triarii Consulting",
+   "es": "Triarii Consulting"
+  },
+  "stack": [
+   "Python 3.13",
+   "uv",
+   "Interactive Brokers API (ib_async)",
+   "Parquet",
+   "Streamlit",
+   "WeasyPrint + Jinja2",
+   "Claude agents",
+   "RFC 3161 timestamps"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "What it does",
+     "es": "Qué hace"
+    },
+    "body": {
+     "en": "<p>STATOR is a liquidity engine for illiquid BME Growth stocks: it keeps a buy and a sell price in the book continuously, inside hard risk limits, and leaves a trail anyone can audit. Around it there is a supervision layer: a dashboard, a daily PDF report and three agents (Reporter, Explainer and Tuner) that work outside the trading loop. The Tuner can only propose a change; a person approves it.</p><p>So far it has only run in paper trading. It has never sent a real order.</p>",
+     "es": "<p>STATOR es un motor de liquidez para valores poco líquidos de BME Growth: mantiene en el libro un precio de compra y otro de venta de forma continua, dentro de límites de riesgo duros, y deja un rastro que cualquiera puede auditar. Lo acompañan un panel, un informe diario en PDF y tres agentes (Reporter, Explainer y Tuner) fuera del bucle de trading. El Tuner solo puede proponer un cambio; lo aprueba una persona.</p><p>Hasta ahora solo ha funcionado en paper trading. Nunca ha enviado una orden real.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "How it's built",
+     "es": "Cómo está hecho"
+    },
+    "body": {
+     "en": "<p>The pipeline goes from market data to the quoting engine, then through a risk layer that fails closed, and only then to execution. Every stage writes to an append-only log in which each entry carries the hash of the previous one. At each close, the last hash of every chain is timestamped by two public RFC 3161 authorities; only the hash leaves the machine.</p><ul><li>It only connects to paper accounts, through paper ports on the same machine. Anything else aborts the process.</li><li>A watchdog cancels everything if the engine stops responding. The kill switch on the dashboard only writes a stop file, and the dashboard never talks to the broker.</li></ul>",
+     "es": "<p>El flujo va de los datos de mercado al motor de cotización y a una capa de riesgo que se cierra ante la duda, y solo después a ejecución. Cada etapa escribe en un registro de solo añadir en el que cada entrada lleva el hash de la anterior. Al cierre, el último hash de cada cadena se sella con dos autoridades públicas de sellado de tiempo (RFC 3161); de la máquina solo sale el hash.</p><ul><li>Solo se conecta a cuentas paper, por los puertos paper de la propia máquina. Cualquier otra cosa aborta el proceso.</li><li>Un vigilante lo cancela todo si el motor deja de responder. El kill switch del panel solo escribe un fichero de parada, y el panel nunca habla con el broker.</li></ul>"
+    }
+   },
+   {
+    "title": {
+     "en": "Results",
+     "es": "Resultados"
+    },
+    "body": {
+     "en": "<p>In the acceptance session, on 28 September 2026, the engine started once, ran with no manual intervention and closed by itself. It sent 2,938 orders (new ones and modifications) and none went outside its limits; the audit log showed no breaks. In an earlier test, the dashboard kill switch cancelled every live order and got confirmation in one second. The plan was a six-week MVP; the code went from first commit to v1.0 between 14 and 30 September.</p><p>One limit: the paper account has no BME data, so I validated it on stand-in stocks from other European venues. That proves the system works, not the quality of its quotes. The screens shown here are design mockups with sample data.</p>",
+     "es": "<p>En la sesión de aceptación, el 28 de septiembre de 2026, el motor arrancó una vez, funcionó sin intervención manual y cerró solo. Envió 2.938 órdenes (nuevas y modificaciones) y ninguna salió de sus límites; el registro de auditoría no tuvo ninguna ruptura. En otra prueba, el kill switch del panel canceló todas las órdenes vivas y recibió la confirmación en un segundo. El plan era un MVP de seis semanas; el código pasó del primer commit a la v1.0 entre el 14 y el 30 de septiembre.</p><p>Un límite: la cuenta paper no tiene datos de BME, así que lo validé con valores sustitutos de otros mercados europeos. Eso valida el sistema, no la calidad de sus cotizaciones. Las pantallas que se ven aquí son maquetas de diseño con datos de ejemplo.</p>"
+    }
+   }
+  ]
+ },
+ "telegram-task-agent": {
+  "year": "2026",
+  "role": {
+   "en": "Solo, in production",
+   "es": "En solitario, en producción"
+  },
+  "context": {
+   "en": "Albujón Energy",
+   "es": "Albujón Energy"
+  },
+  "stack": [
+   "Python",
+   "python-telegram-bot",
+   "Claude (classification)",
+   "Gemini (voice transcription)",
+   "PostgreSQL (psycopg 3)",
+   "Railway"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "The problem",
+     "es": "El problema"
+    },
+    "body": {
+     "en": "<p>In a small team, work gets handed out in the group chat and in voice notes, and then it disappears up the scroll. I wanted the task list to build itself from the conversation, without asking anyone to change how they talk.</p>",
+     "es": "<p>En un equipo pequeño, el trabajo se reparte en el grupo de chat y en notas de voz, y luego se pierde hacia arriba en la conversación. Quería que la lista de tareas se construyera sola a partir de lo que se habla, sin pedirle a nadie que cambie su forma de escribir.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "What it does",
+     "es": "Qué hace"
+    },
+    "body": {
+     "en": "<p>The bot reads every message in Albujón Energy's team group and classifies it as a new task, an update, a context problem or finished work. It reacts with a thumbs-up when it records something and stays quiet when a message is just chat. Voice notes are transcribed with Gemini and go through the same pipeline; photos and videos only get an acknowledgement.</p><ul><li>At 8:30 on weekdays it posts the open tasks; at 17:00 it posts the day's review.</li><li>Tasks waiting for confirmation come with inline buttons, done or still open, and that mode expires at midnight.</li><li>Commands let anyone list, create, close or change the state of a task by hand. The team uses it every day.</li></ul>",
+     "es": "<p>El bot lee cada mensaje del grupo del equipo de Albujón Energy y lo clasifica como tarea nueva, avance, problema de contexto o trabajo terminado. Reacciona con un pulgar arriba cuando registra algo y no dice nada cuando el mensaje es solo conversación. Las notas de voz se transcriben con Gemini y siguen el mismo camino; las fotos y los vídeos solo reciben un acuse.</p><ul><li>A las 8:30 de los días laborables publica las tareas abiertas; a las 17:00, el repaso del día.</li><li>Las tareas pendientes de confirmar llevan botones, hecha o sigue abierta, y ese modo caduca a medianoche.</li><li>Con comandos, cualquiera puede listar, crear, cerrar o cambiar de estado una tarea a mano. El equipo lo usa a diario.</li></ul>"
+    }
+   },
+   {
+    "title": {
+     "en": "How it's built",
+     "es": "Cómo está hecho"
+    },
+    "body": {
+     "en": "<p>Plain Python split into handlers and scheduled jobs, the LLM calls (Claude to classify, Gemini to transcribe) and a Postgres layer with a connection pool. It runs on Railway as a worker with no public port, next to a managed Postgres, and every push to main deploys it.</p>",
+     "es": "<p>Python sencillo, separado en manejadores y tareas programadas, las llamadas a los modelos (Claude para clasificar, Gemini para transcribir) y una capa de Postgres con pool de conexiones. Corre en Railway como worker sin puerto público, junto a un Postgres gestionado, y cada push a main lo despliega.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "What I learned",
+     "es": "Lo que aprendí"
+    },
+    "body": {
+     "en": "<p>In python-telegram-bot, the days of a daily job count from Sunday as 0, while Python's own weekday() starts with Monday as 0. Writing Monday to Friday the Python way silently drops Friday. I fixed the days and added a second check with Python's convention as a safety net.</p>",
+     "es": "<p>En python-telegram-bot, los días de una tarea diaria empiezan en el domingo como 0, mientras que el weekday() de Python empieza en el lunes. Si escribes de lunes a viernes al estilo de Python, el viernes desaparece sin avisar. Corregí los días y añadí una segunda comprobación con la convención de Python como red de seguridad.</p>"
+    }
+   }
+  ]
+ },
+ "miax-asesor": {
+  "year": "2026",
+  "role": {
+   "en": "Solo",
+   "es": "En solitario"
+  },
+  "context": {
+   "en": "Personal tool for the MIAX master's",
+   "es": "Herramienta personal para el máster MIAX"
+  },
+  "stack": [
+   "Python",
+   "FastAPI (SSE streaming)",
+   "ChromaDB",
+   "Claude (Anthropic API)",
+   "Gemini and Groq",
+   "React + Vite",
+   "PyMuPDF · pdfplumber · Tesseract",
+   "Obsidian export"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "The problem",
+     "es": "El problema"
+    },
+    "body": {
+     "en": "<p>The master's material is spread across PDFs, notebooks, slides and documents. To study it properly I needed to search all of it at once and get answers from more than one angle, because a question about a model is a maths question, a finance question and an engineering question at the same time.</p>",
+     "es": "<p>El material del máster está repartido entre PDFs, notebooks, diapositivas y documentos. Para estudiarlo bien necesitaba buscar en todo a la vez y obtener respuestas desde más de un ángulo, porque una pregunta sobre un modelo es a la vez de matemáticas, de finanzas y de ingeniería.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Phase 1: the knowledge base",
+     "es": "Fase 1: la base de conocimiento"
+    },
+    "body": {
+     "en": "<p>An extraction pipeline reads PDF, IPYNB, DOCX, PPTX, TXT and Markdown files, with OCR when it has to, splits long texts, structures them into notes per block and routes every concept to a catalogue. The result is 105 topic files with about 4,200 sub-concepts, a ChromaDB index of around 3,069 chunks and an Obsidian vault of 280 files. Gemini and Groq do the bulk extraction for free, with Claude Sonnet as the fallback.</p>",
+     "es": "<p>Un pipeline de extracción lee PDF, IPYNB, DOCX, PPTX, TXT y Markdown, con OCR cuando hace falta, trocea los textos largos, los estructura en notas por bloque y lleva cada concepto a un catálogo. El resultado son 105 fichas de temas con unos 4.200 subconceptos, un índice de ChromaDB de unos 3.069 fragmentos y un vault de Obsidian de 280 ficheros. Gemini y Groq hacen el grueso de la extracción gratis, con Claude Sonnet como respaldo.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Phase 2: agents that debate",
+     "es": "Fase 2: agentes que debaten"
+    },
+    "body": {
+     "en": "<p>You pick one, two or three specialists: finance, AI and maths, and engineering. With one you get a direct answer grounded in the knowledge base. With two, answers and cross-critiques. With three, answers, critiques, defences and a final synthesis, in about two and a half minutes. The synthesis downloads as Markdown or as a notebook with runnable cells.</p><p>The React dashboard streams the debate live and adds a 3D graph of the vault (335 nodes) and a library. Dropping in a new file triggers the whole pipeline, and the agents can use it on the next question. The course material itself stays private; what is shown here is the tool.</p>",
+     "es": "<p>Eliges uno, dos o tres especialistas: finanzas, IA y matemáticas, e ingeniería. Con uno obtienes una respuesta directa apoyada en la base de conocimiento. Con dos, respuestas y críticas cruzadas. Con tres, respuestas, críticas, defensas y una síntesis final, en unos dos minutos y medio. La síntesis se descarga en Markdown o como notebook con celdas ejecutables.</p><p>El panel en React muestra el debate en directo y añade un grafo 3D del vault (335 nodos) y una biblioteca. Al subir un fichero nuevo se lanza todo el pipeline, y los agentes ya pueden usarlo en la siguiente pregunta. El material del curso sigue siendo privado; lo que se enseña aquí es la herramienta.</p>"
+    }
+   }
+  ]
+ },
+ "tenk-agent": {
+  "year": "2026",
+  "role": {
+   "en": "Team of 3",
+   "es": "Equipo de 3"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME · LLMs in finance",
+   "es": "Máster MIAX, Instituto BME · LLMs en finanzas"
+  },
+  "stack": [
+   "Python",
+   "LangChain + LangGraph",
+   "FAISS",
+   "BM25 (rank-bm25)",
+   "sentence-transformers",
+   "XBRL facts (pandas, Parquet)",
+   "OpenRouter",
+   "pytest"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "The problem",
+     "es": "El problema"
+    },
+    "body": {
+     "en": "<p>Answer financial questions about the 10-K filings of NVIDIA, Microsoft, Apple, Alphabet, Meta and Amazon for fiscal 2024 and 2025, citing the exact source. A model on its own invents figures or quotes the wrong year. The starting agent, with dense retrieval only, got 35% right on our question set.</p>",
+     "es": "<p>Responder preguntas financieras sobre los informes 10-K de NVIDIA, Microsoft, Apple, Alphabet, Meta y Amazon de los ejercicios 2024 y 2025, citando la fuente exacta. Un modelo solo se inventa cifras o cita el año equivocado. El agente de partida, con búsqueda densa y nada más, acertaba el 35 % de nuestras preguntas.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "How it's built",
+     "es": "Cómo está hecho"
+    },
+    "body": {
+     "en": "<p>Four tools over XBRL facts and the filing text, with a retrieval ladder measured step by step: filters by company and year, BM25 mixed with vectors through reciprocal rank fusion, and query rewriting. On top sit the guardrails: a limit on calls, a deterministic check of every figure against XBRL, a citation for every numbered sentence, a source derived from what the agent actually retrieved, and a repair step when the structured answer is missing.</p><p>We wrote our own golden set: 20 numeric, extractive and comparative questions, plus 6 where the right answer is that the data isn't in the filings.</p>",
+     "es": "<p>Cuatro herramientas sobre los hechos XBRL y el texto de los informes, con una escalera de búsqueda medida paso a paso: filtros por empresa y ejercicio, BM25 combinado con vectores mediante fusión de rankings y reescritura de la consulta. Encima van las salvaguardas: un límite de llamadas, la comprobación determinista de cada cifra contra XBRL, una cita por cada frase numerada, una fuente sacada de lo que el agente recuperó de verdad y un paso de reparación cuando falta la respuesta estructurada.</p><p>Escribimos nuestro propio conjunto de referencia: 20 preguntas numéricas, extractivas y comparativas, y otras 6 en las que la respuesta correcta es que el dato no está en los informes.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Results",
+     "es": "Resultados"
+    },
+    "body": {
+     "en": "<p>With the same model in both runs, accuracy went from 35% to 65%. Comparative questions went from 0 of 7 to 4 of 7, with fewer calls per question (3.3 to 2.2) at practically the same cost. On the ten blind questions handed out by the course, it got 8 right, in about 15 seconds each.</p>",
+     "es": "<p>Con el mismo modelo en las dos ejecuciones, el acierto pasó del 35 % al 65 %. Las comparativas pasaron de 0 de 7 a 4 de 7, con menos llamadas por pregunta (de 3,3 a 2,2) y prácticamente el mismo coste. En las diez preguntas a ciegas que entregó el curso acertó 8, en unos 15 segundos cada una.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "What I learned",
+     "es": "Lo que aprendí"
+    },
+    "body": {
+     "en": "<p>Temperature 0 is not deterministic with every provider. A replica of one run dropped from 75% to 60% with the same code and model; without it we would have reported a 75% that doesn't hold. We also caught our own mistake: one comparison mixed two commits, so it changed three variables instead of one. Checking the commit of every run is now part of the protocol.</p>",
+     "es": "<p>La temperatura 0 no es determinista con todos los proveedores. Una réplica de una ejecución bajó del 75 % al 60 % con el mismo código y el mismo modelo; sin ella habríamos presentado un 75 % que no se sostiene. También detectamos un error nuestro: una comparación mezclaba dos commits, así que cambiaba tres variables en lugar de una. Ahora comprobar el commit de cada ejecución forma parte del protocolo.</p>"
+    }
+   }
+  ]
+ },
+ "market-regimes": {
+  "year": "2026",
+  "role": {
+   "en": "Team of 3 — most of the commits are mine",
+   "es": "Equipo de 3 — la mayoría de los commits son míos"
+  },
+  "context": {
+   "en": "MIAX master's thesis, Instituto BME",
+   "es": "TFM del máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "pandas",
+   "hmmlearn",
+   "statsmodels",
+   "arch",
+   "scikit-learn",
+   "ruptures",
+   "PyTorch",
+   "jumpmodels",
+   "pytest"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "The problem",
+     "es": "El problema"
+    },
+    "body": {
+     "en": "<p>My master's thesis is a multi-agent RAG system that builds portfolios and explains them with citations, and it has to know what state the market is in. Phase 1 builds that piece: a tool that, for any date, returns the regime, its probability and how long it has lasted, using only information published by that date. The earlier attempt had failed for a simple reason: it standardised data over the full sample, which leaks the future.</p>",
+     "es": "<p>Mi TFM es un sistema multiagente con RAG que construye carteras y las explica con citas, y necesita saber en qué estado está el mercado. La Fase 1 construye esa pieza: una herramienta que, para cualquier fecha, devuelve el régimen, su probabilidad y cuánto lleva en él, usando solo información publicada hasta ese día. El intento anterior había fallado por algo sencillo: estandarizaba los datos con la muestra completa, y eso filtra el futuro.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "How it's built",
+     "es": "Cómo está hecho"
+    },
+    "body": {
+     "en": "<p>Every feature is causal: z-scores are expanding or rolling, and each series enters with its publication lag. Evaluation is walk-forward, so nothing is judged in-sample, and every detector implements the same interface and is scored by the same judge. There are two frozen data tracks: one from 1962 with 41 features and 18 crises, and a richer one from 2007 with 106 features and 10 crises.</p><p>Twelve detectors from seven families compete, from simple rules to hidden Markov models, Markov switching, GARCH, jump models and an autoencoder. A crisis counts as detected when it is flagged for at least three sessions in a row inside its window.</p>",
+     "es": "<p>Todas las variables son causales: los z-scores son acumulados o móviles, y cada serie entra con su retraso de publicación. La evaluación es walk-forward, así que nada se juzga dentro de la muestra, y todos los detectores comparten interfaz y los puntúa el mismo juez. Hay dos pistas de datos congeladas: una desde 1962, con 41 variables y 18 crisis, y otra más rica desde 2007, con 106 variables y 10 crisis.</p><p>Compiten doce detectores de siete familias, desde reglas simples hasta modelos ocultos de Markov, Markov-switching, GARCH, modelos de saltos y un autoencoder. Una crisis cuenta como detectada cuando se marca al menos tres sesiones seguidas dentro de su ventana.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Results",
+     "es": "Resultados"
+    },
+    "body": {
+     "en": "<p>On the long track, a simple rule won: Mahalanobis turbulence caught 16 of 17 crises evaluated out of sample, with 2.35 times the precision of chance. On the rich track, Markov switching came first and caught 9 of 9. The most complex detectors didn't pay off, and two of them didn't even pass the eligibility filter. Combining an alert with a confirmation beat each detector alone, but it did not anticipate the start of a crisis.</p><p>Next come the final choice of rule and a pseudo-live test, and Phase 2, the data the agents will read, is already under way.</p>",
+     "es": "<p>En la pista larga ganó una regla simple: la turbulencia de Mahalanobis detectó 16 de las 17 crisis evaluadas fuera de muestra, con 2,35 veces la precisión del azar. En la pista rica quedó primero Markov-switching, con 9 de 9. Los detectores más complejos no compensaron, y dos ni siquiera pasaron el filtro de elegibilidad. Combinar una alerta con una confirmación mejoró a cada detector por separado, pero no adelantó el inicio de ninguna crisis.</p><p>Faltan la elección final de la regla y una prueba en pseudodirecto, y la Fase 2, con los datos que leerán los agentes, ya está en marcha.</p>"
+    }
+   }
+  ]
+ },
+ "stock-contest": {
+  "year": "2026",
+  "role": {
+   "en": "Solo",
+   "es": "En solitario"
+  },
+  "context": {
+   "en": "Personal project · El Concurso de Bolsa 2026",
+   "es": "Proyecto personal · El Concurso de Bolsa 2026"
+  },
+  "stack": [
+   "Python",
+   "pandas",
+   "NumPy · SciPy",
+   "yfinance",
+   "Parquet",
+   "Jupyter",
+   "GitHub Actions",
+   "Telegram Bot API"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "The problem",
+     "es": "El problema"
+    },
+    "body": {
+     "en": "<p>El Concurso de Bolsa 2026 gives each player 50,000 virtual euros on the Spanish Mercado Continuo for 23 sessions, from 13 October to 12 November. The ranking doesn't reward return alone: it mixes return relative to the leader, volatility measured against the rest of the field and a training quiz. So the best return doesn't necessarily win, and I set the goal as the probability of finishing in the top three. The rules disqualify bots, so the system never touches the account.</p>",
+     "es": "<p>El Concurso de Bolsa 2026 da a cada participante 50.000 euros virtuales en el Mercado Continuo durante 23 sesiones, del 13 de octubre al 12 de noviembre. La clasificación no premia solo la rentabilidad: combina la rentabilidad frente a la del primero, la volatilidad comparada con la del resto y un cuestionario formativo. Así que la mejor rentabilidad no tiene por qué ganar, y me puse como objetivo la probabilidad de acabar entre los tres primeros. Las bases descalifican a quien use bots, así que el sistema nunca entra en la cuenta.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "What I built",
+     "es": "Lo que he construido"
+    },
+    "body": {
+     "en": "<ul><li><strong>Data:</strong> unadjusted prices for the contest's stocks, a calendar of dividends and earnings, takeover bids checked by hand, and eligibility rules that only use what was known on each day.</li><li><strong>Simulator:</strong> the contest's exact scoring, commissions and weekly trading requirement.</li><li><strong>Laboratory:</strong> it replays 452 historical windows of 23 sessions, from 2016 to 2026, against thousands of synthetic rivals, and compares a menu of candidate strategies by their chance of reaching the podium, with bootstrap confidence intervals and stress tests such as rivals who play the same way or days I can't trade.</li><li><strong>Live:</strong> three times each trading day, GitHub Actions runs the recommender, which sends me the exact orders by Telegram. I place them by hand on the contest website and tap a button to log them.</li></ul>",
+     "es": "<ul><li><strong>Datos:</strong> precios sin ajustar de los valores del concurso, un calendario de dividendos y resultados, las OPAs revisadas a mano y reglas de elegibilidad que solo usan lo que se sabía cada día.</li><li><strong>Simulador:</strong> la puntuación exacta del concurso, sus comisiones y el requisito semanal de operaciones.</li><li><strong>Laboratorio:</strong> repite 452 ventanas históricas de 23 sesiones, de 2016 a 2026, contra miles de rivales sintéticos, y compara un menú de estrategias candidatas por su probabilidad de podio, con intervalos de confianza por bootstrap y pruebas de estrés como rivales que juegan igual o días en los que no puedo operar.</li><li><strong>En directo:</strong> tres veces cada día hábil, GitHub Actions ejecuta el recomendador, que me manda por Telegram las órdenes exactas. Yo las meto a mano en la web del concurso y pulso un botón para apuntarlas.</li></ul>"
+    }
+   },
+   {
+    "title": {
+     "en": "Results",
+     "es": "Resultados"
+    },
+    "body": {
+     "en": "<p>The contest is still running. I'll publish the strategy I chose, the numbers behind it and the final result after it ends on 12 November.</p>",
+     "es": "<p>El concurso sigue en marcha. Publicaré la estrategia elegida, las cifras que la respaldan y el resultado final cuando termine, el 12 de noviembre.</p>"
+    }
+   }
+  ]
+ },
+ "polymarket": {
+  "year": "2026",
+  "role": {
+   "en": "Solo",
+   "es": "En solitario"
+  },
+  "context": {
+   "en": "Personal project",
+   "es": "Proyecto personal"
+  },
+  "stack": [
+   "Python",
+   "pandas",
+   "SciPy",
+   "Binance candle data",
+   "pytest",
+   "asyncio"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "The idea",
+     "es": "La idea"
+    },
+    "body": {
+     "en": "<p>Polymarket's «Bitcoin up or down» markets pay out on whether a candle closes above its open. My hypothesis was momentum: a green candle tends to be followed by another green one. I built a bot with risk limits and a paper mode to trade it.</p>",
+     "es": "<p>Los mercados «Bitcoin up or down» de Polymarket pagan según si una vela cierra por encima de su apertura. Mi hipótesis era el momentum: a una vela verde le suele seguir otra verde. Monté un bot con límites de riesgo y modo paper para operarla.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "What the data said",
+     "es": "Lo que dijeron los datos"
+    },
+    "body": {
+     "en": "<p>No momentum. On 15-minute and one-hour candles, the colour repeats less than half the time, in 2024–25, in 2025–26 and out of sample. The edges my first version found in volume, volatility and wicks came from look-ahead: they used data from the very candle being predicted. A notebook now shows the leak and a test guards against it. I shelved the bot before putting any money in.</p>",
+     "es": "<p>No hay momentum. En velas de 15 minutos y de una hora, el color se repite menos de la mitad de las veces, en 2024-25, en 2025-26 y fuera de muestra. Las ventajas que mi primera versión encontraba en el volumen, la volatilidad y las mechas venían de mirar al futuro: usaban datos de la misma vela que se quería predecir. Ahora un notebook enseña la fuga y un test la vigila. Archivé el bot antes de meter dinero.</p>"
+    }
+   }
+  ]
+ },
+ "ibex-newsletter": {
+  "year": "2026",
+  "role": {
+   "en": "Solo",
+   "es": "En solitario"
+  },
+  "context": {
+   "en": "Personal project",
+   "es": "Proyecto personal"
+  },
+  "stack": [
+   "Python",
+   "Claude Opus and Sonnet",
+   "yfinance + RSS",
+   "GitHub Actions",
+   "PostgreSQL (SQLAlchemy)",
+   "Flask + JWT",
+   "SendGrid",
+   "reportlab",
+   "Railway"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "What it did",
+     "es": "Qué hacía"
+    },
+    "body": {
+     "en": "<p>Every trading day after the close, GitHub Actions launched four Claude agents. A leader on Opus coordinated and validated; a researcher and an analyst on Sonnet worked in parallel; a writer, the only agent allowed to write output, turned their work into a seven-page report on the Spanish market: macro indicators, an IBEX 35 summary table, a sector heat map, a 52-week chart, return attribution and the economic calendar. The newsletter then went out by email, and a failed send never stopped the pipeline.</p>",
+     "es": "<p>Cada día hábil, después del cierre, GitHub Actions lanzaba cuatro agentes de Claude. Un líder en Opus coordinaba y validaba; un investigador y un analista en Sonnet trabajaban en paralelo; un redactor, el único agente con permiso para escribir el resultado, convertía su trabajo en un informe de siete páginas sobre el mercado español: indicadores macro, tabla resumen del IBEX 35, mapa de calor sectorial, gráfico de 52 semanas, atribución de rentabilidad y calendario económico. Después salía la newsletter por correo, y un envío fallido nunca paraba el proceso.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Why it matters",
+     "es": "Por qué importa"
+    },
+    "body": {
+     "en": "<p>Around it I built a Flask API with JWT, alerts, backtests and portfolio tracking, covered by 48 tests. It was the forerunner of Auguria.</p>",
+     "es": "<p>A su alrededor monté una API en Flask con JWT, alertas, backtests y seguimiento de carteras, con 48 tests. Fue el precursor de Auguria.</p>"
+    }
+   }
+  ]
+ },
+ "chatbot-experiments": {
+  "year": "2026",
+  "role": {
+   "en": "Solo",
+   "es": "En solitario"
+  },
+  "context": {
+   "en": "Personal project",
+   "es": "Proyecto personal"
+  },
+  "stack": [
+   "Python",
+   "FastAPI",
+   "Anthropic SDK",
+   "WhatsApp Cloud API",
+   "ngrok"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "What it is",
+     "es": "Qué es"
+    },
+    "body": {
+     "en": "<p>A small FastAPI backend for WhatsApp. One endpoint answers Meta's webhook verification; the other receives incoming messages, parses Meta's payload, keeps the last 20 messages of each conversation in memory and replies with Claude. It can be tested without Meta credentials by simulating the webhook with curl, and exposed through ngrok when it's time to connect the real number.</p>",
+     "es": "<p>Un pequeño backend en FastAPI para WhatsApp. Un endpoint responde a la verificación del webhook de Meta; el otro recibe los mensajes, interpreta el formato de Meta, guarda en memoria los últimos 20 mensajes de cada conversación y contesta con Claude. Se puede probar sin credenciales de Meta simulando el webhook con curl, y exponer con ngrok cuando toca conectar el número real.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Why it exists",
+     "es": "Por qué existe"
+    },
+    "body": {
+     "en": "<p>These were the tests I ran before building the Telegram bot that is now in production. For now Claude's reply shows up in the server log; sending replies back through Meta is left for when the real credentials are in place.</p>",
+     "es": "<p>Fueron las pruebas que hice antes de construir el bot de Telegram que hoy está en producción. Por ahora la respuesta de Claude aparece en el registro del servidor; el envío de respuestas de vuelta a través de Meta queda para cuando estén las credenciales reales.</p>"
+    }
+   }
+  ]
+ },
+ "fair-credit": {
+  "year": "2026",
+  "role": {
+   "en": "Team of 3",
+   "es": "Equipo de 3"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "Keras 3 + TensorFlow",
+   "Keras Tuner",
+   "scikit-learn",
+   "pandas",
+   "MC Dropout"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "The task",
+     "es": "La tarea"
+    },
+    "body": {
+     "en": "<p>A neural network for credit risk on Home Credit data, focused on applicants with little credit history, that must not discriminate by gender. Four pieces: a custom layer that computes the debt-to-income ratio with a trainable saturation; a fairness loss that adds a penalty for dependence between the prediction and gender, tried with three measures; a Keras Tuner search that maps the trade-off between AUC and fairness; and an uncertainty estimate for every prediction.</p>",
+     "es": "<p>Una red neuronal de riesgo de crédito sobre datos de Home Credit, centrada en solicitantes con poco historial, que no puede discriminar por género. Cuatro piezas: una capa propia que calcula la ratio de endeudamiento con una saturación entrenable; una pérdida justa que penaliza la dependencia entre la predicción y el género, probada con tres medidas; una búsqueda con Keras Tuner que dibuja el equilibrio entre AUC y equidad, y una estimación de incertidumbre para cada predicción.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Results",
+     "es": "Resultados"
+    },
+    "body": {
+     "en": "<p>The chosen compromise cut the gender gap on the test set by 72% (from 5.6 to 1.6 points) while AUC fell only from 0.7404 to 0.7345. Monte Carlo dropout returns a class and a variance; the variance rises 47% only when all three external credit scores are missing.</p>",
+     "es": "<p>El compromiso elegido redujo un 72 % la brecha de género en test (de 5,6 a 1,6 puntos) con una bajada de AUC de solo 0,7404 a 0,7345. El MC Dropout devuelve la clase y una varianza; la varianza sube un 47 % solo cuando faltan las tres puntuaciones externas de crédito.</p>"
+    }
+   }
+  ]
+ },
+ "xai-credit": {
+  "year": "2026",
+  "role": {
+   "en": "Team of 3",
+   "es": "Equipo de 3"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "XGBoost",
+   "SHAP",
+   "LIME",
+   "DiCE",
+   "scikit-learn",
+   "Keras"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "The task",
+     "es": "La tarea"
+    },
+    "body": {
+     "en": "<p>Build, audit and tune a credit-approval model under two cost scenarios: one symmetric, and one where approving a bad payer costs ten times more than turning down a good one. Logistic regression, XGBoost, two Keras networks and a LinUCB bandit of our own were compared with leak-free cross-validation, and the threshold was chosen by expected cost. XGBoost won in both scenarios.</p>",
+     "es": "<p>Construir, auditar y ajustar un modelo de concesión de crédito en dos escenarios de coste: uno simétrico y otro en el que aprobar a un moroso cuesta diez veces más que rechazar a un buen cliente. Comparamos regresión logística, XGBoost, dos redes en Keras y un bandit LinUCB propio con validación cruzada sin fugas, y elegimos el umbral por coste esperado. XGBoost ganó en los dos escenarios.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "The audit",
+     "es": "La auditoría"
+    },
+    "body": {
+     "en": "<p>A surrogate tree with readable rules, counterfactuals that explain to a rejected client what would have to change, global and local SHAP, and, beyond what was asked, permutation importance, PDP and ICE, LIME measured against SHAP for stability, and age subgroups. In the 10-to-1 scenario, choosing the threshold by expected cost cut the cost by 51%.</p>",
+     "es": "<p>Un árbol subrogado con reglas legibles, contrafactuales que explican a un cliente rechazado qué tendría que cambiar, SHAP global y local y, además de lo pedido, importancia por permutación, PDP e ICE, LIME comparado con SHAP en estabilidad y subgrupos por edad. En el escenario 10 a 1, elegir el umbral por coste esperado redujo el coste un 51 %.</p>"
+    }
+   }
+  ]
+ },
+ "synthetic-data": {
+  "year": "2026",
+  "role": {
+   "en": "Team of 3",
+   "es": "Equipo de 3"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "PyTorch",
+   "Keras",
+   "hmmlearn",
+   "scikit-learn",
+   "yfinance"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "The question",
+     "es": "La pregunta"
+    },
+    "body": {
+     "en": "<p>Can generative models help a classifier when real data is scarce? Here the scarcity is structural: from 2003 to 2026 there are about ten independent stress episodes. The task predicts the dominant market regime over the next 21 days from 60-day windows. We built seven generators, from real data plus noise to Gaussian, CVAE, CGAN, RBIG, flow matching and diffusion, with a time split, an 85-session embargo and test data that is always real.</p>",
+     "es": "<p>¿Pueden los modelos generativos ayudar a un clasificador cuando escasean los datos reales? Aquí la escasez es estructural: entre 2003 y 2026 hay unos diez episodios de estrés independientes. La tarea predice el régimen dominante de los próximos 21 días a partir de ventanas de 60. Montamos siete generadores, desde datos reales con ruido hasta gaussiano, CVAE, CGAN, RBIG, flow matching y difusión, con corte temporal, un embargo de 85 sesiones y un test siempre con datos reales.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Results",
+     "es": "Resultados"
+    },
+    "body": {
+     "en": "<p>Across 570 training runs, synthetic data lifts balanced accuracy from 0.575 to 0.612 and beats reweighting the loss, but the gain sits inside the noise band. And the most faithful generator came seventh in usefulness.</p>",
+     "es": "<p>En 570 entrenamientos, los datos sintéticos suben la balanced accuracy de 0,575 a 0,612 y ganan a reponderar la pérdida, pero la mejora cae dentro de la banda de ruido. Y el generador más fiel a los datos quedó séptimo en utilidad.</p>"
+    }
+   }
+  ]
+ },
+ "equity-arbitrage": {
+  "year": "2025",
+  "role": {
+   "en": "Course assignment",
+   "es": "Práctica del máster"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "pandas",
+   "NumPy",
+   "matplotlib",
+   "Jupyter"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "What it does",
+     "es": "Qué hace"
+    },
+    "body": {
+     "en": "<p>A pipeline over quote and status files from BME, Aquis, Cboe and Turquoise. For each instrument it removes the special placeholder prices venues publish, keeps only continuous trading and merges the four books into one consolidated tape. Then it looks for moments when the best bid on one venue is above the best ask on another, and removes duplicates caused by the same price propagating in time.</p>",
+     "es": "<p>Un pipeline sobre ficheros de cotizaciones y de estado de BME, Aquis, Cboe y Turquoise. Para cada instrumento elimina los precios especiales que publican los mercados como marcadores, se queda solo con la negociación continua y fusiona los cuatro libros en un tape consolidado. Después busca los momentos en que la mejor compra de un mercado supera la mejor venta de otro, y quita los duplicados que deja un mismo precio al propagarse en el tiempo.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Results",
+     "es": "Resultados"
+    },
+    "body": {
+     "en": "<p>It found 2,719 opportunities. A latency simulator then replays each one with delays, and the profit decays fast: a few milliseconds are enough to wipe it out.</p>",
+     "es": "<p>Encontró 2.719 oportunidades. Un simulador de latencia repite cada una con retraso, y el beneficio cae rápido: bastan unos milisegundos para que desaparezca.</p>"
+    }
+   }
+  ]
+ },
+ "nn-sp500": {
+  "year": "2026",
+  "role": {
+   "en": "Team of 3",
+   "es": "Equipo de 3"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "Keras 3 + TensorFlow",
+   "yfinance",
+   "scikit-learn",
+   "pandas"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "The task",
+     "es": "La tarea"
+    },
+    "body": {
+     "en": "<p>Predict the average future log return of 23 S&amp;P 500 stocks from their past returns, over 16 combinations of input and output windows from 1 to 90 days, scored by MAE. We trained sixteen architectures, dense, recurrent, convolutional and hybrid: 256 trainings in all.</p>",
+     "es": "<p>Predecir la media de los log-retornos futuros de 23 valores del S&amp;P 500 a partir de sus retornos pasados, en 16 combinaciones de ventanas de entrada y salida de 1 a 90 días, con el MAE como nota. Entrenamos dieciséis arquitecturas, densas, recurrentes, convolucionales e híbridas: 256 entrenamientos en total.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Results",
+     "es": "Resultados"
+    },
+    "body": {
+     "en": "<p>None beat a linear regression. Every network converged to the same error in every window, because returns are close to white noise and the best answer is the mean. The only real gain came from fractional differentiation, which cut the one-day error by 8.9%.</p>",
+     "es": "<p>Ninguna batió a una regresión lineal. Todas las redes llegaron al mismo error en todas las ventanas, porque los retornos se parecen mucho al ruido blanco y la mejor respuesta es la media. La única mejora real vino de la diferenciación fraccional, que bajó un 8,9 % el error a un día.</p>"
+    }
+   }
+  ]
+ },
+ "risk-var": {
+  "year": "2026",
+  "role": {
+   "en": "Course assignment",
+   "es": "Práctica del máster"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "hmmlearn",
+   "copulas",
+   "SciPy",
+   "pandas",
+   "yfinance"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "What it does",
+     "es": "Qué hace"
+    },
+    "body": {
+     "en": "<p>A stress-testing system for an 18-asset portfolio over 2006–2026, with no imputation: each asset enters from its real start date. A two-state hidden Markov model separates calm from crisis and picks up 2008, 2020 and 2022. Each regime gets its own marginals and Gaussian copulas, and a simulator draws 10,000 paths of 126 days for three scenarios: 2022 stagflation, the 2008 credit crisis and a loss of confidence in US credit. Each one reports VaR and CVaR at 99%.</p>",
+     "es": "<p>Un sistema de stress testing para una cartera de 18 activos entre 2006 y 2026, sin imputar datos: cada activo entra desde su fecha real de inicio. Un modelo oculto de Markov de dos estados separa calma y crisis, y detecta 2008, 2020 y 2022. Cada régimen tiene sus propias marginales y cópulas gaussianas, y un simulador genera 10.000 trayectorias de 126 días para tres escenarios: la estanflación de 2022, la crisis de crédito de 2008 y una pérdida de confianza en el crédito de EE. UU. Cada uno da su VaR y su CVaR al 99 %.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Findings",
+     "es": "Conclusiones"
+    },
+    "body": {
+     "en": "<p>In a crisis, volatility rises two to four times, correlations go up and extreme co-movements become much more common, just when diversification is needed most.</p>",
+     "es": "<p>En crisis, la volatilidad se multiplica por dos a cuatro, las correlaciones suben y los movimientos extremos conjuntos se vuelven mucho más frecuentes, justo cuando más falta hace diversificar.</p>"
+    }
+   }
+  ]
+ },
+ "derivatives": {
+  "year": "2025–2026",
+  "role": {
+   "en": "Course assignment",
+   "es": "Práctica del máster"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "ib_insync",
+   "NumPy · SciPy",
+   "pandas",
+   "Plotly",
+   "yfinance"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "What it does",
+     "es": "Qué hace"
+    },
+    "body": {
+     "en": "<p>Starting from the course's base code, which connects to Interactive Brokers and prices options with Black-Scholes, Greeks and implied volatility, I built a long straddle on SPY and a version hedged in delta every day. The P&amp;L of both is broken down by Greek, and a simulation compares sending the position as one combo order with legging in one option at a time.</p>",
+     "es": "<p>A partir del código base del curso, que conecta con Interactive Brokers y valora opciones con Black-Scholes, griegas y volatilidad implícita, construí un long straddle sobre SPY y una versión cubierta en delta cada día. El P&amp;L de las dos se descompone por griega, y una simulación compara enviar la posición como orden combinada o pata a pata.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "What I learned",
+     "es": "Lo que aprendí"
+    },
+    "body": {
+     "en": "<p>The daily hedge turns the straddle from a bet on direction into a pure bet on volatility, and at-the-money strikes give the best balance between cost and sensitivity.</p>",
+     "es": "<p>La cobertura diaria convierte el straddle de una apuesta de dirección en una apuesta pura sobre la volatilidad, y los strikes at the money dan el mejor equilibrio entre coste y sensibilidad.</p>"
+    }
+   }
+  ]
+ },
+ "backtesting": {
+  "year": "2026",
+  "role": {
+   "en": "Course assignment",
+   "es": "Práctica del máster"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "pandas",
+   "NumPy",
+   "Parquet",
+   "Monte Carlo",
+   "Jupyter"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "What it does",
+     "es": "Qué hace"
+    },
+    "body": {
+     "en": "<p>A monthly momentum strategy adapted from MSCI's method: each month it buys the 20 S&amp;P 500 stocks with the strongest combined 6- and 12-month momentum, from 2015 on, paying 0.23% per trade. A reserve list handles stocks that stop trading, and prices are kept in a wide dates-by-tickers table so the calculations run vectorised.</p>",
+     "es": "<p>Una estrategia de momentum mensual adaptada del método de MSCI: cada mes compra los 20 valores del S&amp;P 500 con mayor momentum combinado a 6 y 12 meses, desde 2015, pagando un 0,23 % por operación. Una lista de reserva cubre los valores que dejan de cotizar, y los precios van en una tabla ancha de fechas por tickers para que los cálculos sean vectoriales.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Results",
+     "es": "Resultados"
+    },
+    "body": {
+     "en": "<p>It returned 10.93% a year and beat every one of 25 million random portfolios, which averaged 4.54%. The write-up ends with a critical look at what that does and doesn't prove.</p>",
+     "es": "<p>Rindió un 10,93 % anual y batió a los 25 millones de carteras aleatorias, que se quedaron en un 4,54 % de media. El trabajo cierra con una lectura crítica de lo que eso demuestra y lo que no.</p>"
+    }
+   }
+  ]
+ },
+ "causal-graphs": {
+  "year": "2026",
+  "role": {
+   "en": "Course assignment",
+   "es": "Práctica del máster"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "pgmpy",
+   "lingam",
+   "statsmodels",
+   "networkx",
+   "Plotly"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "What it does",
+     "es": "Qué hace"
+    },
+    "body": {
+     "en": "<p>Correlation is symmetric; causation has a direction. Using six US sector ETFs from 2000 to 2024, it learns directed acyclic graphs with the PC algorithm, Hill Climbing and LiNGAM, adds Granger tests for timing, and checks robustness with bootstrap and different significance levels. The graph changes between calm and crisis periods and between bull and bear markets.</p>",
+     "es": "<p>La correlación es simétrica; la causalidad tiene dirección. Con seis ETF sectoriales de EE. UU. entre 2000 y 2024, aprende grafos acíclicos dirigidos con el algoritmo PC, Hill Climbing y LiNGAM, añade tests de Granger para el orden temporal y comprueba la robustez con bootstrap y distintos niveles de significación. El grafo cambia entre periodos de calma y de crisis, y entre mercados alcistas y bajistas.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "The factor mirage",
+     "es": "El espejismo de los factores"
+    },
+    "body": {
+     "en": "<p>A worked example shows how controlling for a collider, a variable caused by two others, creates a correlation that isn't there.</p>",
+     "es": "<p>Un ejemplo resuelto muestra cómo controlar por un colisionador, una variable causada por otras dos, crea una correlación que no existe.</p>"
+    }
+   }
+  ]
+ },
+ "portfolio-mgmt": {
+  "year": "2026",
+  "role": {
+   "en": "Course assignment",
+   "es": "Práctica del máster"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "cvxpy",
+   "NumPy",
+   "pandas",
+   "SciPy",
+   "matplotlib"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "What it does",
+     "es": "Qué hace"
+    },
+    "body": {
+     "en": "<p>A class competition scored on annualised Sharpe ratio, over 50 anonymised assets and 1,760 days of returns. The code is split into modules: data preparation, equal-weight portfolios and diversification, Markowitz optimisation, asset selection by diversification and Sharpe, a comparison of points along the frontier, and a final check of the constraints before export.</p>",
+     "es": "<p>Una competición de clase puntuada por el Sharpe anualizado, sobre 50 activos anonimizados y 1.760 días de retornos. El código va por módulos: preparación de datos, carteras equiponderadas y diversificación, optimización de Markowitz, selección de activos por diversificación y Sharpe, comparación de puntos de la frontera y una comprobación final de las restricciones antes de exportar.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Result",
+     "es": "Resultado"
+    },
+    "body": {
+     "en": "<p>The maximum-Sharpe portfolio reached 1.16 on the training data. That is an in-sample figure, so it says more about the method than about how the portfolio would do next.</p>",
+     "es": "<p>La cartera de Sharpe máximo llegó a 1,16 en los datos de entrenamiento. Es una cifra dentro de muestra, así que habla más del método que de cómo se comportaría la cartera después.</p>"
+    }
+   }
+  ]
+ },
+ "fund-of-funds": {
+  "year": "2026",
+  "role": {
+   "en": "Course assignment",
+   "es": "Práctica del máster"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "pandas",
+   "scikit-learn",
+   "Fama-French factors",
+   "Jupyter"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "The thesis",
+     "es": "La tesis"
+    },
+    "body": {
+     "en": "<p>The hypothesis was that Asia would do better than other regions, so the goal was a fund of funds with 70% in Asia, 30% to diversify and no fund above 5%, after minimum quality filters.</p>",
+     "es": "<p>La hipótesis era que Asia lo haría mejor que otras regiones, así que el objetivo era un fondo de fondos con un 70 % en Asia, un 30 % para diversificar y ningún fondo por encima del 5 %, tras unos filtros mínimos de calidad.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "How it's built",
+     "es": "Cómo está hecho"
+    },
+    "body": {
+     "en": "<p>Daily fund prices are merged with Fama-French factors, dates are aligned and the universe goes into one long daily table with quality checks and missing-data handling. Funds are grouped by clustering before they are picked, supervised regression models are fitted on top, and the result is measured against an Asia ETF.</p>",
+     "es": "<p>Los precios diarios de los fondos se cruzan con los factores de Fama-French, se alinean las fechas y el universo pasa a una única tabla diaria larga, con controles de calidad y tratamiento de faltantes. Los fondos se agrupan por clustering antes de elegirlos, se ajustan encima modelos supervisados de regresión y el resultado se mide contra un ETF de Asia.</p>"
+    }
+   }
+  ]
+ },
+ "data-preprocessing": {
+  "year": "2026",
+  "role": {
+   "en": "Pair work",
+   "es": "En pareja"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "pandas",
+   "NumPy",
+   "scikit-learn",
+   "Parquet",
+   "Jupyter"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "Bars and memory",
+     "es": "Barras y memoria"
+    },
+    "body": {
+     "en": "<p>López de Prado's preprocessing methods, step by step. Tick, volume and dollar bars are built and compared, and dollar bars become the base. Fractional differentiation is tried from d = 0 to 1; from d = 0.4 the series is stationary while keeping part of its memory.</p>",
+     "es": "<p>Los métodos de preprocesado de López de Prado, paso a paso. Se construyen y comparan barras de ticks, de volumen y de dólares, y las de dólares quedan como base. Se prueba la diferenciación fraccional de d = 0 a 1; desde d = 0,4 la serie es estacionaria y conserva parte de su memoria.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Covariance, labels and splits",
+     "es": "Covarianzas, etiquetas y particiones"
+    },
+    "body": {
+     "en": "<p>A covariance matrix of ten cryptocurrencies is cleaned with Marchenko–Pastur, events are labelled with the triple barrier, using fixed and volatility-based thresholds, and the train and test splits respect time.</p>",
+     "es": "<p>La matriz de covarianzas de diez criptomonedas se limpia con Marchenko–Pastur, los eventos se etiquetan con la triple barrera, con umbrales fijos y basados en la volatilidad, y las particiones de entrenamiento y test respetan el tiempo.</p>"
+    }
+   }
+  ]
+ },
+ "heterogeneous-nn": {
+  "year": "2026",
+  "role": {
+   "en": "Team of 3 — I wrote the preprocessing pipeline",
+   "es": "Equipo de 3 — hice el pipeline de preprocesado"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "TensorFlow (tf.keras)",
+   "LSTM",
+   "Embeddings",
+   "pandas",
+   "scikit-learn"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "The task",
+     "es": "La tarea"
+    },
+    "body": {
+     "en": "<p>Forecast daily sales for nine Rossmann stores with a network that reads two kinds of input: an LSTM branch for the last 30 open days and an embedding branch for each store's fixed traits, such as type, range and competition. One global model shares what it learns across stores, because some have only about 600 days of history. Validation covers October to December 2014 so it includes Christmas.</p>",
+     "es": "<p>Predecir las ventas diarias de nueve tiendas Rossmann con una red que lee dos tipos de entrada: una rama LSTM con los últimos 30 días abiertos y una rama de embeddings con los rasgos fijos de cada tienda, como el tipo, el surtido o la competencia. Un único modelo global comparte lo aprendido entre tiendas, porque algunas solo tienen unos 600 días de historia. La validación va de octubre a diciembre de 2014 para incluir la Navidad.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "My part and results",
+     "es": "Mi parte y resultados"
+    },
+    "body": {
+     "en": "<p>I wrote the preprocessing: loading, cleaning, store features, encoding, a time split, a per-store normaliser and the input sequences. On the 2015 test period, R² was above 0.6 in seven of the nine stores and negative in one.</p>",
+     "es": "<p>Me encargué del preprocesado: carga, limpieza, variables de tienda, codificación, partición temporal, un normalizador por tienda y las secuencias de entrada. En el periodo de test de 2015, el R² superó 0,6 en siete de las nueve tiendas y fue negativo en una.</p>"
+    }
+   }
+  ]
+ },
+ "nn-competition": {
+  "year": "2026",
+  "role": {
+   "en": "Team of 3",
+   "es": "Equipo de 3"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "Keras + TensorFlow",
+   "LSTM",
+   "pandas",
+   "NumPy"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "The format",
+     "es": "El formato"
+    },
+    "body": {
+     "en": "<p>A one-day team hackathon: forecast six indices day by day for 252 steps, where each prediction feeds the next, scored by average RMSE.</p>",
+     "es": "<p>Un hackathon por equipos de un día: predecir seis índices día a día durante 252 pasos, en los que cada predicción alimenta la siguiente, con el RMSE medio como nota.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "How we played it",
+     "es": "Cómo lo jugamos"
+    },
+    "body": {
+     "en": "<p>First a short exploration of each index's quirks, such as whether one copied another with a lag. Then flat, drift and random-walk baselines for all six, to secure the pass. Only after that did the network effort go where it was worth it, with LSTMs planned for the hardest indices and a flat line for the steady one. Each index had one owner and one results file, and a final notebook only read them to build the submission.</p>",
+     "es": "<p>Primero, una exploración rápida de las rarezas de cada índice, como si uno copiaba a otro con retraso. Después, baselines plano, con deriva y de paseo aleatorio para los seis, para asegurar el aprobado. Solo entonces fueron las redes a donde compensaba, con LSTM previstas para los índices más difíciles y una línea plana para el más estable. Cada índice tenía un responsable y un fichero de resultados, y un notebook final solo los leía para montar la entrega.</p>"
+    }
+   }
+  ]
+ },
+ "fixed-income": {
+  "year": "2025",
+  "role": {
+   "en": "Team of 3",
+   "es": "Equipo de 3"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "pandas",
+   "NumPy",
+   "SciPy",
+   "matplotlib"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "Reading the portfolio",
+     "es": "Leer la cartera"
+    },
+    "body": {
+     "en": "<p>The first fixed-income exercise, on a universe of corporate bonds. First, reading the portfolio: currencies, fixed or floating coupons, seniority, callable and perpetual bonds, ratings with investment grade against high yield, one-year default probability, liquidity through spreads and outstanding amount, and concentration by sector and issuer.</p>",
+     "es": "<p>El primer ejercicio de renta fija, sobre un universo de bonos corporativos. Primero, leer la cartera: divisas, cupón fijo o flotante, prelación, bonos callable y perpetuos, ratings con grado de inversión frente a high yield, probabilidad de impago a un año, liquidez por horquillas y nominal vivo, y concentración por sector y emisor.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Pricing",
+     "es": "Valoración"
+    },
+    "body": {
+     "en": "<p>Then pricing: each bond valued on the €STR curve plus a credit spread, with clean price, accrued interest and dirty price; the spreads that match market prices; yield, duration and convexity; and an equal-weight portfolio rebalanced every month.</p>",
+     "es": "<p>Después, la valoración: cada bono valorado con la curva €STR más un spread de crédito, con precio limpio, cupón corrido y precio sucio; los spreads que cuadran con los precios de mercado; TIR, duración y convexidad, y una cartera equiponderada con rebalanceo mensual.</p>"
+    }
+   }
+  ]
+ },
+ "python-fundamentals": {
+  "year": "2025",
+  "role": {
+   "en": "Course assignment",
+   "es": "Práctica del máster"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "pandas",
+   "yfinance",
+   "Alpha Vantage API",
+   "matplotlib · seaborn",
+   "Monte Carlo"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "Getting the data right",
+     "es": "Datos limpios"
+    },
+    "body": {
+     "en": "<p>The master's first block: a toolkit for market data in five stages. It downloads prices from Yahoo Finance or Alpha Vantage into a standard format; validates and cleans them, checking for gaps, duplicates and impossible prices; and wraps them in data classes for a price series and a portfolio that compute their own statistics.</p>",
+     "es": "<p>El primer bloque del máster: un kit para datos de mercado en cinco etapas. Descarga precios de Yahoo Finance o Alpha Vantage en un formato común; los valida y los limpia, buscando huecos, duplicados y precios imposibles, y los envuelve en clases de datos para una serie de precios y una cartera que calculan sus propias estadísticas.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Simulation and reports",
+     "es": "Simulación e informes"
+    },
+    "body": {
+     "en": "<p>It runs Monte Carlo simulations with geometric Brownian motion, historical bootstrap or stochastic volatility, with VaR and CVaR; and writes Markdown reports with charts. End-to-end tests cover the whole flow, shown here on ten hypothetical portfolios.</p>",
+     "es": "<p>Ejecuta simulaciones de Monte Carlo con movimiento browniano geométrico, bootstrap histórico o volatilidad estocástica, con VaR y CVaR, y escribe informes en Markdown con gráficos. Unos tests de punta a punta cubren todo el flujo, aquí sobre diez carteras hipotéticas.</p>"
+    }
+   }
+  ]
+ },
+ "fraud-detection": {
+  "year": "2026",
+  "role": {
+   "en": "Team of 3",
+   "es": "Equipo de 3"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "scikit-learn",
+   "Gaussian mixtures",
+   "pandas",
+   "Jupyter"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "The task",
+     "es": "La tarea"
+    },
+    "body": {
+     "en": "<p>Give every bank transaction a fraud score, judged by the area under the precision-recall curve on a production file we can't see. The labelled set has 170,884 transactions with anonymised variables, and only 295 of them, 0.17%, are fraud. A shared notebook cell fixes the split, the folds and the scaling inside each fold, so every team member's score is comparable.</p>",
+     "es": "<p>Dar a cada transacción bancaria una puntuación de fraude, evaluada por el área bajo la curva precisión-recall en un fichero de producción que no vemos. El conjunto etiquetado tiene 170.884 transacciones con variables anonimizadas, y solo 295, un 0,17 %, son fraude. Una celda común fija la partición, los folds y el escalado dentro de cada fold, para que la puntuación de cada miembro del equipo sea comparable.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "So far",
+     "es": "Hasta ahora"
+    },
+    "body": {
+     "en": "<p>A 10-component Gaussian mixture with a log amount and an amount-frequency feature reaches 0.696, against the 0.567 starting baseline. With only 89 frauds in the test set, differences of 0.05 aren't conclusive, so cross-validation decides. The final version is due on 29 October.</p>",
+     "es": "<p>Una mezcla gaussiana de 10 componentes, con el importe en logaritmo y una variable de frecuencia del importe, llega a 0,696 frente al 0,567 de partida. Con solo 89 fraudes en el test, diferencias de 0,05 no son concluyentes, así que decide la validación cruzada. La versión final se entrega el 29 de octubre.</p>"
+    }
+   }
+  ]
+ },
+ "doc-systems": {
+  "year": "2026",
+  "role": {
+   "en": "Solo",
+   "es": "En solitario"
+  },
+  "context": {
+   "en": "Five client companies",
+   "es": "Cinco empresas cliente"
+  },
+  "stack": [
+   "RAG",
+   "LLM assistants",
+   "Document classification"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "The problem",
+     "es": "El problema"
+    },
+    "body": {
+     "en": "<p>Small and medium companies keep their documentation in many places at once: shared folders, email attachments, scanned PDFs and personal drives. Finding a contract, an invoice or a past decision takes time and depends on who remembers where it is.</p>",
+     "es": "<p>Las pymes guardan su documentación en muchos sitios a la vez: carpetas compartidas, adjuntos de correo, PDF escaneados y discos personales. Encontrar un contrato, una factura o una decisión pasada lleva tiempo y depende de quién se acuerde de dónde está.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "What I did",
+     "es": "Qué hice"
+    },
+    "body": {
+     "en": "<p>For each of five companies I gathered the documents, sorted and renamed them into one archive ordered by area and date, and set up an AI assistant over that archive. The team asks in plain language and the assistant answers from the company’s own files.</p>",
+     "es": "<p>Para cada una de las cinco empresas reuní los documentos, los clasifiqué y renombré en un único archivo ordenado por área y fecha, y monté un asistente con IA sobre ese archivo. El equipo pregunta con sus palabras y el asistente responde a partir de los archivos de la propia empresa.</p>"
+    }
+   }
+  ]
+ }
+}

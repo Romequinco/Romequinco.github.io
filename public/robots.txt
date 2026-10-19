@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+# CV PDFs are not linked from the site for now
+Disallow: /cv-oscar-romero-quincoces-en.pdf
+Disallow: /cv-oscar-romero-quincoces-es.pdf
+
+Sitemap: https://romequinco.github.io/sitemap-index.xml

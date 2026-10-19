@@ -1,0 +1,126 @@
+---
+/*
+  Project covers, one style per group:
+  products → two-ink poster · research → paper title page
+  course → subject card · webs → desktop + phone
+  Sizes are in container units so a cover reads the same at any width.
+*/
+import { type Lang, t, plain } from '../lib/i18n';
+import { type Project, type Group, type Img, detailOf, coverOf, kpiValue } from '../lib/data';
+
+interface Props { lang: Lang; project: Project; group: Group }
+const { lang, project: p, group } = Astro.props;
+const d = detailOf(p.slug);
+const c = coverOf(p.slug);
+const raster = p.images.filter((i) => i.src);
+const svg = p.images.find((i) => i.svg);
+const [img1, img2] = raster;
+const tallImg = (im: Img) => !!im.w && !!im.h && im.h > im.w;
+const kpis = (c.kpis ?? []).slice(0, 3);
+const stack = (d.stack ?? []).slice(0, 4);
+const team = /team|equipo|pair|pareja/i.test(plain(d.role, 'en'));
+const domain = c.domain ?? (p.links.find((l) => /^https?:/.test(l.href))?.href ?? '').replace(/^https?:\/\//, '').replace(/\/$/, '');
+// covers use the light copies made by scripts/make-thumbs.py
+const th = (src?: string) => (src ? src.replace(/^\/img\//, '/img/t/') : src);
+const svgHtml = (im?: Img) => (im?.svg ? im.svg.replace('<svg ', '<svg aria-hidden="true" ') : '');
+const style = { products: 'shot', research: 'paper', course: 'subject', webs: 'devices' }[group.id] ?? 'poster';
+const L = (en: string, es: string) => (lang === 'en' ? en : es);
+const nameLen = plain(p.name, lang).length;
+const ts = nameLen > 30 ? 5.2 : nameLen > 22 ? 6.2 : nameLen > 14 ? 7.6 : 9.4;
+const ts2 = nameLen > 22 ? 4.4 : nameLen > 15 ? 5.2 : 6.2;
+---
+<div class:list={['cover', style, `g-${group.id}`]} style={c.brand ? `--b:${c.brand}` : undefined} aria-hidden="true">
+  {style === 'shot' && (
+    <>
+      {img1 && img2 && tallImg(img1) && tallImg(img2)
+        ? <div class="pair">{raster.slice(0, 2).map((im) => <img src={th(im.src)} width={im.w} height={im.h} alt="" loading="lazy" decoding="async" />)}</div>
+        : <>
+            {img1 ? <img class="bg" src={th(img1.src)} width={img1.w} height={img1.h} alt="" loading="lazy" decoding="async" /> : <div class="bgsvg" set:html={svgHtml(svg)} />}
+            {img2 && <img class="in" src={th(img2.src)} width={img2.w} height={img2.h} alt="" loading="lazy" decoding="async" />}
+          </>}
+      {p.status && <span class="pl" set:html={t(p.status, lang)} />}
+      <div class="w">
+        <span class="bar"></span>
+        <span class="ttl" style={`--ts:${ts}cqw`} set:html={t(p.name, lang)} />
+        <span class="d" set:html={t(p.short, lang)} />
+        {kpis.length > 0 && (
+          <div class="kpis">{kpis.map((k) => <div><b>{kpiValue(k, lang)}</b><span>{t(k.l, lang)}</span></div>)}</div>
+        )}
+        {stack.length > 0 && <span class="stk">{stack.slice(0, 3).join(' · ')}{d.year ? ` · ${d.year}` : ''}</span>}
+      </div>
+    </>
+  )}
+
+  {style === 'poster' && (
+    <>
+      {img1 ? <img class="bg" src={th(img1.src)} width={img1.w} height={img1.h} alt="" loading="lazy" decoding="async" /> : <div class="bgsvg ink" set:html={svgHtml(svg)} />}
+      <div class="top">
+        {p.status && <span class="pill" set:html={t(p.status, lang)} />}
+        {d.year && <span class="pill o">{d.year}</span>}
+      </div>
+      {img2 && <img class="inset" src={th(img2.src)} width={img2.w} height={img2.h} alt="" loading="lazy" decoding="async" />}
+      <div class="bottom">
+        <span class="ttl" style={`--ts:${ts}cqw`} set:html={t(p.name, lang)} />
+        {kpis.length > 0 && (
+          <div class="kpis">{kpis.map((k) => <div><b>{kpiValue(k, lang)}</b><span>{t(k.l, lang)}</span></div>)}</div>
+        )}
+        {stack.length > 0 && <span class="stk">{stack.join(' · ')}</span>}
+      </div>
+    </>
+  )}
+
+  {style === 'paper' && (
+    <>
+      <div class="txt">
+        <span class="pre">{L('Research note', 'Nota de investigación')} · {d.year ?? '2026'}</span>
+        <span class="ttl" set:html={`${t(p.name, lang)}: ${t(p.short, lang)}`} />
+        <span class="au">Óscar Romero Quincoces{team ? L(' and team', ' y equipo') : ''}</span>
+        <p class="ab"><b>{L('Abstract.', 'Resumen.')}</b> <Fragment set:html={t(p.say, lang)} /></p>
+        {c.keywords && <p class="kw"><i>{L('Keywords', 'Palabras clave')}:</i> {t(c.keywords, lang)}</p>}
+      </div>
+      <div class="pfigs">
+        {p.images.slice(0, 2).map((im, i) => (
+          <figure class="ink">
+            {im.src ? <img src={th(im.src)} width={im.w} height={im.h} alt="" loading="lazy" decoding="async" /> : <Fragment set:html={svgHtml(im)} />}
+            <figcaption>Fig. {i + 1}</figcaption>
+          </figure>
+        ))}
+      </div>
+      {kpis.length > 0 && (
+        <div class="res">{kpis.map((k) => <div><b>{kpiValue(k, lang)}</b><span>{t(k.l, lang)}</span></div>)}</div>
+      )}
+      {p.status && <span class="tag" set:html={t(p.status, lang)} />}
+    </>
+  )}
+
+  {style === 'subject' && (
+    <>
+      <span class="band"></span>
+      <div class="txt">
+        <span class="pre">{L("MIAX master's", 'Máster MIAX')} · Instituto BME · {d.year ?? ''}</span>
+        <span class="ttl" style={`--ts:${ts2}cqw`} set:html={t(p.name, lang)} />
+        <dl>
+          {c.tech && <><dt>{L('Method', 'Técnica')}</dt><dd>{t(c.tech, lang)}</dd></>}
+          {c.data && <><dt>{L('Data', 'Datos')}</dt><dd>{t(c.data, lang)}</dd></>}
+          {kpis.length > 0 && <><dt>{L('Result', 'Resultado')}</dt><dd class="r">{kpis.map((k) => <span><b>{kpiValue(k, lang)}</b> {t(k.l, lang)}</span>)}</dd></>}
+        </dl>
+        <span class="foot">{team ? L('Team of 3', 'Equipo de 3') : L('Solo', 'Individual')}{p.status ? ' · ' : ''}{p.status && <Fragment set:html={t(p.status, lang)} />}</span>
+      </div>
+      <div class="thumbs">
+        <div class="th ink">{img1 ? <img src={th(img1.src)} width={img1.w} height={img1.h} alt="" loading="lazy" decoding="async" /> : <Fragment set:html={svgHtml(svg)} />}</div>
+        {(img2 || (svg && img1)) && <div class="th ink">{img2 ? <img src={th(img2.src)} width={img2.w} height={img2.h} alt="" loading="lazy" decoding="async" /> : <Fragment set:html={svgHtml(svg)} />}</div>}
+      </div>
+    </>
+  )}
+
+  {style === 'devices' && (
+    <>
+      <div class="desk">
+        <div class="bar"><i></i><span>{domain}</span></div>
+        {img1 && <img src={th(img1.src)} width={img1.w} height={img1.h} alt="" loading="lazy" decoding="async" />}
+      </div>
+      {img2 && img2.h! > img2.w! && <div class="phone"><img src={th(img2.src)} width={img2.w} height={img2.h} alt="" loading="lazy" decoding="async" /></div>}
+      <div class="lbl"><b set:html={t(p.name, lang)} />{c.facts && <span>{t(c.facts, lang)}</span>}</div>
+    </>
+  )}
+</div>
