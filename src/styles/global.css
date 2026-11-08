@@ -345,7 +345,11 @@ html[lang="en"] .dg [lang="es"],html[lang="es"] .dg [lang="en"]{display:none}
 .shot .kpis b{display:block;font-family:var(--disp);font-weight:800;font-stretch:105%;font-size:4.6cqw;line-height:1;color:var(--b);white-space:nowrap}
 .shot .kpis span{display:block;font-size:2.1cqw;line-height:1.25;margin-top:.5cqw;color:#C3C7CD;max-width:15cqw}
 .shot .stk{font:500 2cqw var(--font);color:#9A9EA5}
+/* with an inset on the right, the three figures must fit in the text column */
+.shot:has(.in) .kpis{column-gap:2.4cqw}
+.shot:has(.in) .kpis b{font-size:3.9cqw}
 @container (max-width:440px){
+  .shot:has(.in) .kpis b{font-size:5.6cqw}
   .shot .d,.shot .stk{display:none}
   .shot .kpis{grid-template-columns:repeat(2,auto)}
   .shot .kpis div:nth-child(3){display:none}

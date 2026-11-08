@@ -22,48 +22,30 @@
      },
      "images": [
       {
-       "src": "/img/p/auguria/1.webp",
+       "src": "/img/p/auguria/volatilidad.webp",
        "w": 1600,
        "h": 1000,
        "caption": {
-        "en": "Market overview: indices, session status and the S&amp;P 500 heat map",
-        "es": "Vista general: índices, estado de las sesiones y mapa de calor del S&amp;P 500"
+        "en": "Volatility and risk: the VIX over the last year, its term structure and correlations between assets",
+        "es": "Volatilidad y riesgo: el VIX del último año, su estructura temporal y las correlaciones entre activos"
        }
       },
       {
-       "src": "/img/p/auguria/activo.webp",
+       "src": "/img/p/auguria/mapa-calor.webp",
        "w": 1600,
        "h": 1000,
        "caption": {
-        "en": "An asset page: candlestick chart with events and indicators, and the tabs of the technical, fundamental and news agents",
-        "es": "La ficha de un activo: gráfico de velas con eventos e indicadores, y las pestañas de los agentes técnico, fundamental y de noticias"
+        "en": "Heat map of the 503 S&amp;P 500 stocks by sector, next to the day's biggest movers and the return by sector",
+        "es": "Mapa de calor de los 503 valores del S&amp;P 500 por sector, junto a los mayores movimientos del día y la rentabilidad por sector"
        }
       },
       {
-       "src": "/img/p/auguria/3.webp",
-       "w": 1440,
-       "h": 900,
+       "src": "/img/p/auguria/activo-sp500.webp",
+       "w": 1600,
+       "h": 1000,
        "caption": {
-        "en": "The public closing briefing, with the day's key charts",
-        "es": "El briefing público de cierre, con los gráficos clave del día"
-       }
-      },
-      {
-       "src": "/img/screener.webp",
-       "w": 2160,
-       "h": 1350,
-       "caption": {
-        "en": "Factor screener across more than 1,000 assets",
-        "es": "Screener de factores sobre más de 1.000 activos"
-       }
-      },
-      {
-       "src": "/img/agentes.webp",
-       "w": 2160,
-       "h": 1350,
-       "caption": {
-        "en": "The news, technical, fundamental and macro agents",
-        "es": "Los agentes de noticias, técnico, fundamental y macro"
+        "en": "An asset page: candlestick chart with indicators and the tabs of the technical, fundamental and news agents",
+        "es": "La ficha de un activo: gráfico de velas con indicadores y las pestañas de los agentes técnico, fundamental y de noticias"
        }
       }
      ],
@@ -255,30 +237,30 @@
      },
      "images": [
       {
-       "src": "/img/p/stator/1.webp",
+       "src": "/img/p/stator/lha.webp",
        "w": 1600,
-       "h": 884,
+       "h": 1000,
        "caption": {
-        "en": "Desk view design: quote ladders and risk limits, with anonymised sample data",
-        "es": "Diseño de la vista de mesa: escaleras de precios y límites de riesgo, con datos de ejemplo anonimizados"
+        "en": "LHA in the 28 September paper session: our quotes and fills over the market price, with position and P&amp;L",
+        "es": "LHA en la sesión paper del 28 de septiembre: nuestras cotizaciones y ejecuciones sobre el precio de mercado, con la posición y el P&amp;L"
        }
       },
       {
-       "src": "/img/p/stator/2.webp",
+       "src": "/img/p/stator/ejecuciones.webp",
        "w": 1600,
-       "h": 900,
+       "h": 1000,
        "caption": {
-        "en": "On-call panel design: do I need to act, and the status of each security",
-        "es": "Diseño del panel de guardia: si hay que actuar y el estado de cada valor"
+        "en": "That day's LHA fills, with the position after each one and the markout at 10 s, 1 min and 5 min",
+        "es": "Las ejecuciones de LHA de ese día, con la posición tras cada una y el markout a 10 s, 1 min y 5 min"
        }
       },
       {
-       "src": "/img/p/stator/3.webp",
+       "src": "/img/p/stator/broker.webp",
        "w": 1600,
-       "h": 900,
+       "h": 1000,
        "caption": {
-        "en": "Session timeline design: processes, incidents, quoting state, position and P&amp;L",
-        "es": "Diseño de la línea de la sesión: procesos, incidencias, estado de cotización, posición y P&amp;L"
+        "en": "The broker (IBKR TWS, paper account) with the engine's orders quoting and being modified",
+        "es": "El bróker (TWS de IBKR, cuenta paper) con las órdenes del motor cotizando y modificándose"
        }
       }
      ],
@@ -287,8 +269,8 @@
       "es": "Cotiza compra y venta de forma continua en valores poco líquidos de BME Growth, con límites de riesgo duros, kill switch y un registro encadenado por hash con sellado de tiempo diario. En la sesión de paper trading envió 2.938 órdenes, ninguna fuera de límites, y el kill switch lo cancela todo en un segundo. MVP en seis semanas, en Triarii."
      },
      "how": {
-      "en": "Python, Interactive Brokers and Claude agents. The screens are design mockups with sample data.",
-      "es": "Python, Interactive Brokers y agentes de Claude. Las pantallas son maquetas de diseño con datos de ejemplo."
+      "en": "Python, Interactive Brokers and Claude agents. The screens are from the real paper sessions.",
+      "es": "Python, Interactive Brokers y agentes de Claude. Las pantallas son de las sesiones reales en paper."
      },
      "links": [],
      "slug": "stator"

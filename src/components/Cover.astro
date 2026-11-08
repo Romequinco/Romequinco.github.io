@@ -12,7 +12,7 @@ interface Props { lang: Lang; project: Project; group: Group }
 const { lang, project: p, group } = Astro.props;
 const d = detailOf(p.slug);
 const c = coverOf(p.slug);
-const raster = p.images.filter((i) => i.src);
+const raster = (c.images ?? p.images).filter((i) => i.src);
 const svg = p.images.find((i) => i.svg);
 const [img1, img2] = raster;
 const tallImg = (im: Img) => !!im.w && !!im.h && im.h > im.w;

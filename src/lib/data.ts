@@ -24,7 +24,8 @@ const details: Record<string, Detail> = (Object.values(found)[0] as Record<strin
 
 import coversRaw from '../data/covers.json';
 export type Kpi = { v: string; ves?: string; l: Bi };
-export type Cover = { kpis?: Kpi[]; tech?: Bi; data?: Bi; keywords?: Bi; facts?: Bi; brand?: string; domain?: string };
+/** `images`: the cover's own background and inset, when they are not the page's first two images. */
+export type Cover = { kpis?: Kpi[]; tech?: Bi; data?: Bi; keywords?: Bi; facts?: Bi; brand?: string; domain?: string; images?: Img[] };
 const covers = coversRaw as Record<string, Cover>;
 export const coverOf = (slug: string): Cover => covers[slug] ?? {};
 export const kpiValue = (k: Kpi, lang: 'en' | 'es') => (lang === 'es' && k.ves ? k.ves : k.v);

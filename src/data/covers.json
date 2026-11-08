@@ -25,7 +25,21 @@
     }
    }
   ],
-  "brand": "#2BB673"
+  "brand": "#2BB673",
+  "images": [
+   {
+    "src": "/img/p/auguria/mapa-calor.webp",
+    "w": 1600,
+    "h": 1000,
+    "caption": null
+   },
+   {
+    "src": "/img/p/auguria/volatilidad.webp",
+    "w": 1600,
+    "h": 1000,
+    "caption": null
+   }
+  ]
  },
  "auguria-studio": {
   "kpis": [
@@ -99,7 +113,21 @@
     }
    }
   ],
-  "brand": "#E0524A"
+  "brand": "#E0524A",
+  "images": [
+   {
+    "src": "/img/p/stator/portada.webp",
+    "w": 1600,
+    "h": 1000,
+    "caption": null
+   },
+   {
+    "src": "/img/p/stator/broker.webp",
+    "w": 1600,
+    "h": 1000,
+    "caption": null
+   }
+  ]
  },
  "telegram-task-agent": {
   "kpis": [
