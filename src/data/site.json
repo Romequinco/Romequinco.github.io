@@ -173,8 +173,8 @@
       "es": "Podcast a dos voces de tus valores"
      },
      "status": {
-      "en": "Live demo",
-      "es": "Demo en directo"
+      "en": "Demo on request",
+      "es": "Demo bajo petición"
      },
      "images": [
       {
@@ -224,10 +224,10 @@
      },
      "links": [
       {
-       "href": "https://multimodal-market-briefer-production.up.railway.app/",
+       "href": "mailto:romequinco@gmail.com?subject=Demo%20de%20Briefly",
        "label": {
-        "en": "Try the live demo",
-        "es": "Probar la demo"
+        "en": "Ask me for the demo",
+        "es": "Pídeme la demo"
        }
       },
       {

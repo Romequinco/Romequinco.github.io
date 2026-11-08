@@ -50,4 +50,4 @@ export const neighbours = (slug: string) => {
 };
 
 /** Links that leave the site (demo, code, live site), never the internal page link. */
-export const externalLinks = (p: Project) => p.links.filter((l) => /^https?:/.test(l.href));
+export const externalLinks = (p: Project) => p.links.filter((l) => /^(https?|mailto):/.test(l.href));
