@@ -1354,5 +1354,55 @@
     }
    }
   ]
+ },
+ "rl-trading": {
+  "year": "2026",
+  "role": {
+   "en": "Team of 3",
+   "es": "Equipo de 3"
+  },
+  "context": {
+   "en": "MIAX master's, Instituto BME",
+   "es": "Máster MIAX, Instituto BME"
+  },
+  "stack": [
+   "Python",
+   "PyTorch",
+   "NumPy",
+   "pandas",
+   "Jupyter"
+  ],
+  "sections": [
+   {
+    "title": {
+     "en": "The question",
+     "es": "La pregunta"
+    },
+    "body": {
+     "en": "<p>Can an agent learn to trade one asset from its own trades? The workshop environment gives a minimal state (recent trend and position), three actions (sell, hold, buy) and a 0.1% commission. The four markets are synthetic and each has a known right strategy: trend with a cycle, geometric Brownian motion, mean reversion, and bull and bear regimes. Every episode uses a new series, and the test uses 200 series and 5 seeds.</p>",
+     "es": "<p>¿Puede un agente aprender a invertir en un activo a partir de sus propias operaciones? El entorno del taller da un estado mínimo (tendencia reciente y posición), tres acciones (vender, mantener, comprar) y una comisión del 0,1 %. Los cuatro mercados son sintéticos y cada uno tiene una estrategia correcta conocida: tendencia con ciclo, browniano geométrico, reversión a la media y regímenes alcista y bajista. Cada episodio usa una serie nueva y el test, 200 series y 5 semillas.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "How it's built",
+     "es": "Cómo está hecho"
+    },
+    "body": {
+     "en": "<p>In the first assignment, tabular Q-Learning and SARSA, tuned in stages on validation (α, ε decay, γ and episodes). Then a richer state with the distance to the 30-session average and 20-session volatility, two more markets, a real S&amp;P 500 series with time splits, and 360 robustness runs that change one factor at a time. In the second, DQN and asynchronous A3C with 3 processes on the same protocol, a noise band to tell real gains from luck, and 300 more one-factor runs.</p>",
+     "es": "<p>En el primer taller, Q-Learning y SARSA tabulares, ajustados por etapas en validación (α, decaimiento de ε, γ y episodios). Después, un estado enriquecido con la distancia a la media de 30 sesiones y la volatilidad de 20, dos mercados más, una serie real del S&amp;P 500 con cortes temporales y 360 entrenamientos de robustez que cambian un solo factor. En el segundo, DQN y A3C asíncrono con 3 procesos sobre el mismo protocolo, un margen de ruido para separar mejoras reales de la suerte y 300 entrenamientos más de un solo factor.</p>"
+    }
+   },
+   {
+    "title": {
+     "en": "Results",
+     "es": "Resultados"
+    },
+    "body": {
+     "en": "<p>The tabular agents learn what is expected: ×502 in trend with a cycle, +27% in mean reversion (buy &amp; hold, −0.3%) and 0% where there is no signal, which is right (in the regime market, none of 70 simple rules beats staying out). To learn at all, α had to drop to 0.001. The richer state adds about 25 points in mean reversion, but on the S&amp;P 500 it lowers the return (and the drawdown), and in a 2019–2025 walk-forward no state beats buy &amp; hold consistently. DQN (×300) and A3C (×375) stay below one-threshold rules (×630) and the tabular agents; A3C trains 3.4 times faster but converges in fewer seeds.</p>",
+     "es": "<p>Los tabulares aprenden lo esperado: x502 en tendencia con ciclo, +27 % en reversión a la media (buy &amp; hold, −0,3 %) y 0 % donde no hay señal, que es lo correcto (en el de regímenes, ninguna de 70 reglas simples bate a quedarse fuera). Para aprender, α tuvo que bajar a 0,001. El estado enriquecido suma unos 25 puntos en reversión, pero en el S&amp;P 500 baja el retorno (y la caída máxima), y en walk-forward 2019–2025 ningún estado bate de forma consistente a buy &amp; hold. DQN (x300) y A3C (x375) quedan por debajo de las reglas de un umbral (x630) y de los tabulares; A3C entrena 3,4 veces más rápido, pero converge en menos semillas.</p>"
+    }
+   }
+  ]
  }
 }

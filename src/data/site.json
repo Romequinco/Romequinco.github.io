@@ -933,6 +933,86 @@
     },
     {
      "name": {
+      "en": "RL for trading",
+      "es": "RL para trading"
+     },
+     "short": {
+      "en": "From Q-Learning to DQN and A3C on synthetic markets",
+      "es": "De Q-Learning a DQN y A3C en mercados sintéticos"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/rl-trading/mercados.webp",
+       "w": 1600,
+       "h": 690,
+       "caption": {
+        "en": "The four synthetic markets of the assignment, with their series and the distribution of returns",
+        "es": "Los cuatro mercados sintéticos del taller, con sus series y la distribución de retornos"
+       }
+      },
+      {
+       "src": "/img/p/rl-trading/politica.webp",
+       "w": 1492,
+       "h": 1505,
+       "caption": {
+        "en": "Greedy policy map with the richer state in each market",
+        "es": "Mapa de la política greedy con el estado enriquecido en cada mercado"
+       }
+      },
+      {
+       "src": "/img/p/rl-trading/episodios.webp",
+       "w": 1600,
+       "h": 673,
+       "caption": {
+        "en": "Test episodes in trend and mean reversion, with the agent's trades",
+        "es": "Episodios de test en tendencia y en reversión, con las operaciones del agente"
+       }
+      },
+      {
+       "src": "/img/p/rl-trading/curvas.webp",
+       "w": 1138,
+       "h": 498,
+       "caption": {
+        "en": "Learning curves of Q-Learning and SARSA in trend and mean reversion",
+        "es": "Curvas de aprendizaje de Q-Learning y SARSA en tendencia y en reversión a la media"
+       }
+      },
+      {
+       "src": "/img/p/rl-trading/rendimiento.webp",
+       "w": 900,
+       "h": 469,
+       "caption": {
+        "en": "Median test return of every agent and baseline in the four markets",
+        "es": "Mediana del retorno en test de todos los agentes y referencias en los cuatro mercados"
+       }
+      }
+     ],
+     "say": {
+      "en": "Two reinforcement learning assignments on trading a single asset. Tabular Q-Learning and SARSA learn the expected strategy in each synthetic market: they follow the trend (×502 against ×33.6 for buy &amp; hold), buy dips and stay out where there is no signal. DQN and A3C learn it too, but beat neither one-threshold rules nor the tabular agents: a richer state helps more than a bigger algorithm. Team of 3.",
+      "es": "Dos talleres de aprendizaje por refuerzo para invertir en un único activo. Q-Learning y SARSA tabulares aprenden la estrategia esperada en cada mercado sintético: siguen la tendencia (x502 frente a x33,6 de buy &amp; hold), compran caídas y no operan donde no hay señal. DQN y A3C también la aprenden, pero no baten ni a reglas de un umbral ni a los tabulares: ayuda más un estado más rico que un algoritmo más grande. Equipo de 3."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/rl-trading-agents",
+       "label": {
+        "en": "Assignment 1 code on GitHub",
+        "es": "Código del taller 1 en GitHub"
+       }
+      },
+      {
+       "href": "https://github.com/Romequinco/deep-rl-trading-agents",
+       "label": {
+        "en": "Assignment 2 code on GitHub",
+        "es": "Código del taller 2 en GitHub"
+       }
+      }
+     ],
+     "slug": "rl-trading"
+    },
+    {
+     "name": {
       "en": "Equity arbitrage",
       "es": "Arbitraje en renta variable"
      },

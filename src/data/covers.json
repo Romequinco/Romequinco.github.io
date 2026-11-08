@@ -805,5 +805,32 @@
    "es": "Tienda de zapatillas · Bilbao · archivada"
   },
   "domain": "thesoleclub.com"
+ },
+ "rl-trading": {
+  "kpis": [
+   {
+    "v": "×502",
+    "ves": "x502",
+    "l": {
+     "en": "Q-Learning against ×33.6 for buy & hold",
+     "es": "Q-Learning frente a x33,6 de buy & hold"
+    }
+   },
+   {
+    "v": "0/4",
+    "l": {
+     "en": "markets where deep RL beats simple rules",
+     "es": "mercados en que el deep RL bate a las reglas"
+    }
+   }
+  ],
+  "tech": {
+   "en": "Q-Learning, SARSA, DQN, A3C",
+   "es": "Q-Learning, SARSA, DQN, A3C"
+  },
+  "data": {
+   "en": "4 synthetic markets and the S&P 500",
+   "es": "4 mercados sintéticos y el S&P 500"
+  }
  }
 }
