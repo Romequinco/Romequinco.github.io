@@ -780,6 +780,12 @@
    "es": "Sociedad holding · Madrid"
   }
  },
+ "web-macapop": {
+  "facts": {
+   "en": "Business consulting · bilingual",
+   "es": "Consultoría de negocio · bilingüe"
+  }
+ },
  "doc-systems": {
   "brand": "#F2A65A",
   "kpis": [

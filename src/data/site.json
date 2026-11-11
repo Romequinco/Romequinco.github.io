@@ -2087,6 +2087,52 @@
     },
     {
      "name": {
+      "en": "MACAPOP",
+      "es": "MACAPOP"
+     },
+     "short": {
+      "en": "A business consulting firm in Delaware",
+      "es": "Una consultora de negocio en Delaware"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/web-macapop/1.webp",
+       "w": 1440,
+       "h": 900,
+       "caption": {
+        "en": "Home page on desktop",
+        "es": "Portada en escritorio"
+       }
+      },
+      {
+       "src": "/img/p/web-macapop/2.webp",
+       "w": 780,
+       "h": 1688,
+       "caption": {
+        "en": "The mobile version",
+        "es": "La versión para móvil"
+       }
+      }
+     ],
+     "say": {
+      "en": "Bilingual website for a Delaware business consulting firm, with a brand identity designed from scratch, a contact form and legal pages.",
+      "es": "Web bilingüe para una consultora de negocio de Delaware, con identidad de marca creada desde cero, formulario de contacto y páginas legales."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://macapop.es",
+       "label": {
+        "en": "Visit macapop.es",
+        "es": "Ver macapop.es"
+       }
+      }
+     ],
+     "slug": "web-macapop"
+    },
+    {
+     "name": {
       "en": "The Sole Club",
       "es": "The Sole Club"
      },
