@@ -2133,6 +2133,52 @@
     },
     {
      "name": {
+      "en": "Molonlabe Capital LLC",
+      "es": "Molonlabe Capital LLC"
+     },
+     "short": {
+      "en": "A business consulting firm in Miami Beach",
+      "es": "Una consultora de negocio en Miami Beach"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/web-molonlabe-llc/1.webp",
+       "w": 1440,
+       "h": 900,
+       "caption": {
+        "en": "Home page on desktop",
+        "es": "Portada en escritorio"
+       }
+      },
+      {
+       "src": "/img/p/web-molonlabe-llc/2.webp",
+       "w": 780,
+       "h": 1688,
+       "caption": {
+        "en": "The mobile version",
+        "es": "La versión para móvil"
+       }
+      }
+     ],
+     "say": {
+      "en": "Bilingual website for a Delaware business consulting firm, with a 3D bronze lambda built in hand-written WebGL that turns as you scroll, legal pages and a contact form.",
+      "es": "Web bilingüe para una consultora de negocio de Delaware, con una lambda de bronce en 3D hecha con WebGL a mano que gira al hacer scroll, páginas legales y formulario de contacto."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://molonlabecapital.us",
+       "label": {
+        "en": "Visit molonlabecapital.us",
+        "es": "Ver molonlabecapital.us"
+       }
+      }
+     ],
+     "slug": "web-molonlabe-llc"
+    },
+    {
+     "name": {
       "en": "The Sole Club",
       "es": "The Sole Club"
      },

@@ -786,6 +786,12 @@
    "es": "Consultoría de negocio · bilingüe"
   }
  },
+ "web-molonlabe-llc": {
+  "facts": {
+   "en": "Business consulting · 3D WebGL",
+   "es": "Consultoría de negocio · 3D en WebGL"
+  }
+ },
  "doc-systems": {
   "brand": "#F2A65A",
   "kpis": [
