@@ -290,6 +290,24 @@
      },
      "images": [
       {
+       "src": "/img/p/telegram-task-agent/1.webp",
+       "w": 2000,
+       "h": 1280,
+       "caption": {
+        "en": "/tareas lists the open tasks, sorted by priority and with their status",
+        "es": "/tareas lista las tareas abiertas, ordenadas por prioridad y con su estado"
+       }
+      },
+      {
+       "src": "/img/p/telegram-task-agent/2.webp",
+       "w": 2000,
+       "h": 1280,
+       "caption": {
+        "en": "/nueva creates a task by hand; the bot reacts with 👍 when it logs an update",
+        "es": "/nueva crea una tarea a mano; el bot reacciona con 👍 cuando registra un avance"
+       }
+      },
+      {
        "svg": "<svg class=\"dg\" preserveaspectratio=\"xMinYMin meet\" role=\"img\" viewbox=\"0 0 520 330\">\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"230\" x=\"1\" y=\"1\"></rect>\n<text x=\"16\" y=\"28\"><tspan lang=\"en\">Team group on Telegram</tspan><tspan lang=\"es\">Grupo del equipo en Telegram</tspan></text>\n<text class=\"s\" x=\"16\" y=\"48\"><tspan lang=\"en\">text messages and voice notes</tspan><tspan lang=\"es\">mensajes de texto y notas de voz</tspan></text>\n<path class=\"l\" d=\"M116,64 V128\" marker-end=\"url(#ah)\"></path>\n<text class=\"s\" x=\"126\" y=\"92\"><tspan lang=\"en\">voice notes: Gemini</tspan><tspan lang=\"es\">notas de voz: Gemini</tspan></text>\n<text class=\"s\" x=\"126\" y=\"108\"><tspan lang=\"en\">transcribes them first</tspan><tspan lang=\"es\">las transcribe antes</tspan></text>\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"230\" x=\"1\" y=\"132\"></rect>\n<text x=\"16\" y=\"159\"><tspan lang=\"en\">Claude classifies</tspan><tspan lang=\"es\">Claude clasifica</tspan></text>\n<text class=\"s\" x=\"16\" y=\"179\"><tspan lang=\"en\">new task, update, done or noise</tspan><tspan lang=\"es\">tarea nueva, avance, hecha o ruido</tspan></text>\n<path class=\"l\" d=\"M116,195 V258\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"230\" x=\"1\" y=\"262\"></rect>\n<text x=\"16\" y=\"289\"><tspan lang=\"en\">Postgres</tspan><tspan lang=\"es\">Postgres</tspan></text>\n<text class=\"s\" x=\"16\" y=\"309\"><tspan lang=\"en\">every task and its status</tspan><tspan lang=\"es\">cada tarea y su estado</tspan></text>\n<path class=\"l\" d=\"M232,293 H372 V198\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"230\" x=\"288\" y=\"132\"></rect>\n<text x=\"303\" y=\"159\"><tspan lang=\"en\">Weekday schedule</tspan><tspan lang=\"es\">Horario de lunes a viernes</tspan></text>\n<text class=\"s\" x=\"303\" y=\"179\"><tspan lang=\"en\">8:30 open tasks, 17:00 review</tspan><tspan lang=\"es\">8:30 tareas abiertas, 17:00 repaso</tspan></text>\n<path class=\"l\" d=\"M403,131 V32 H236\" marker-end=\"url(#ah)\"></path>\n<text class=\"s\" text-anchor=\"end\" x=\"393\" y=\"78\"><tspan lang=\"en\">posts the summary,</tspan><tspan lang=\"es\">publica el resumen,</tspan></text>\n<text class=\"s\" text-anchor=\"end\" x=\"393\" y=\"94\"><tspan lang=\"en\">with buttons to</tspan><tspan lang=\"es\">con botones para</tspan></text>\n<text class=\"s\" text-anchor=\"end\" x=\"393\" y=\"110\"><tspan lang=\"en\">confirm what's done</tspan><tspan lang=\"es\">confirmar lo hecho</tspan></text>\n</svg>",
        "caption": {
         "en": "How the bot works. It has no screen of its own, so this is a diagram rather than a screenshot",
@@ -307,7 +325,7 @@
      },
      "links": [
       {
-       "href": "https://github.com/Romequinco/CHATBOT_ORGANIZACION",
+       "href": "https://github.com/Romequinco/telegram-task-agent",
        "label": {
         "en": "Code on GitHub",
         "es": "Código en GitHub"
