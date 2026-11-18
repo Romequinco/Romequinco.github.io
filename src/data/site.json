@@ -308,10 +308,28 @@
        }
       },
       {
+       "src": "/img/p/telegram-task-agent/3.webp",
+       "w": 2000,
+       "h": 1280,
+       "caption": {
+        "en": "At 8:30 on weekdays it posts the open tasks to the group",
+        "es": "A las 8:30 de lunes a viernes publica en el grupo las tareas abiertas"
+       }
+      },
+      {
+       "src": "/img/p/telegram-task-agent/4.webp",
+       "w": 2000,
+       "h": 1280,
+       "caption": {
+        "en": "At 17:00, the day review, with buttons to confirm what got done",
+        "es": "A las 17:00, el repaso del día, con botones para confirmar lo que está hecho"
+       }
+      },
+      {
        "svg": "<svg class=\"dg\" preserveaspectratio=\"xMinYMin meet\" role=\"img\" viewbox=\"0 0 520 330\">\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"230\" x=\"1\" y=\"1\"></rect>\n<text x=\"16\" y=\"28\"><tspan lang=\"en\">Team group on Telegram</tspan><tspan lang=\"es\">Grupo del equipo en Telegram</tspan></text>\n<text class=\"s\" x=\"16\" y=\"48\"><tspan lang=\"en\">text messages and voice notes</tspan><tspan lang=\"es\">mensajes de texto y notas de voz</tspan></text>\n<path class=\"l\" d=\"M116,64 V128\" marker-end=\"url(#ah)\"></path>\n<text class=\"s\" x=\"126\" y=\"92\"><tspan lang=\"en\">voice notes: Gemini</tspan><tspan lang=\"es\">notas de voz: Gemini</tspan></text>\n<text class=\"s\" x=\"126\" y=\"108\"><tspan lang=\"en\">transcribes them first</tspan><tspan lang=\"es\">las transcribe antes</tspan></text>\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"230\" x=\"1\" y=\"132\"></rect>\n<text x=\"16\" y=\"159\"><tspan lang=\"en\">Claude classifies</tspan><tspan lang=\"es\">Claude clasifica</tspan></text>\n<text class=\"s\" x=\"16\" y=\"179\"><tspan lang=\"en\">new task, update, done or noise</tspan><tspan lang=\"es\">tarea nueva, avance, hecha o ruido</tspan></text>\n<path class=\"l\" d=\"M116,195 V258\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"230\" x=\"1\" y=\"262\"></rect>\n<text x=\"16\" y=\"289\"><tspan lang=\"en\">Postgres</tspan><tspan lang=\"es\">Postgres</tspan></text>\n<text class=\"s\" x=\"16\" y=\"309\"><tspan lang=\"en\">every task and its status</tspan><tspan lang=\"es\">cada tarea y su estado</tspan></text>\n<path class=\"l\" d=\"M232,293 H372 V198\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"62\" rx=\"3\" width=\"230\" x=\"288\" y=\"132\"></rect>\n<text x=\"303\" y=\"159\"><tspan lang=\"en\">Weekday schedule</tspan><tspan lang=\"es\">Horario de lunes a viernes</tspan></text>\n<text class=\"s\" x=\"303\" y=\"179\"><tspan lang=\"en\">8:30 open tasks, 17:00 review</tspan><tspan lang=\"es\">8:30 tareas abiertas, 17:00 repaso</tspan></text>\n<path class=\"l\" d=\"M403,131 V32 H236\" marker-end=\"url(#ah)\"></path>\n<text class=\"s\" text-anchor=\"end\" x=\"393\" y=\"78\"><tspan lang=\"en\">posts the summary,</tspan><tspan lang=\"es\">publica el resumen,</tspan></text>\n<text class=\"s\" text-anchor=\"end\" x=\"393\" y=\"94\"><tspan lang=\"en\">with buttons to</tspan><tspan lang=\"es\">con botones para</tspan></text>\n<text class=\"s\" text-anchor=\"end\" x=\"393\" y=\"110\"><tspan lang=\"en\">confirm what's done</tspan><tspan lang=\"es\">confirmar lo hecho</tspan></text>\n</svg>",
        "caption": {
-        "en": "How the bot works. It has no screen of its own, so this is a diagram rather than a screenshot",
-        "es": "Cómo funciona el bot. No tiene pantalla propia, así que esto es un diagrama y no una captura"
+        "en": "How the bot works: from the group's messages to the daily summaries",
+        "es": "Cómo funciona el bot: de los mensajes del grupo a los resúmenes del día"
        }
       }
      ],
@@ -348,6 +366,33 @@
       "es": "En uso"
      },
      "images": [
+      {
+       "src": "/img/p/doc-systems/1.webp",
+       "w": 2000,
+       "h": 1280,
+       "caption": {
+        "en": "The assistant answers from the company's own documents and cites each one",
+        "es": "El asistente responde con los documentos de la propia empresa y cita cada uno"
+       }
+      },
+      {
+       "src": "/img/p/doc-systems/2.webp",
+       "w": 2000,
+       "h": 1280,
+       "caption": {
+        "en": "Each new document is read, classified, renamed and filed in its folder",
+        "es": "Cada documento nuevo se lee, se clasifica, se renombra y se guarda en su carpeta"
+       }
+      },
+      {
+       "src": "/img/p/doc-systems/3.webp",
+       "w": 2000,
+       "h": 1280,
+       "caption": {
+        "en": "The ordered archive: one folder per area and names that start with the date",
+        "es": "El archivo ordenado: una carpeta por área y nombres que empiezan por la fecha"
+       }
+      },
       {
        "svg": "<svg class=\"dg\" preserveAspectRatio=\"xMinYMin meet\" role=\"img\" viewBox=\"0 0 620 320\">\n<rect class=\"b\" height=\"64\" rx=\"3\" width=\"270\" x=\"1\" y=\"1\"></rect>\n<text x=\"16\" y=\"28\"><tspan lang=\"en\">Scattered documents</tspan><tspan lang=\"es\">Documentos dispersos</tspan></text>\n<text class=\"s\" x=\"16\" y=\"49\"><tspan lang=\"en\">contracts, invoices, emails, PDFs</tspan><tspan lang=\"es\">contratos, facturas, correos, PDF</tspan></text>\n<path class=\"l\" d=\"M136,66 V118\" marker-end=\"url(#ah)\"></path>\n<text class=\"s\" x=\"148\" y=\"97\"><tspan lang=\"en\">sorted and renamed</tspan><tspan lang=\"es\">clasificados y renombrados</tspan></text>\n<rect class=\"b\" height=\"64\" rx=\"3\" width=\"270\" x=\"1\" y=\"122\"></rect>\n<text x=\"16\" y=\"149\"><tspan lang=\"en\">One ordered archive</tspan><tspan lang=\"es\">Un archivo ordenado</tspan></text>\n<text class=\"s\" x=\"16\" y=\"170\"><tspan lang=\"en\">by area, company and date</tspan><tspan lang=\"es\">por área, empresa y fecha</tspan></text>\n<path class=\"l\" d=\"M272,154 H334\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"64\" rx=\"3\" width=\"280\" x=\"338\" y=\"122\"></rect>\n<text x=\"353\" y=\"149\"><tspan lang=\"en\">AI assistant (RAG)</tspan><tspan lang=\"es\">Asistente con IA (RAG)</tspan></text>\n<text class=\"s\" x=\"353\" y=\"170\"><tspan lang=\"en\">answers from the company’s files</tspan><tspan lang=\"es\">responde con sus propios archivos</tspan></text>\n<path class=\"l\" d=\"M478,187 V240\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"64\" rx=\"3\" width=\"280\" x=\"338\" y=\"244\"></rect>\n<text x=\"353\" y=\"271\"><tspan lang=\"en\">The team asks</tspan><tspan lang=\"es\">El equipo pregunta</tspan></text>\n<text class=\"s\" x=\"353\" y=\"292\"><tspan lang=\"en\">and finds any document</tspan><tspan lang=\"es\">y encuentra cualquier documento</tspan></text>\n<text class=\"s\" x=\"1\" y=\"282\"><tspan lang=\"en\">Set up for five companies</tspan><tspan lang=\"es\">Montado para cinco empresas</tspan></text>\n</svg>",
        "caption": {
