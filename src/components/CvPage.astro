@@ -1,5 +1,5 @@
 ---
-import { type Lang, t, paths, contact, ui } from '../lib/i18n';
+import { type Lang, t, paths, contact, ui, originLabel } from '../lib/i18n';
 import { groups, work, study, languages } from '../lib/data';
 
 interface Props { lang: Lang }
@@ -22,7 +22,13 @@ const skills: { k: { en: string; es: string }; v: string }[] = [
       ? 'Backtesting without look-ahead, VaR and CVaR, copulas, fixed income, options and Greeks, market microstructure'
       : 'Backtesting sin look-ahead, VaR y CVaR, cópulas, renta fija, opciones y griegas, microestructura de mercado' },
 ];
-const selected = groups.filter((g) => g.id === 'products' || g.id === 'research').flatMap((g) => g.projects);
+// Products, then the 10-K agent, the thesis and my own research: the master's coursework stays off the CV.
+const all = groups.flatMap((g) => g.projects);
+const selected = [
+  ...groups.filter((g) => g.id === 'products').flatMap((g) => g.projects),
+  ...all.filter((p) => p.slug === 'tenk-agent'),
+  ...all.filter((p) => p.origin === 'tfm' || p.origin === 'own'),
+];
 ---
 <div class="cvp">
   <div class="actions noprint"><a class="btn pri" href={paths.cvPdf(lang)}>{ui.printCv[lang]}</a></div>
@@ -54,7 +60,7 @@ const selected = groups.filter((g) => g.id === 'products' || g.id === 'research'
     <h2>{lang === 'en' ? 'Selected projects' : 'Proyectos destacados'}</h2>
     <ul class="cvl">
       {selected.map((p) => (
-        <li><span class="when" set:html={p.status ? t(p.status, lang) : ''} /><span><strong set:html={t(p.name, lang)} /><small set:html={t(p.say ?? p.short, lang)} /></span></li>
+        <li><span class="when" set:html={p.status ? t(p.status, lang) : p.origin ? originLabel[p.origin][lang] : ''} /><span><strong set:html={t(p.name, lang)} /><small set:html={t(p.say ?? p.short, lang)} /></span></li>
       ))}
     </ul>
   </section>

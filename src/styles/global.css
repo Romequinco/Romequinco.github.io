@@ -43,7 +43,7 @@ a:hover{text-decoration-color:currentColor}
 
 /* ---------- sidebar: icon rail + panel ---------- */
 /* --g: cover colour; --gs: pastel used in the sidebar and section headers */
-.g-products{--g:#F2C14E;--gs:#FFD6A5}.g-research{--g:#5FB3A1;--gs:#B9F2D8}.g-course{--g:#9A86D6;--gs:#D7C8FF}.g-webs{--g:#5B8DEF;--gs:#BDE0FE}
+.g-products{--g:#F2C14E;--gs:#FFD6A5}.g-study{--g:#9A86D6;--gs:#D7C8FF}.g-webs{--g:#5B8DEF;--gs:#BDE0FE}
 .sb{--ink:#F2F2F2;--mut:#8E8E93;position:fixed;inset:0 auto 0 0;width:var(--sidebar-w);display:flex;background:#141416;color:var(--ink);border-right:1px solid rgba(255,255,255,.08);z-index:30}
 .rail-i{width:76px;flex:none;background:#0B0B0C;display:flex;flex-direction:column;align-items:center;padding:16px 0 14px;gap:4px;border-right:1px solid rgba(255,255,255,.07)}
 .rail-i a{width:66px;min-height:50px;padding:6px 0 5px;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-decoration:none;color:var(--ink)}
@@ -215,8 +215,7 @@ html[lang="en"] .dg [lang="es"],html[lang="es"] .dg [lang="en"]{display:none}
 .dg text.s{font-size:12.5px;fill:var(--pencil)}
 
 /* ---------- project covers (container units: 1cqw = 1% of the cover width) ---------- */
-.cover{--disp:"Archivo Variable","Schibsted Grotesk",sans-serif;--serif:"Source Serif 4 Variable",Georgia,serif;
-  container-type:inline-size;position:relative;aspect-ratio:16/10;border-radius:10px;overflow:hidden;isolation:isolate}
+.cover{--disp:"Archivo Variable","Schibsted Grotesk",sans-serif;container-type:inline-size;position:relative;aspect-ratio:16/10;border-radius:10px;overflow:hidden;isolation:isolate}
 .cover img{display:block}
 /* dark ink for the line diagrams when they sit on light paper */
 .ink .dg .b,.ink .dg .l{stroke:#3a3d3b}
@@ -241,27 +240,7 @@ html[lang="en"] .dg [lang="es"],html[lang="es"] .dg [lang="en"]{display:none}
 .poster .kpis span{display:block;font-size:2.2cqw;line-height:1.25;margin-top:.5cqw;max-width:22cqw}
 .poster .stk{font:500 2.1cqw var(--font);opacity:.8}
 
-/* paper title page: research */
-.paper{background:#F7F5EE;color:#1E1E1C;display:grid;grid-template-columns:56% 1fr;grid-template-rows:1fr auto;gap:0 3cqw;padding:3.6cqw 3.6cqw 0}
-.paper .txt{min-width:0;display:flex;flex-direction:column;gap:1cqw}
-.paper .pre{font:600 1.9cqw var(--font);color:#6F6C62;text-transform:none}
-.paper .ttl{font:600 3.9cqw/1.12 var(--serif)}
-.paper .au{font:400 2cqw var(--serif);color:#555}
-.paper .ab{font:400 1.85cqw/1.42 var(--serif);color:#333;border-top:1px solid #D7D3C7;padding-top:1cqw;display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden}
-.paper .ab b{font-weight:600}
-.paper .kw{font:400 1.75cqw/1.35 var(--serif);color:#555;margin-top:auto;padding-bottom:1cqw}
-.paper .pfigs{display:grid;gap:1.6cqw;align-content:start;min-width:0}
-.paper figure{background:#fff;border:1px solid #D7D3C7;padding:.8cqw}
-.paper figure img,.paper figure svg{width:100%;aspect-ratio:16/10;object-fit:contain;display:block}
-.paper figure + figure img{aspect-ratio:16/7}
-.paper figcaption{font:600 1.6cqw var(--serif);color:#555;margin-top:.5cqw}
-.paper .res{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);border-top:.4cqw solid #1E1E1C;margin-top:1.6cqw;padding:1.4cqw 0 2.4cqw}
-.paper .res div + div{border-left:1px solid #D7D3C7;padding-left:2cqw}
-.paper .res b{display:block;font:700 3.4cqw/1 var(--disp);font-stretch:105%;color:#0F3D35}
-.paper .res span{display:block;font:400 1.8cqw/1.3 var(--font);color:#555;margin-top:.5cqw}
-.paper .tag{position:absolute;top:2.8cqw;right:3.6cqw;font:600 1.8cqw var(--font);color:#0F6B5C;border:1px solid var(--g);background:color-mix(in srgb,var(--g) 18%,#fff);padding:.4cqw 1.2cqw;border-radius:.8cqw}
-
-/* subject card: master's coursework */
+/* subject card: research and master's */
 .subject{background:#F1EDFF;color:#17112B;display:grid;grid-template-columns:2.4cqw minmax(0,1fr) 40%;gap:0 3cqw}
 .subject .band{background:var(--g)}
 .subject .txt{padding:3.6cqw 0 3.2cqw;display:flex;flex-direction:column;gap:1.2cqw;min-width:0}
@@ -306,14 +285,31 @@ html[lang="en"] .dg [lang="es"],html[lang="es"] .dg [lang="en"]{display:none}
 .ficha-go{font-size:14px;color:var(--pencil);margin-top:2px}
 .grp-h .sw{width:12px;height:12px;border-radius:3px;background:var(--gs);align-self:center}
 .grp-h h3{color:var(--paper)}
+.grp-h:has(+ .grp-s){margin-bottom:4px}
+.grp-s{color:var(--pencil);font-size:15px;line-height:1.45;margin-bottom:16px}
+
+/* where a study project comes from: thesis, master's or own research */
+.ficha-n{min-width:0}
+.ficha-t .org,.mini-t .org{display:inline-block;vertical-align:.2em;margin-left:5px;padding:0 8px;border:1px solid color-mix(in srgb,var(--gs) 42%,transparent);border-radius:999px;font-size:12px;font-weight:500;line-height:18px;color:var(--gs);white-space:nowrap}
+
+/* compact cards: the rest of a long group */
+.grp-more{color:var(--pencil);font-size:14px;line-height:1.45;margin:32px 0 12px}
+.minis{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:12px}
+.minis li{display:contents}
+.mini{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:14px;padding:10px;border:1px solid var(--line);border-radius:12px;text-decoration:none;background:var(--soft);transition:background .15s,border-color .15s}
+.mini:hover{background:var(--soft-2);border-color:rgba(236,234,227,.24)}
+/* the cover is drawn 456 px wide in its own container and scaled down whole */
+.mini-c{--k:.35;width:calc(456px*var(--k));aspect-ratio:16/10;border-radius:6px;overflow:hidden}
+.mini-k{width:456px;container-type:inline-size;transform:scale(var(--k));transform-origin:0 0}
+.mini-k .cover{border-radius:0}
+.mini-b{display:grid;gap:4px;min-width:0}
+.mini-t b{font-size:16px;font-weight:600;line-height:1.3}
+.mini-d{color:var(--pencil);font-size:14px;line-height:1.4}
+.mini-d b{color:var(--paper);font-weight:500}
+@media (max-width:440px){.mini{gap:12px}.mini-c{--k:.25}}
 
 /* small covers (phones): drop the fine print, enlarge what matters */
 @container (max-width:440px){
-  .paper .ab,.paper .kw,.paper .au,.paper .pfigs figure + figure{display:none}
-  .paper .ttl{font-size:5.4cqw}
-  .paper .pre,.paper .tag,.paper figcaption{font-size:2.6cqw}
-  .paper .res b{font-size:4.4cqw}
-  .paper .res span{font-size:2.6cqw}
   .poster .stk{display:none}
   .poster .pill{font-size:3.2cqw}
   .poster .kpis b{font-size:5.6cqw}
@@ -327,7 +323,7 @@ html[lang="en"] .dg [lang="es"],html[lang="es"] .dg [lang="en"]{display:none}
 
 /* justified running text, with hyphenation so the spacing stays even */
 .main p,.main li small,.main .tl small,.main dd,.main figcaption,.prose li{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
-.main .actions,.main .badges,.main .chips,.main .crumb{text-align:left}
+.main .actions,.main .badges,.main .chips,.main .crumb,.main .grp-s,.main .grp-more,.main .mini-d,.cover dd{text-align:left;hyphens:manual;-webkit-hyphens:manual}
 
 /* shot: products. Grey screenshot that stays clearly visible, brand-coloured figures, colour inset */
 .shot{background:#101113;color:#fff;--b:#2BB673}
@@ -370,6 +366,7 @@ html[lang="en"] .dg [lang="es"],html[lang="es"] .dg [lang="en"]{display:none}
 .now li{display:grid;grid-template-columns:10px minmax(0,1fr);gap:12px;padding:9px 0;border-top:1px solid var(--line)}
 .now li:first-child{border-top:0;padding-top:2px}
 .now i{width:8px;height:8px;border-radius:50%;background:var(--gs);margin-top:8px}
+.now .now-alt{--gs:#B9F2D8}
 .now b{display:block;font-weight:600}
 .now span{display:block;color:var(--pencil);font-size:15px;line-height:1.45}
 .about-now .chip{font-size:13.5px}
@@ -387,13 +384,19 @@ html[lang="en"] .dg [lang="es"],html[lang="es"] .dg [lang="en"]{display:none}
 .shot .pair img:first-child{border-color:var(--b)}
 .shot:has(.pair)::after{display:none}
 .shot:has(.pair) .w{width:40cqw}
-.paper .pfigs figure + figure img,.paper .pfigs figure + figure svg{aspect-ratio:16/7}
 
 /* quiet open/close chevron for each group in the sidebar */
 .pn-s .tg{flex:none;width:16px;height:16px;display:grid;place-items:center;opacity:.55;transition:opacity .15s}
 .pn-s .tg svg{width:12px;height:12px;fill:none;stroke:var(--mut);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform .15s}
 .pn-s details:not([open]) .tg svg{transform:rotate(-90deg)}
 .pn-s summary:hover .tg{opacity:1}
+/* "show all" inside a long group */
+.pn-s .more{margin:0}
+.pn-s .more summary{padding:4px 8px 4px 25px;font-size:13px;font-weight:400;line-height:1.3;color:var(--mut)}
+.pn-s .more summary:hover{color:var(--ink)}
+.pn-s .more summary > span:not(.tg){flex:1}
+.pn-s .more[open] .mo-a,.pn-s .more:not([open]) .mo-b{display:none}
+.pn-s .more ul{margin:1px 0 4px}
 .main .lead-row figcaption{text-align:left;hyphens:manual}
 .shot:has(.pair) .pair{top:auto;bottom:3.6cqw;transform:none;height:46cqw}
 

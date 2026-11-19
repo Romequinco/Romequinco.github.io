@@ -3,6 +3,7 @@ import type { Bi } from './i18n';
 
 export type Img = { src?: string; w?: number; h?: number; svg?: string; caption: Bi | null };
 export type Link = { href: string; label: Bi };
+export type Origin = 'tfm' | 'master' | 'own';
 export type Project = {
   slug: string;
   name: Bi;
@@ -12,8 +13,11 @@ export type Project = {
   say: Bi | null;
   how: Bi | null;
   links: Link[];
+  /** Where a study project comes from; shown as a tag next to its name. */
+  origin?: Origin;
 };
-export type Group = { id: string; title: Bi; projects: Project[] };
+/** `featured`: how many projects open the group as full cards; the rest are compact. */
+export type Group = { id: string; title: Bi; sub?: Bi; featured?: number; projects: Project[] };
 export type Section = { title: Bi; body: Bi };
 export type Detail = { year?: string; role?: Bi; context?: Bi; stack?: string[]; sections?: Section[] };
 export type CvItem = { when: Bi; title: Bi; note: Bi };
@@ -25,7 +29,7 @@ const details: Record<string, Detail> = (Object.values(found)[0] as Record<strin
 import coversRaw from '../data/covers.json';
 export type Kpi = { v: string; ves?: string; l: Bi };
 /** `images`: the cover's own background and inset, when they are not the page's first two images. */
-export type Cover = { kpis?: Kpi[]; tech?: Bi; data?: Bi; keywords?: Bi; facts?: Bi; brand?: string; domain?: string; images?: Img[] };
+export type Cover = { kpis?: Kpi[]; tech?: Bi; data?: Bi; facts?: Bi; brand?: string; domain?: string; images?: Img[] };
 const covers = coversRaw as Record<string, Cover>;
 export const coverOf = (slug: string): Cover => covers[slug] ?? {};
 export const kpiValue = (k: Kpi, lang: 'en' | 'es') => (lang === 'es' && k.ves ? k.ves : k.v);

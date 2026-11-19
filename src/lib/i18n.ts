@@ -30,9 +30,14 @@ export const contact = {
 
 export const groupShort: Record<string, Bi> = {
   products: { en: 'Products and tools', es: 'Productos y herramientas' },
-  research: { en: 'Research', es: 'Investigación' },
-  course: { en: "Master's coursework", es: 'Trabajos del máster' },
+  study: { en: "Research and master's", es: 'Investigación y máster' },
   webs: { en: 'Websites', es: 'Webs' },
+};
+
+export const originLabel: Record<'tfm' | 'master' | 'own', Bi> = {
+  tfm: { en: "Master's thesis", es: 'TFM' },
+  master: { en: "MIAX master's", es: 'Máster MIAX' },
+  own: { en: 'Own research', es: 'Investigación propia' },
 };
 
 export const ui = {
@@ -65,6 +70,9 @@ export const ui = {
     en: 'Point at a project, or move to it with the keyboard, to see it on the right. Up and down arrows move through the list, left and right step through the images.',
     es: 'Pasa el ratón por un proyecto, o llega a él con el teclado, para verlo a la derecha. Las flechas arriba y abajo recorren la lista; izquierda y derecha pasan las imágenes.',
   },
+  otherProjects: { en: '{n} more projects', es: 'Otros {n} proyectos' },
+  showAll: { en: 'Show all {n}', es: 'Ver los {n}' },
+  showLess: { en: 'Show fewer', es: 'Ver menos' },
   openProject: { en: 'Read about it', es: 'Ver el proyecto' },
   prevImage: { en: 'Previous image', es: 'Imagen anterior' },
   nextImage: { en: 'Next image', es: 'Imagen siguiente' },

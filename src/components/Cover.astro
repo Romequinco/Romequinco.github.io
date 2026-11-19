@@ -1,8 +1,8 @@
 ---
 /*
   Project covers, one style per group:
-  products → two-ink poster · research → paper title page
-  course → subject card · webs → desktop + phone
+  products → screenshot with figures · study → subject card
+  webs → desktop + phone
   Sizes are in container units so a cover reads the same at any width.
 */
 import { type Lang, t, plain } from '../lib/i18n';
@@ -23,7 +23,7 @@ const domain = c.domain ?? (p.links.find((l) => /^https?:/.test(l.href))?.href ?
 // covers use the light copies made by scripts/make-thumbs.py
 const th = (src?: string) => (src ? src.replace(/^\/img\//, '/img/t/') : src);
 const svgHtml = (im?: Img) => (im?.svg ? im.svg.replace('<svg ', '<svg aria-hidden="true" ') : '');
-const style = { products: 'shot', research: 'paper', course: 'subject', webs: 'devices' }[group.id] ?? 'poster';
+const style = { products: 'shot', study: 'subject', webs: 'devices' }[group.id] ?? 'poster';
 const L = (en: string, es: string) => (lang === 'en' ? en : es);
 const nameLen = plain(p.name, lang).length;
 const ts = nameLen > 30 ? 5.2 : nameLen > 22 ? 6.2 : nameLen > 14 ? 7.6 : 9.4;
@@ -69,35 +69,11 @@ const ts2 = nameLen > 22 ? 4.4 : nameLen > 15 ? 5.2 : 6.2;
     </>
   )}
 
-  {style === 'paper' && (
-    <>
-      <div class="txt">
-        <span class="pre">{L('Research note', 'Nota de investigación')} · {d.year ?? '2026'}</span>
-        <span class="ttl" set:html={`${t(p.name, lang)}: ${t(p.short, lang)}`} />
-        <span class="au">Óscar Romero Quincoces{team ? L(' and team', ' y equipo') : ''}</span>
-        <p class="ab"><b>{L('Abstract.', 'Resumen.')}</b> <Fragment set:html={t(p.say, lang)} /></p>
-        {c.keywords && <p class="kw"><i>{L('Keywords', 'Palabras clave')}:</i> {t(c.keywords, lang)}</p>}
-      </div>
-      <div class="pfigs">
-        {p.images.slice(0, 2).map((im, i) => (
-          <figure class="ink">
-            {im.src ? <img src={th(im.src)} width={im.w} height={im.h} alt="" loading="lazy" decoding="async" /> : <Fragment set:html={svgHtml(im)} />}
-            <figcaption>Fig. {i + 1}</figcaption>
-          </figure>
-        ))}
-      </div>
-      {kpis.length > 0 && (
-        <div class="res">{kpis.map((k) => <div><b>{kpiValue(k, lang)}</b><span>{t(k.l, lang)}</span></div>)}</div>
-      )}
-      {p.status && <span class="tag" set:html={t(p.status, lang)} />}
-    </>
-  )}
-
   {style === 'subject' && (
     <>
       <span class="band"></span>
       <div class="txt">
-        <span class="pre">{L("MIAX master's", 'Máster MIAX')} · Instituto BME · {d.year ?? ''}</span>
+        <span class="pre">{p.origin === 'own' ? L('Own research', 'Investigación propia') : `${L("MIAX master's", 'Máster MIAX')} · Instituto BME`} · {d.year ?? ''}</span>
         <span class="ttl" style={`--ts:${ts2}cqw`} set:html={t(p.name, lang)} />
         <dl>
           {c.tech && <><dt>{L('Method', 'Técnica')}</dt><dd>{t(c.tech, lang)}</dd></>}

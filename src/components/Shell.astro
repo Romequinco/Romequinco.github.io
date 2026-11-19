@@ -1,6 +1,6 @@
 ---
 import { type Lang, t, other, paths, contact, ui, groupShort } from '../lib/i18n';
-import { groups, hasPage, externalLinks } from '../lib/data';
+import { type Project, groups, hasPage, externalLinks } from '../lib/data';
 
 interface Props {
   lang: Lang;
@@ -49,16 +49,26 @@ const rail = [
       <span>{ui.role_line[lang]}</span>
     </div>
     <nav class="pn-s" aria-label={ui.projects[lang]}>
-      {groups.map((g) => (
-        <details class={`g-${g.id}`} open={activeGroup ? g.id === activeGroup || g.id === 'products' : g.id !== 'course'}>
-          <summary><span class="sw"></span><a class="t" href={anchor(`g-${g.id}`)}>{t(groupShort[g.id] ?? g.title, lang)}</a><span class="c">{g.projects.length}</span><span class="tg" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 6.5l3 3 3-3"/></svg></span></summary>
-          <ul>
-            {g.projects.map((p) => (
-              <li><a href={itemHref(g, p)} aria-current={p.slug === current ? 'page' : undefined}><span class="dt"></span><span set:html={t(p.name, lang)} /></a></li>
-            ))}
-          </ul>
-        </details>
-      ))}
+      {groups.map((g) => {
+        // A long group lists its featured projects and keeps the rest behind "show all".
+        const n = g.featured ?? g.projects.length;
+        const rest = g.projects.slice(n);
+        const item = (p: Project) => (
+          <li><a href={itemHref(g, p)} aria-current={p.slug === current ? 'page' : undefined}><span class="dt"></span><span set:html={t(p.name, lang)} /></a></li>
+        );
+        return (
+          <details class={`g-${g.id}`} open={activeGroup ? g.id === activeGroup || g.id === 'products' : true}>
+            <summary><span class="sw"></span><a class="t" href={anchor(`g-${g.id}`)}>{t(groupShort[g.id] ?? g.title, lang)}</a><span class="c">{g.projects.length}</span><span class="tg" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 6.5l3 3 3-3"/></svg></span></summary>
+            <ul>{g.projects.slice(0, n).map(item)}</ul>
+            {rest.length > 0 && (
+              <details class="more" open={rest.some((p) => p.slug === current)}>
+                <summary><span class="mo-a">{ui.showAll[lang].replace('{n}', String(g.projects.length))}</span><span class="mo-b">{ui.showLess[lang]}</span><span class="tg" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 6.5l3 3 3-3"/></svg></span></summary>
+                <ul>{rest.map(item)}</ul>
+              </details>
+            )}
+          </details>
+        );
+      })}
     </nav>
     <div class="pn-f"><button type="button" class="pn-mail" popovertarget="contact-pop">{contact.email}</button></div>
   </div>

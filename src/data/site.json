@@ -464,76 +464,20 @@
      },
      "links": [],
      "slug": "miax-asesor"
-    },
-    {
-     "name": {
-      "en": "10-K agent",
-      "es": "Agente 10-K"
-     },
-     "short": {
-      "en": "Answers questions from SEC filings",
-      "es": "Responde sobre informes de la SEC"
-     },
-     "status": {
-      "en": "Master's project",
-      "es": "Proyecto del máster"
-     },
-     "images": [
-      {
-       "src": "/img/p/tenk-agent/3.webp",
-       "w": 1600,
-       "h": 900,
-       "caption": {
-        "en": "Results: from 7 to 13 of 20 correct, with a verified citation in every answer",
-        "es": "Resultados: de 7 a 13 aciertos sobre 20, con una cita verificada en cada respuesta"
-       }
-      },
-      {
-       "src": "/img/p/tenk-agent/2.webp",
-       "w": 1600,
-       "h": 900,
-       "caption": {
-        "en": "The agent loop: decide, call a tool, read, decide again, within a call budget",
-        "es": "El bucle del agente: decide, llama a una herramienta, lee y vuelve a decidir, con un límite de llamadas"
-       }
-      },
-      {
-       "src": "/img/p/tenk-agent/1.webp",
-       "w": 1600,
-       "h": 900,
-       "caption": {
-        "en": "Retrieval improves from 2 to 5 of 13 paragraphs, one change at a time",
-        "es": "La búsqueda pasa de encontrar 2 a 5 de 13 párrafos, un cambio cada vez"
-       }
-      }
-     ],
-     "say": {
-      "en": "It answers financial questions about 10-K reports, cites the exact source and checks every figure against XBRL, with search that mixes vectors and BM25. Accuracy went from 35% to 65% over the baseline, and it got 8 of 10 blind questions right. Team of 3.",
-      "es": "Responde preguntas financieras sobre informes 10-K, cita la fuente exacta y comprueba cada cifra contra XBRL, con una búsqueda que combina vectores y BM25. El acierto pasó del 35 % al 65 % frente a la versión base, y acertó 8 de 10 preguntas a ciegas. Equipo de 3."
-     },
-     "how": {
-      "en": "LangGraph, FAISS and BM25.",
-      "es": "LangGraph, FAISS y BM25."
-     },
-     "links": [
-      {
-       "href": "https://github.com/Romequinco/10k-financial-agent",
-       "label": {
-        "en": "Code on GitHub",
-        "es": "Código en GitHub"
-       }
-      }
-     ],
-     "slug": "tenk-agent"
     }
    ]
   },
   {
-   "id": "research",
+   "id": "study",
    "title": {
-    "en": "Research and experiments",
-    "es": "Investigación y experimentos"
+    "en": "Research and master's",
+    "es": "Investigación y máster"
    },
+   "sub": {
+    "en": "Coursework from the MIAX master's (Instituto BME), the master's thesis and my own research",
+    "es": "Trabajos del máster MIAX (Instituto BME), el TFM e investigación propia"
+   },
+   "featured": 6,
    "projects": [
     {
      "name": {
@@ -544,10 +488,7 @@
       "en": "12 detectors, 60 years of data",
       "es": "12 detectores, 60 años de datos"
      },
-     "status": {
-      "en": "Master's thesis",
-      "es": "TFM"
-     },
+     "status": null,
      "images": [
       {
        "src": "/img/p/market-regimes/1.webp",
@@ -594,229 +535,68 @@
        }
       }
      ],
-     "slug": "market-regimes"
+     "slug": "market-regimes",
+     "origin": "tfm"
     },
     {
      "name": {
-      "en": "Stock contest",
-      "es": "Concurso de Bolsa"
+      "en": "10-K agent",
+      "es": "Agente 10-K"
      },
      "short": {
-      "en": "Plays for the podium, not for return",
-      "es": "Busca el podio, no la rentabilidad"
+      "en": "Answers questions from SEC filings",
+      "es": "Responde sobre informes de la SEC"
      },
-     "status": {
-      "en": "In progress",
-      "es": "En curso"
-     },
+     "status": null,
      "images": [
       {
-       "src": "/img/p/stock-contest/2.webp",
+       "src": "/img/p/tenk-agent/3.webp",
        "w": 1600,
-       "h": 557,
+       "h": 900,
        "caption": {
-        "en": "Data cleaning: from raw sessions to a clean panel where only past data decides eligibility",
-        "es": "Limpieza de datos: de las sesiones en bruto a un panel limpio en el que solo los datos pasados deciden qué valor es elegible"
+        "en": "Results: from 7 to 13 of 20 correct, with a verified citation in every answer",
+        "es": "Resultados: de 7 a 13 aciertos sobre 20, con una cita verificada en cada respuesta"
        }
       },
       {
-       "src": "/img/p/stock-contest/3.webp",
+       "src": "/img/p/tenk-agent/2.webp",
        "w": 1600,
-       "h": 1491,
+       "h": 900,
        "caption": {
-        "en": "Clustered correlations of liquid Spanish stocks, by macro-sector",
-        "es": "Correlaciones agrupadas de los valores españoles líquidos, por macrosector"
+        "en": "The agent loop: decide, call a tool, read, decide again, within a call budget",
+        "es": "El bucle del agente: decide, llama a una herramienta, lee y vuelve a decidir, con un límite de llamadas"
        }
       },
       {
-       "src": "/img/p/stock-contest/1.webp",
-       "w": 657,
-       "h": 638,
+       "src": "/img/p/tenk-agent/1.webp",
+       "w": 1600,
+       "h": 900,
        "caption": {
-        "en": "How many points separate rivals on return and on volatility, across 108 simulated fields",
-        "es": "Cuántos puntos separan a los rivales por rentabilidad y por volatilidad, en 108 campos simulados"
+        "en": "Retrieval improves from 2 to 5 of 13 paragraphs, one change at a time",
+        "es": "La búsqueda pasa de encontrar 2 a 5 de 13 párrafos, un cambio cada vez"
        }
       }
      ],
      "say": {
-      "en": "For El Concurso de Bolsa 2026. A simulator replays 452 historical windows of 23 sessions against thousands of synthetic rivals under the contest's exact scoring, so the strategy aims for the podium rather than for the highest return. Every day it sends the orders by Telegram and I place them by hand, because the rules don't allow bots. I'll publish the results after 12 November.",
-      "es": "Para El Concurso de Bolsa 2026. Un simulador repite 452 ventanas históricas de 23 sesiones contra miles de rivales sintéticos con la puntuación exacta del concurso, para que la estrategia busque el podio y no la máxima rentabilidad. Cada día manda las órdenes por Telegram y yo las meto a mano, porque las bases no permiten bots. Publicaré los resultados después del 12 de noviembre."
-     },
-     "how": null,
-     "links": [],
-     "slug": "stock-contest"
-    },
-    {
-     "name": {
-      "en": "Polymarket",
-      "es": "Polymarket"
-     },
-     "short": {
-      "en": "Do Bitcoin candles have momentum?",
-      "es": "¿Tienen inercia las velas de bitcoin?"
-     },
-     "status": {
-      "en": "Ruled out",
-      "es": "Descartada"
-     },
-     "images": [
-      {
-       "src": "/img/p/polymarket/1.webp",
-       "w": 1490,
-       "h": 985,
-       "caption": {
-        "en": "Hypothesis test on 15-minute candles: win rate against the 50% baseline",
-        "es": "Contraste sobre velas de 15 minutos: tasa de acierto frente al 50 % de referencia"
-       }
-      },
-      {
-       "src": "/img/p/polymarket/3.webp",
-       "w": 1390,
-       "h": 490,
-       "caption": {
-        "en": "Win rate by candle-body percentile, and its gap to the baseline",
-        "es": "Tasa de acierto por percentil del cuerpo de la vela y su diferencia con la referencia"
-       }
-      },
-      {
-       "src": "/img/p/polymarket/2.webp",
-       "w": 1490,
-       "h": 985,
-       "caption": {
-        "en": "First look at 1-hour candles: price, returns, body size and volatility",
-        "es": "Primer análisis de las velas de 1 hora: precio, retornos, tamaño del cuerpo y volatilidad"
-       }
-      }
-     ],
-     "say": {
-      "en": "An experiment on Polymarket's \"Bitcoin up or down\" markets. The hypothesis was momentum, and the data said no: candles repeat their colour less than half the time. The edges in my first version came from look-ahead leaks, so I shelved the bot before putting any money in.",
-      "es": "Un experimento sobre los mercados «Bitcoin up or down» de Polymarket. La hipótesis era la inercia y los datos dijeron que no: las velas repiten color menos de la mitad de las veces. Las ventajas de mi primera versión venían de fugas de información futura, así que aparqué el bot antes de meter dinero."
+      "en": "It answers financial questions about 10-K reports, cites the exact source and checks every figure against XBRL, with search that mixes vectors and BM25. Accuracy went from 35% to 65% over the baseline, and it got 8 of 10 blind questions right. Team of 3.",
+      "es": "Responde preguntas financieras sobre informes 10-K, cita la fuente exacta y comprueba cada cifra contra XBRL, con una búsqueda que combina vectores y BM25. El acierto pasó del 35 % al 65 % frente a la versión base, y acertó 8 de 10 preguntas a ciegas. Equipo de 3."
      },
      "how": {
-      "en": "Python on Binance candles, with a test that watches for look-ahead.",
-      "es": "Python sobre velas de Binance, con un test que vigila las fugas de información futura."
-     },
-     "links": [],
-     "slug": "polymarket"
-    },
-    {
-     "name": {
-      "en": "IBEX 35 newsletter",
-      "es": "Newsletter del IBEX 35"
-     },
-     "short": {
-      "en": "A daily report written by agents",
-      "es": "Un informe diario escrito por agentes"
-     },
-     "status": {
-      "en": "First prototype",
-      "es": "Primer prototipo"
-     },
-     "images": [
-      {
-       "src": "/img/p/ibex-newsletter/1.webp",
-       "w": 1132,
-       "h": 1600,
-       "caption": {
-        "en": "Page 1: headline, market panel, 52-week chart and summary",
-        "es": "Página 1: titular, panel de mercado, gráfico de 52 semanas y resumen"
-       }
-      },
-      {
-       "src": "/img/p/ibex-newsletter/2.webp",
-       "w": 1132,
-       "h": 1600,
-       "caption": {
-        "en": "Page 2: IBEX 35 heat map and European macro context",
-        "es": "Página 2: mapa de calor del IBEX 35 y contexto macro europeo"
-       }
-      },
-      {
-       "src": "/img/p/ibex-newsletter/3.webp",
-       "w": 1132,
-       "h": 1600,
-       "caption": {
-        "en": "Page 3: contribution by stock and by sector",
-        "es": "Página 3: aportación por valor y por sector"
-       }
-      }
-     ],
-     "say": {
-      "en": "The forerunner of Auguria. Every trading day at 17:35, four Claude agents (a leader, a researcher, an analyst and a writer) produced a seven-page report on the Spanish market and sent it out as an email newsletter.",
-      "es": "El precursor de Auguria. Cada día hábil a las 17:35, cuatro agentes de Claude (un líder, un investigador, un analista y un redactor) preparaban un informe de siete páginas sobre la bolsa española y lo enviaban como newsletter por correo."
-     },
-     "how": {
-      "en": "Claude Opus and Sonnet, GitHub Actions, PostgreSQL and SendGrid.",
-      "es": "Claude Opus y Sonnet, GitHub Actions, PostgreSQL y SendGrid."
+      "en": "LangGraph, FAISS and BM25.",
+      "es": "LangGraph, FAISS y BM25."
      },
      "links": [
       {
-       "href": "https://github.com/Romequinco/llm-agents-lab",
+       "href": "https://github.com/Romequinco/10k-financial-agent",
        "label": {
         "en": "Code on GitHub",
         "es": "Código en GitHub"
        }
       }
      ],
-     "slug": "ibex-newsletter"
+     "slug": "tenk-agent",
+     "origin": "master"
     },
-    {
-     "name": {
-      "en": "Chatbot experiments",
-      "es": "Pruebas de chatbot"
-     },
-     "short": {
-      "en": "A WhatsApp bot answered by Claude",
-      "es": "Un bot de WhatsApp que responde con Claude"
-     },
-     "status": {
-      "en": "Prototype",
-      "es": "Prototipo"
-     },
-     "images": [
-      {
-       "svg": "<svg class=\"dg\" preserveaspectratio=\"xMinYMin meet\" role=\"img\" viewbox=\"0 0 520 300\">\n<rect class=\"b\" height=\"56\" rx=\"3\" width=\"290\" x=\"1\" y=\"1\"></rect>\n<text x=\"16\" y=\"25\"><tspan lang=\"en\">Someone writes on WhatsApp</tspan><tspan lang=\"es\">Alguien escribe por WhatsApp</tspan></text>\n<text class=\"s\" x=\"16\" y=\"44\"><tspan lang=\"en\">Meta sends it to the webhook</tspan><tspan lang=\"es\">Meta lo envía al webhook</tspan></text>\n<path class=\"l\" d=\"M146,58 V76\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"56\" rx=\"3\" width=\"290\" x=\"1\" y=\"80\"></rect>\n<text x=\"16\" y=\"104\"><tspan lang=\"en\">FastAPI /webhook</tspan><tspan lang=\"es\">FastAPI /webhook</tspan></text>\n<text class=\"s\" x=\"16\" y=\"123\"><tspan lang=\"en\">reads the message from the payload</tspan><tspan lang=\"es\">saca el mensaje del payload</tspan></text>\n<path class=\"l\" d=\"M146,137 V155\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"56\" rx=\"3\" width=\"290\" x=\"1\" y=\"159\"></rect>\n<text x=\"16\" y=\"183\"><tspan lang=\"en\">Conversation history</tspan><tspan lang=\"es\">Historial de la conversación</tspan></text>\n<text class=\"s\" x=\"16\" y=\"202\"><tspan lang=\"en\">last 20 messages per number, in memory</tspan><tspan lang=\"es\">20 últimos mensajes por número, en memoria</tspan></text>\n<path class=\"l\" d=\"M146,216 V234\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"56\" rx=\"3\" width=\"290\" x=\"1\" y=\"238\"></rect>\n<text x=\"16\" y=\"262\"><tspan lang=\"en\">Claude writes the answer</tspan><tspan lang=\"es\">Claude escribe la respuesta</tspan></text>\n<text class=\"s\" x=\"16\" y=\"281\"><tspan lang=\"en\">Anthropic SDK</tspan><tspan lang=\"es\">SDK de Anthropic</tspan></text>\n<path class=\"l\" d=\"M292,266 H370 V29 H296\" marker-end=\"url(#ah)\"></path>\n<text class=\"s\" x=\"382\" y=\"140\"><tspan lang=\"en\">the reply goes back</tspan><tspan lang=\"es\">la respuesta vuelve</tspan></text>\n<text class=\"s\" x=\"382\" y=\"157\"><tspan lang=\"en\">to the same chat</tspan><tspan lang=\"es\">al mismo chat</tspan></text>\n</svg>",
-       "caption": {
-        "en": "How the prototype works, as a diagram: it only ran against simulated messages",
-        "es": "Cómo funciona el prototipo, en diagrama: solo se probó con mensajes simulados"
-       }
-      },
-      {
-       "svg": "<svg class=\"dg\" preserveAspectRatio=\"xMinYMin meet\" role=\"img\" viewBox=\"0 0 620 250\">\n<rect class=\"b\" height=\"64\" rx=\"3\" width=\"270\" x=\"1\" y=\"1\"></rect>\n<text x=\"16\" y=\"28\"><tspan lang=\"en\">New WhatsApp message</tspan><tspan lang=\"es\">Mensaje nuevo de WhatsApp</tspan></text>\n<text class=\"s\" x=\"16\" y=\"49\"><tspan lang=\"en\">from one phone number</tspan><tspan lang=\"es\">desde un número de teléfono</tspan></text>\n<rect class=\"b\" height=\"64\" rx=\"3\" width=\"270\" x=\"1\" y=\"120\"></rect>\n<text x=\"16\" y=\"147\"><tspan lang=\"en\">Recent history</tspan><tspan lang=\"es\">Historial reciente</tspan></text>\n<text class=\"s\" x=\"16\" y=\"168\"><tspan lang=\"en\">of that conversation, in memory</tspan><tspan lang=\"es\">de esa conversación, en memoria</tspan></text>\n<path class=\"l\" d=\"M272,33 H330 V80\" marker-end=\"url(#ah)\"></path>\n<path class=\"l\" d=\"M272,152 H330 V112\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"64\" rx=\"3\" width=\"280\" x=\"338\" y=\"64\"></rect>\n<text x=\"353\" y=\"91\"><tspan lang=\"en\">Claude writes the reply</tspan><tspan lang=\"es\">Claude escribe la respuesta</tspan></text>\n<text class=\"s\" x=\"353\" y=\"112\"><tspan lang=\"en\">with the whole context</tspan><tspan lang=\"es\">con todo el contexto</tspan></text>\n<path class=\"l\" d=\"M478,129 V184\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"56\" rx=\"3\" width=\"280\" x=\"338\" y=\"188\"></rect>\n<text x=\"353\" y=\"212\"><tspan lang=\"en\">Reply sent and saved</tspan><tspan lang=\"es\">Respuesta enviada y guardada</tspan></text>\n<text class=\"s\" x=\"353\" y=\"232\"><tspan lang=\"en\">back into the history</tspan><tspan lang=\"es\">de vuelta al historial</tspan></text>\n</svg>",
-       "caption": {
-        "en": "What goes to Claude with each message: the new text plus that conversation’s recent history",
-        "es": "Qué recibe Claude con cada mensaje: el texto nuevo y el historial reciente de esa conversación"
-       }
-      }
-     ],
-     "say": {
-      "en": "The tests I ran before the production Telegram bot: a backend that receives WhatsApp messages through Meta's webhook, keeps each conversation's recent history and answers with Claude.",
-      "es": "Las pruebas que hice antes del bot de Telegram en producción: un backend que recibe mensajes de WhatsApp por el webhook de Meta, guarda el historial reciente de cada conversación y responde con Claude."
-     },
-     "how": {
-      "en": "Python, FastAPI and the Anthropic SDK.",
-      "es": "Python, FastAPI y el SDK de Anthropic."
-     },
-     "links": [
-      {
-       "href": "https://github.com/Romequinco/chatbot-experiments",
-       "label": {
-        "en": "Code on GitHub",
-        "es": "Código en GitHub"
-       }
-      }
-     ],
-     "slug": "chatbot-experiments"
-    }
-   ]
-  },
-  {
-   "id": "course",
-   "title": {
-    "en": "Master's coursework, MIAX at Instituto BME",
-    "es": "Trabajos del máster MIAX, Instituto BME"
-   },
-   "projects": [
     {
      "name": {
       "en": "Fair credit",
@@ -873,7 +653,8 @@
        }
       }
      ],
-     "slug": "fair-credit"
+     "slug": "fair-credit",
+     "origin": "master"
     },
     {
      "name": {
@@ -937,62 +718,8 @@
        }
       }
      ],
-     "slug": "xai-credit"
-    },
-    {
-     "name": {
-      "en": "Synthetic data",
-      "es": "Datos sintéticos"
-     },
-     "short": {
-      "en": "Seven generators for scarce crisis data",
-      "es": "Siete generadores para datos de crisis escasos"
-     },
-     "status": null,
-     "images": [
-      {
-       "src": "/img/p/synthetic-data/2.webp",
-       "w": 1600,
-       "h": 666,
-       "caption": {
-        "en": "Fidelity against usefulness: the most faithful generator is not the most useful",
-        "es": "Fidelidad frente a utilidad: el generador más fiel no es el más útil"
-       }
-      },
-      {
-       "src": "/img/p/synthetic-data/1.webp",
-       "w": 1600,
-       "h": 542,
-       "caption": {
-        "en": "Real and synthetic crisis windows from the seven generators, in PCA space",
-        "es": "Ventanas de crisis reales y sintéticas de los siete generadores, en el espacio PCA"
-       }
-      },
-      {
-       "src": "/img/p/synthetic-data/4.webp",
-       "w": 1600,
-       "h": 609,
-       "caption": {
-        "en": "Crisis recall by amount of real data and share of synthetic data",
-        "es": "Recall de crisis según la cantidad de datos reales y la proporción de sintéticos"
-       }
-      }
-     ],
-     "say": {
-      "en": "Can synthetic data help when real crises are rare? Seven generators, from added noise to diffusion, and 570 training runs. Synthetic data lifts balanced accuracy from 0.575 to 0.612, but the gain sits inside the noise band, and the most faithful generator came seventh in usefulness. Team of 3.",
-      "es": "¿Ayudan los datos sintéticos cuando las crisis reales son raras? Siete generadores, del ruido añadido a la difusión, y 570 entrenamientos. Los sintéticos suben la balanced accuracy de 0,575 a 0,612, pero la mejora cae dentro del ruido, y el generador más fiel quedó séptimo en utilidad. Equipo de 3."
-     },
-     "how": null,
-     "links": [
-      {
-       "href": "https://github.com/Romequinco/synthetic-financial-data",
-       "label": {
-        "en": "Code on GitHub",
-        "es": "Código en GitHub"
-       }
-      }
-     ],
-     "slug": "synthetic-data"
+     "slug": "xai-credit",
+     "origin": "master"
     },
     {
      "name": {
@@ -1072,239 +799,8 @@
        }
       }
      ],
-     "slug": "rl-trading"
-    },
-    {
-     "name": {
-      "en": "Equity arbitrage",
-      "es": "Arbitraje en renta variable"
-     },
-     "short": {
-      "en": "Order books from four European venues",
-      "es": "Libros de órdenes de cuatro mercados europeos"
-     },
-     "status": null,
-     "images": [
-      {
-       "src": "/img/p/equity-arbitrage/1.webp",
-       "w": 1600,
-       "h": 952,
-       "caption": {
-        "en": "Profit as a share of the zero-latency case: below break-even within a few milliseconds",
-        "es": "Beneficio como porcentaje del caso sin latencia: por debajo del punto muerto en pocos milisegundos"
-       }
-      },
-      {
-       "src": "/img/p/equity-arbitrage/2.webp",
-       "w": 989,
-       "h": 590,
-       "caption": {
-        "en": "Profit or loss in euros against latency",
-        "es": "Beneficio o pérdida en euros según la latencia"
-       }
-      }
-     ],
-     "say": {
-      "en": "It merges the order books of BME, Aquis, Cboe and Turquoise into one consolidated tape and looks for prices that cross between venues. It found 2,719 opportunities, and showed that a few milliseconds of latency are enough to wipe out the profit.",
-      "es": "Une los libros de órdenes de BME, Aquis, Cboe y Turquoise en una cinta consolidada y busca precios que se cruzan entre mercados. Encontró 2.719 oportunidades y demostró que bastan unos pocos milisegundos de latencia para que desaparezca el beneficio."
-     },
-     "how": {
-      "en": "pandas, with a latency simulator.",
-      "es": "pandas, con un simulador de latencia."
-     },
-     "links": [
-      {
-       "href": "https://github.com/Romequinco/equity-arbitrage-opportunities",
-       "label": {
-        "en": "Code on GitHub",
-        "es": "Código en GitHub"
-       }
-      }
-     ],
-     "slug": "equity-arbitrage"
-    },
-    {
-     "name": {
-      "en": "S&amp;P 500 forecasting",
-      "es": "Predicción del S&amp;P 500"
-     },
-     "short": {
-      "en": "256 trainings, none beat a linear model",
-      "es": "256 entrenamientos, ninguno bate a uno lineal"
-     },
-     "status": null,
-     "images": [
-      {
-       "src": "/img/p/nn-sp500/1.webp",
-       "w": 1600,
-       "h": 993,
-       "caption": {
-        "en": "Best test error for each input and output window: identical rows, so the input window doesn't matter",
-        "es": "Mejor error de test para cada ventana de entrada y de salida: filas idénticas, así que la ventana de entrada no importa"
-       }
-      },
-      {
-       "src": "/img/p/nn-sp500/ffd.webp",
-       "w": 689,
-       "h": 390,
-       "caption": {
-        "en": "Sweep of the fractional differencing order: the lowest test error is at d = 0.2",
-        "es": "Barrido del orden de diferenciación fraccional: el menor error de test aparece con d = 0,2"
-       }
-      },
-      {
-       "src": "/img/p/nn-sp500/2.webp",
-       "w": 1600,
-       "h": 609,
-       "caption": {
-        "en": "2025 cumulative return: the network's portfolio against equal-weight buy and hold",
-        "es": "Rentabilidad acumulada en 2025: la cartera de la red frente a comprar y mantener a partes iguales"
-       }
-      }
-     ],
-     "say": {
-      "en": "Sixteen architectures, dense, recurrent, convolutional and hybrid, predicting the returns of 23 S&amp;P 500 stocks: 256 trainings in all. None beat a linear regression, and the write-up explains why: the returns are close to noise, so every network ends up predicting the mean. Team of 3.",
-      "es": "Dieciséis arquitecturas, densas, recurrentes, convolucionales e híbridas, para predecir los retornos de 23 valores del S&amp;P 500: 256 entrenamientos en total. Ninguna bate a una regresión lineal, y el trabajo explica por qué: los retornos se parecen mucho al ruido, así que todas las redes acaban prediciendo la media. Equipo de 3."
-     },
-     "how": null,
-     "links": [
-      {
-       "href": "https://github.com/Romequinco/neural-networks-workshop",
-       "label": {
-        "en": "Code on GitHub",
-        "es": "Código en GitHub"
-       }
-      }
-     ],
-     "slug": "nn-sp500"
-    },
-    {
-     "name": {
-      "en": "Stress testing and VaR",
-      "es": "Stress testing y VaR"
-     },
-     "short": {
-      "en": "Crisis scenarios for an 18-asset portfolio",
-      "es": "Escenarios de crisis para una cartera de 18 activos"
-     },
-     "status": null,
-     "images": [
-      {
-       "src": "/img/p/risk-var/1.webp",
-       "w": 1589,
-       "h": 590,
-       "caption": {
-        "en": "S&amp;P 500 coloured by regime, crisis or calm",
-        "es": "El S&amp;P 500 coloreado por régimen, crisis o calma"
-       }
-      },
-      {
-       "src": "/img/p/risk-var/3.webp",
-       "w": 936,
-       "h": 790,
-       "caption": {
-        "en": "How much each asset's volatility rises in a crisis",
-        "es": "Cuánto sube la volatilidad de cada activo en crisis"
-       }
-      },
-      {
-       "src": "/img/p/risk-var/4.webp",
-       "w": 1189,
-       "h": 590,
-       "caption": {
-        "en": "Pairwise correlations by regime",
-        "es": "Correlaciones entre pares de activos por régimen"
-       }
-      },
-      {
-       "src": "/img/p/risk-var/2.webp",
-       "w": 1189,
-       "h": 590,
-       "caption": {
-        "en": "99% VaR across the Monte Carlo runs, against the real VaR",
-        "es": "VaR al 99 % en las simulaciones de Monte Carlo, frente al VaR real"
-       }
-      }
-     ],
-     "say": {
-      "en": "A two-state hidden Markov model separates calm from crisis over 2006–2026, copulas model how 18 assets move together, and 10,000 Monte Carlo paths of 126 days give VaR and CVaR for each stress scenario. In a crisis, volatility rises two to four times and correlations go up, just when diversification is needed most.",
-      "es": "Un modelo oculto de Markov de dos estados separa calma y crisis entre 2006 y 2026, las cópulas modelan cómo se mueven juntos 18 activos y 10.000 trayectorias de Monte Carlo de 126 días dan el VaR y el CVaR de cada escenario de estrés. En crisis, la volatilidad se multiplica por entre dos y cuatro y las correlaciones suben, justo cuando más falta hace diversificar."
-     },
-     "how": null,
-     "links": [
-      {
-       "href": "https://github.com/Romequinco/risk-management-var",
-       "label": {
-        "en": "Code on GitHub",
-        "es": "Código en GitHub"
-       }
-      }
-     ],
-     "slug": "risk-var"
-    },
-    {
-     "name": {
-      "en": "Options on SPY",
-      "es": "Opciones sobre SPY"
-     },
-     "short": {
-      "en": "A long straddle, with and without delta hedging",
-      "es": "Un long straddle, con y sin cobertura delta"
-     },
-     "status": null,
-     "images": [
-      {
-       "src": "/img/p/derivatives/4.webp",
-       "w": 1600,
-       "h": 793,
-       "caption": {
-        "en": "Cumulative P&amp;L: the straddle unhedged and delta-hedged",
-        "es": "P&amp;L acumulado: el straddle sin cubrir y con cobertura delta"
-       }
-      },
-      {
-       "src": "/img/p/derivatives/1.webp",
-       "w": 1600,
-       "h": 908,
-       "caption": {
-        "en": "Long straddle payoff on SPY, with its break-even points",
-        "es": "Perfil de pagos del long straddle sobre SPY, con sus puntos muertos"
-       }
-      },
-      {
-       "src": "/img/p/derivatives/3.webp",
-       "w": 1600,
-       "h": 1197,
-       "caption": {
-        "en": "Sensitivity to the strike: premium, delta, gamma and break-even range",
-        "es": "Sensibilidad al strike: prima, delta, gamma y rango hasta el punto muerto"
-       }
-      },
-      {
-       "src": "/img/p/derivatives/2.webp",
-       "w": 1600,
-       "h": 1398,
-       "caption": {
-        "en": "Option price and Greeks through to expiry",
-        "es": "Precio de la opción y griegas hasta el vencimiento"
-       }
-      }
-     ],
-     "say": {
-      "en": "Black-Scholes pricing, Greeks and implied volatility on SPY options, used to build a long straddle and a version hedged every day. The hedge turns the straddle from a bet on direction into a pure bet on volatility. It also compares sending a combo order with legging in.",
-      "es": "Valoración con Black-Scholes, griegas y volatilidad implícita sobre opciones de SPY, para montar un long straddle y una versión cubierta cada día. La cobertura convierte el straddle de una apuesta de dirección en una apuesta pura sobre volatilidad. También compara enviar la orden combinada con meter las patas por separado."
-     },
-     "how": null,
-     "links": [
-      {
-       "href": "https://github.com/Romequinco/derivatives-pricing",
-       "label": {
-        "en": "Code on GitHub",
-        "es": "Código en GitHub"
-       }
-      }
-     ],
-     "slug": "derivatives"
+     "slug": "rl-trading",
+     "origin": "master"
     },
     {
      "name": {
@@ -1368,7 +864,351 @@
        }
       }
      ],
-     "slug": "backtesting"
+     "slug": "backtesting",
+     "origin": "master"
+    },
+    {
+     "name": {
+      "en": "Stock contest",
+      "es": "Concurso de Bolsa"
+     },
+     "short": {
+      "en": "Plays for the podium, not for return",
+      "es": "Busca el podio, no la rentabilidad"
+     },
+     "status": {
+      "en": "In progress",
+      "es": "En curso"
+     },
+     "images": [
+      {
+       "src": "/img/p/stock-contest/2.webp",
+       "w": 1600,
+       "h": 557,
+       "caption": {
+        "en": "Data cleaning: from raw sessions to a clean panel where only past data decides eligibility",
+        "es": "Limpieza de datos: de las sesiones en bruto a un panel limpio en el que solo los datos pasados deciden qué valor es elegible"
+       }
+      },
+      {
+       "src": "/img/p/stock-contest/3.webp",
+       "w": 1600,
+       "h": 1491,
+       "caption": {
+        "en": "Clustered correlations of liquid Spanish stocks, by macro-sector",
+        "es": "Correlaciones agrupadas de los valores españoles líquidos, por macrosector"
+       }
+      },
+      {
+       "src": "/img/p/stock-contest/1.webp",
+       "w": 657,
+       "h": 638,
+       "caption": {
+        "en": "How many points separate rivals on return and on volatility, across 108 simulated fields",
+        "es": "Cuántos puntos separan a los rivales por rentabilidad y por volatilidad, en 108 campos simulados"
+       }
+      }
+     ],
+     "say": {
+      "en": "For El Concurso de Bolsa 2026. A simulator replays 452 historical windows of 23 sessions against thousands of synthetic rivals under the contest's exact scoring, so the strategy aims for the podium rather than for the highest return. Every day it sends the orders by Telegram and I place them by hand, because the rules don't allow bots. I'll publish the results after 12 November.",
+      "es": "Para El Concurso de Bolsa 2026. Un simulador repite 452 ventanas históricas de 23 sesiones contra miles de rivales sintéticos con la puntuación exacta del concurso, para que la estrategia busque el podio y no la máxima rentabilidad. Cada día manda las órdenes por Telegram y yo las meto a mano, porque las bases no permiten bots. Publicaré los resultados después del 12 de noviembre."
+     },
+     "how": null,
+     "links": [],
+     "slug": "stock-contest",
+     "origin": "own"
+    },
+    {
+     "name": {
+      "en": "Synthetic data",
+      "es": "Datos sintéticos"
+     },
+     "short": {
+      "en": "Seven generators for scarce crisis data",
+      "es": "Siete generadores para datos de crisis escasos"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/synthetic-data/2.webp",
+       "w": 1600,
+       "h": 666,
+       "caption": {
+        "en": "Fidelity against usefulness: the most faithful generator is not the most useful",
+        "es": "Fidelidad frente a utilidad: el generador más fiel no es el más útil"
+       }
+      },
+      {
+       "src": "/img/p/synthetic-data/1.webp",
+       "w": 1600,
+       "h": 542,
+       "caption": {
+        "en": "Real and synthetic crisis windows from the seven generators, in PCA space",
+        "es": "Ventanas de crisis reales y sintéticas de los siete generadores, en el espacio PCA"
+       }
+      },
+      {
+       "src": "/img/p/synthetic-data/4.webp",
+       "w": 1600,
+       "h": 609,
+       "caption": {
+        "en": "Crisis recall by amount of real data and share of synthetic data",
+        "es": "Recall de crisis según la cantidad de datos reales y la proporción de sintéticos"
+       }
+      }
+     ],
+     "say": {
+      "en": "Can synthetic data help when real crises are rare? Seven generators, from added noise to diffusion, and 570 training runs. Synthetic data lifts balanced accuracy from 0.575 to 0.612, but the gain sits inside the noise band, and the most faithful generator came seventh in usefulness. Team of 3.",
+      "es": "¿Ayudan los datos sintéticos cuando las crisis reales son raras? Siete generadores, del ruido añadido a la difusión, y 570 entrenamientos. Los sintéticos suben la balanced accuracy de 0,575 a 0,612, pero la mejora cae dentro del ruido, y el generador más fiel quedó séptimo en utilidad. Equipo de 3."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/synthetic-financial-data",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "synthetic-data",
+     "origin": "master"
+    },
+    {
+     "name": {
+      "en": "Equity arbitrage",
+      "es": "Arbitraje en renta variable"
+     },
+     "short": {
+      "en": "Order books from four European venues",
+      "es": "Libros de órdenes de cuatro mercados europeos"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/equity-arbitrage/1.webp",
+       "w": 1600,
+       "h": 952,
+       "caption": {
+        "en": "Profit as a share of the zero-latency case: below break-even within a few milliseconds",
+        "es": "Beneficio como porcentaje del caso sin latencia: por debajo del punto muerto en pocos milisegundos"
+       }
+      },
+      {
+       "src": "/img/p/equity-arbitrage/2.webp",
+       "w": 989,
+       "h": 590,
+       "caption": {
+        "en": "Profit or loss in euros against latency",
+        "es": "Beneficio o pérdida en euros según la latencia"
+       }
+      }
+     ],
+     "say": {
+      "en": "It merges the order books of BME, Aquis, Cboe and Turquoise into one consolidated tape and looks for prices that cross between venues. It found 2,719 opportunities, and showed that a few milliseconds of latency are enough to wipe out the profit.",
+      "es": "Une los libros de órdenes de BME, Aquis, Cboe y Turquoise en una cinta consolidada y busca precios que se cruzan entre mercados. Encontró 2.719 oportunidades y demostró que bastan unos pocos milisegundos de latencia para que desaparezca el beneficio."
+     },
+     "how": {
+      "en": "pandas, with a latency simulator.",
+      "es": "pandas, con un simulador de latencia."
+     },
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/equity-arbitrage-opportunities",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "equity-arbitrage",
+     "origin": "master"
+    },
+    {
+     "name": {
+      "en": "S&amp;P 500 forecasting",
+      "es": "Predicción del S&amp;P 500"
+     },
+     "short": {
+      "en": "256 trainings, none beat a linear model",
+      "es": "256 entrenamientos, ninguno bate a uno lineal"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/nn-sp500/1.webp",
+       "w": 1600,
+       "h": 993,
+       "caption": {
+        "en": "Best test error for each input and output window: identical rows, so the input window doesn't matter",
+        "es": "Mejor error de test para cada ventana de entrada y de salida: filas idénticas, así que la ventana de entrada no importa"
+       }
+      },
+      {
+       "src": "/img/p/nn-sp500/ffd.webp",
+       "w": 689,
+       "h": 390,
+       "caption": {
+        "en": "Sweep of the fractional differencing order: the lowest test error is at d = 0.2",
+        "es": "Barrido del orden de diferenciación fraccional: el menor error de test aparece con d = 0,2"
+       }
+      },
+      {
+       "src": "/img/p/nn-sp500/2.webp",
+       "w": 1600,
+       "h": 609,
+       "caption": {
+        "en": "2025 cumulative return: the network's portfolio against equal-weight buy and hold",
+        "es": "Rentabilidad acumulada en 2025: la cartera de la red frente a comprar y mantener a partes iguales"
+       }
+      }
+     ],
+     "say": {
+      "en": "Sixteen architectures, dense, recurrent, convolutional and hybrid, predicting the returns of 23 S&amp;P 500 stocks: 256 trainings in all. None beat a linear regression, and the write-up explains why: the returns are close to noise, so every network ends up predicting the mean. Team of 3.",
+      "es": "Dieciséis arquitecturas, densas, recurrentes, convolucionales e híbridas, para predecir los retornos de 23 valores del S&amp;P 500: 256 entrenamientos en total. Ninguna bate a una regresión lineal, y el trabajo explica por qué: los retornos se parecen mucho al ruido, así que todas las redes acaban prediciendo la media. Equipo de 3."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/neural-networks-workshop",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "nn-sp500",
+     "origin": "master"
+    },
+    {
+     "name": {
+      "en": "Stress testing and VaR",
+      "es": "Stress testing y VaR"
+     },
+     "short": {
+      "en": "Crisis scenarios for an 18-asset portfolio",
+      "es": "Escenarios de crisis para una cartera de 18 activos"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/risk-var/1.webp",
+       "w": 1589,
+       "h": 590,
+       "caption": {
+        "en": "S&amp;P 500 coloured by regime, crisis or calm",
+        "es": "El S&amp;P 500 coloreado por régimen, crisis o calma"
+       }
+      },
+      {
+       "src": "/img/p/risk-var/3.webp",
+       "w": 936,
+       "h": 790,
+       "caption": {
+        "en": "How much each asset's volatility rises in a crisis",
+        "es": "Cuánto sube la volatilidad de cada activo en crisis"
+       }
+      },
+      {
+       "src": "/img/p/risk-var/4.webp",
+       "w": 1189,
+       "h": 590,
+       "caption": {
+        "en": "Pairwise correlations by regime",
+        "es": "Correlaciones entre pares de activos por régimen"
+       }
+      },
+      {
+       "src": "/img/p/risk-var/2.webp",
+       "w": 1189,
+       "h": 590,
+       "caption": {
+        "en": "99% VaR across the Monte Carlo runs, against the real VaR",
+        "es": "VaR al 99 % en las simulaciones de Monte Carlo, frente al VaR real"
+       }
+      }
+     ],
+     "say": {
+      "en": "A two-state hidden Markov model separates calm from crisis over 2006–2026, copulas model how 18 assets move together, and 10,000 Monte Carlo paths of 126 days give VaR and CVaR for each stress scenario. In a crisis, volatility rises two to four times and correlations go up, just when diversification is needed most.",
+      "es": "Un modelo oculto de Markov de dos estados separa calma y crisis entre 2006 y 2026, las cópulas modelan cómo se mueven juntos 18 activos y 10.000 trayectorias de Monte Carlo de 126 días dan el VaR y el CVaR de cada escenario de estrés. En crisis, la volatilidad se multiplica por entre dos y cuatro y las correlaciones suben, justo cuando más falta hace diversificar."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/risk-management-var",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "risk-var",
+     "origin": "master"
+    },
+    {
+     "name": {
+      "en": "Options on SPY",
+      "es": "Opciones sobre SPY"
+     },
+     "short": {
+      "en": "A long straddle, with and without delta hedging",
+      "es": "Un long straddle, con y sin cobertura delta"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/derivatives/4.webp",
+       "w": 1600,
+       "h": 793,
+       "caption": {
+        "en": "Cumulative P&amp;L: the straddle unhedged and delta-hedged",
+        "es": "P&amp;L acumulado: el straddle sin cubrir y con cobertura delta"
+       }
+      },
+      {
+       "src": "/img/p/derivatives/1.webp",
+       "w": 1600,
+       "h": 908,
+       "caption": {
+        "en": "Long straddle payoff on SPY, with its break-even points",
+        "es": "Perfil de pagos del long straddle sobre SPY, con sus puntos muertos"
+       }
+      },
+      {
+       "src": "/img/p/derivatives/3.webp",
+       "w": 1600,
+       "h": 1197,
+       "caption": {
+        "en": "Sensitivity to the strike: premium, delta, gamma and break-even range",
+        "es": "Sensibilidad al strike: prima, delta, gamma y rango hasta el punto muerto"
+       }
+      },
+      {
+       "src": "/img/p/derivatives/2.webp",
+       "w": 1600,
+       "h": 1398,
+       "caption": {
+        "en": "Option price and Greeks through to expiry",
+        "es": "Precio de la opción y griegas hasta el vencimiento"
+       }
+      }
+     ],
+     "say": {
+      "en": "Black-Scholes pricing, Greeks and implied volatility on SPY options, used to build a long straddle and a version hedged every day. The hedge turns the straddle from a bet on direction into a pure bet on volatility. It also compares sending a combo order with legging in.",
+      "es": "Valoración con Black-Scholes, griegas y volatilidad implícita sobre opciones de SPY, para montar un long straddle y una versión cubierta cada día. La cobertura convierte el straddle de una apuesta de dirección en una apuesta pura sobre volatilidad. También compara enviar la orden combinada con meter las patas por separado."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/derivatives-pricing",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "derivatives",
+     "origin": "master"
     },
     {
      "name": {
@@ -1432,7 +1272,8 @@
        }
       }
      ],
-     "slug": "causal-graphs"
+     "slug": "causal-graphs",
+     "origin": "master"
     },
     {
      "name": {
@@ -1496,7 +1337,8 @@
        }
       }
      ],
-     "slug": "portfolio-mgmt"
+     "slug": "portfolio-mgmt",
+     "origin": "master"
     },
     {
      "name": {
@@ -1560,7 +1402,8 @@
        }
       }
      ],
-     "slug": "fund-of-funds"
+     "slug": "fund-of-funds",
+     "origin": "master"
     },
     {
      "name": {
@@ -1624,7 +1467,8 @@
        }
       }
      ],
-     "slug": "data-preprocessing"
+     "slug": "data-preprocessing",
+     "origin": "master"
     },
     {
      "name": {
@@ -1670,7 +1514,8 @@
        }
       }
      ],
-     "slug": "heterogeneous-nn"
+     "slug": "heterogeneous-nn",
+     "origin": "master"
     },
     {
      "name": {
@@ -1732,7 +1577,8 @@
        }
       }
      ],
-     "slug": "nn-competition"
+     "slug": "nn-competition",
+     "origin": "master"
     },
     {
      "name": {
@@ -1785,7 +1631,8 @@
        }
       }
      ],
-     "slug": "fixed-income"
+     "slug": "fixed-income",
+     "origin": "master"
     },
     {
      "name": {
@@ -1849,7 +1696,8 @@
        }
       }
      ],
-     "slug": "python-fundamentals"
+     "slug": "python-fundamentals",
+     "origin": "master"
     },
     {
      "name": {
@@ -1907,7 +1755,173 @@
        }
       }
      ],
-     "slug": "fraud-detection"
+     "slug": "fraud-detection",
+     "origin": "master"
+    },
+    {
+     "name": {
+      "en": "Polymarket",
+      "es": "Polymarket"
+     },
+     "short": {
+      "en": "Do Bitcoin candles have momentum?",
+      "es": "¿Tienen inercia las velas de bitcoin?"
+     },
+     "status": {
+      "en": "Ruled out",
+      "es": "Descartada"
+     },
+     "images": [
+      {
+       "src": "/img/p/polymarket/1.webp",
+       "w": 1490,
+       "h": 985,
+       "caption": {
+        "en": "Hypothesis test on 15-minute candles: win rate against the 50% baseline",
+        "es": "Contraste sobre velas de 15 minutos: tasa de acierto frente al 50 % de referencia"
+       }
+      },
+      {
+       "src": "/img/p/polymarket/3.webp",
+       "w": 1390,
+       "h": 490,
+       "caption": {
+        "en": "Win rate by candle-body percentile, and its gap to the baseline",
+        "es": "Tasa de acierto por percentil del cuerpo de la vela y su diferencia con la referencia"
+       }
+      },
+      {
+       "src": "/img/p/polymarket/2.webp",
+       "w": 1490,
+       "h": 985,
+       "caption": {
+        "en": "First look at 1-hour candles: price, returns, body size and volatility",
+        "es": "Primer análisis de las velas de 1 hora: precio, retornos, tamaño del cuerpo y volatilidad"
+       }
+      }
+     ],
+     "say": {
+      "en": "An experiment on Polymarket's \"Bitcoin up or down\" markets. The hypothesis was momentum, and the data said no: candles repeat their colour less than half the time. The edges in my first version came from look-ahead leaks, so I shelved the bot before putting any money in.",
+      "es": "Un experimento sobre los mercados «Bitcoin up or down» de Polymarket. La hipótesis era la inercia y los datos dijeron que no: las velas repiten color menos de la mitad de las veces. Las ventajas de mi primera versión venían de fugas de información futura, así que aparqué el bot antes de meter dinero."
+     },
+     "how": {
+      "en": "Python on Binance candles, with a test that watches for look-ahead.",
+      "es": "Python sobre velas de Binance, con un test que vigila las fugas de información futura."
+     },
+     "links": [],
+     "slug": "polymarket",
+     "origin": "own"
+    },
+    {
+     "name": {
+      "en": "IBEX 35 newsletter",
+      "es": "Newsletter del IBEX 35"
+     },
+     "short": {
+      "en": "A daily report written by agents",
+      "es": "Un informe diario escrito por agentes"
+     },
+     "status": {
+      "en": "First prototype",
+      "es": "Primer prototipo"
+     },
+     "images": [
+      {
+       "src": "/img/p/ibex-newsletter/1.webp",
+       "w": 1132,
+       "h": 1600,
+       "caption": {
+        "en": "Page 1: headline, market panel, 52-week chart and summary",
+        "es": "Página 1: titular, panel de mercado, gráfico de 52 semanas y resumen"
+       }
+      },
+      {
+       "src": "/img/p/ibex-newsletter/2.webp",
+       "w": 1132,
+       "h": 1600,
+       "caption": {
+        "en": "Page 2: IBEX 35 heat map and European macro context",
+        "es": "Página 2: mapa de calor del IBEX 35 y contexto macro europeo"
+       }
+      },
+      {
+       "src": "/img/p/ibex-newsletter/3.webp",
+       "w": 1132,
+       "h": 1600,
+       "caption": {
+        "en": "Page 3: contribution by stock and by sector",
+        "es": "Página 3: aportación por valor y por sector"
+       }
+      }
+     ],
+     "say": {
+      "en": "The forerunner of Auguria. Every trading day at 17:35, four Claude agents (a leader, a researcher, an analyst and a writer) produced a seven-page report on the Spanish market and sent it out as an email newsletter.",
+      "es": "El precursor de Auguria. Cada día hábil a las 17:35, cuatro agentes de Claude (un líder, un investigador, un analista y un redactor) preparaban un informe de siete páginas sobre la bolsa española y lo enviaban como newsletter por correo."
+     },
+     "how": {
+      "en": "Claude Opus and Sonnet, GitHub Actions, PostgreSQL and SendGrid.",
+      "es": "Claude Opus y Sonnet, GitHub Actions, PostgreSQL y SendGrid."
+     },
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/llm-agents-lab",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "ibex-newsletter",
+     "origin": "own"
+    },
+    {
+     "name": {
+      "en": "Chatbot experiments",
+      "es": "Pruebas de chatbot"
+     },
+     "short": {
+      "en": "A WhatsApp bot answered by Claude",
+      "es": "Un bot de WhatsApp que responde con Claude"
+     },
+     "status": {
+      "en": "Prototype",
+      "es": "Prototipo"
+     },
+     "images": [
+      {
+       "svg": "<svg class=\"dg\" preserveaspectratio=\"xMinYMin meet\" role=\"img\" viewbox=\"0 0 520 300\">\n<rect class=\"b\" height=\"56\" rx=\"3\" width=\"290\" x=\"1\" y=\"1\"></rect>\n<text x=\"16\" y=\"25\"><tspan lang=\"en\">Someone writes on WhatsApp</tspan><tspan lang=\"es\">Alguien escribe por WhatsApp</tspan></text>\n<text class=\"s\" x=\"16\" y=\"44\"><tspan lang=\"en\">Meta sends it to the webhook</tspan><tspan lang=\"es\">Meta lo envía al webhook</tspan></text>\n<path class=\"l\" d=\"M146,58 V76\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"56\" rx=\"3\" width=\"290\" x=\"1\" y=\"80\"></rect>\n<text x=\"16\" y=\"104\"><tspan lang=\"en\">FastAPI /webhook</tspan><tspan lang=\"es\">FastAPI /webhook</tspan></text>\n<text class=\"s\" x=\"16\" y=\"123\"><tspan lang=\"en\">reads the message from the payload</tspan><tspan lang=\"es\">saca el mensaje del payload</tspan></text>\n<path class=\"l\" d=\"M146,137 V155\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"56\" rx=\"3\" width=\"290\" x=\"1\" y=\"159\"></rect>\n<text x=\"16\" y=\"183\"><tspan lang=\"en\">Conversation history</tspan><tspan lang=\"es\">Historial de la conversación</tspan></text>\n<text class=\"s\" x=\"16\" y=\"202\"><tspan lang=\"en\">last 20 messages per number, in memory</tspan><tspan lang=\"es\">20 últimos mensajes por número, en memoria</tspan></text>\n<path class=\"l\" d=\"M146,216 V234\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"56\" rx=\"3\" width=\"290\" x=\"1\" y=\"238\"></rect>\n<text x=\"16\" y=\"262\"><tspan lang=\"en\">Claude writes the answer</tspan><tspan lang=\"es\">Claude escribe la respuesta</tspan></text>\n<text class=\"s\" x=\"16\" y=\"281\"><tspan lang=\"en\">Anthropic SDK</tspan><tspan lang=\"es\">SDK de Anthropic</tspan></text>\n<path class=\"l\" d=\"M292,266 H370 V29 H296\" marker-end=\"url(#ah)\"></path>\n<text class=\"s\" x=\"382\" y=\"140\"><tspan lang=\"en\">the reply goes back</tspan><tspan lang=\"es\">la respuesta vuelve</tspan></text>\n<text class=\"s\" x=\"382\" y=\"157\"><tspan lang=\"en\">to the same chat</tspan><tspan lang=\"es\">al mismo chat</tspan></text>\n</svg>",
+       "caption": {
+        "en": "How the prototype works, as a diagram: it only ran against simulated messages",
+        "es": "Cómo funciona el prototipo, en diagrama: solo se probó con mensajes simulados"
+       }
+      },
+      {
+       "svg": "<svg class=\"dg\" preserveAspectRatio=\"xMinYMin meet\" role=\"img\" viewBox=\"0 0 620 250\">\n<rect class=\"b\" height=\"64\" rx=\"3\" width=\"270\" x=\"1\" y=\"1\"></rect>\n<text x=\"16\" y=\"28\"><tspan lang=\"en\">New WhatsApp message</tspan><tspan lang=\"es\">Mensaje nuevo de WhatsApp</tspan></text>\n<text class=\"s\" x=\"16\" y=\"49\"><tspan lang=\"en\">from one phone number</tspan><tspan lang=\"es\">desde un número de teléfono</tspan></text>\n<rect class=\"b\" height=\"64\" rx=\"3\" width=\"270\" x=\"1\" y=\"120\"></rect>\n<text x=\"16\" y=\"147\"><tspan lang=\"en\">Recent history</tspan><tspan lang=\"es\">Historial reciente</tspan></text>\n<text class=\"s\" x=\"16\" y=\"168\"><tspan lang=\"en\">of that conversation, in memory</tspan><tspan lang=\"es\">de esa conversación, en memoria</tspan></text>\n<path class=\"l\" d=\"M272,33 H330 V80\" marker-end=\"url(#ah)\"></path>\n<path class=\"l\" d=\"M272,152 H330 V112\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"64\" rx=\"3\" width=\"280\" x=\"338\" y=\"64\"></rect>\n<text x=\"353\" y=\"91\"><tspan lang=\"en\">Claude writes the reply</tspan><tspan lang=\"es\">Claude escribe la respuesta</tspan></text>\n<text class=\"s\" x=\"353\" y=\"112\"><tspan lang=\"en\">with the whole context</tspan><tspan lang=\"es\">con todo el contexto</tspan></text>\n<path class=\"l\" d=\"M478,129 V184\" marker-end=\"url(#ah)\"></path>\n<rect class=\"b\" height=\"56\" rx=\"3\" width=\"280\" x=\"338\" y=\"188\"></rect>\n<text x=\"353\" y=\"212\"><tspan lang=\"en\">Reply sent and saved</tspan><tspan lang=\"es\">Respuesta enviada y guardada</tspan></text>\n<text class=\"s\" x=\"353\" y=\"232\"><tspan lang=\"en\">back into the history</tspan><tspan lang=\"es\">de vuelta al historial</tspan></text>\n</svg>",
+       "caption": {
+        "en": "What goes to Claude with each message: the new text plus that conversation’s recent history",
+        "es": "Qué recibe Claude con cada mensaje: el texto nuevo y el historial reciente de esa conversación"
+       }
+      }
+     ],
+     "say": {
+      "en": "The tests I ran before the production Telegram bot: a backend that receives WhatsApp messages through Meta's webhook, keeps each conversation's recent history and answers with Claude.",
+      "es": "Las pruebas que hice antes del bot de Telegram en producción: un backend que recibe mensajes de WhatsApp por el webhook de Meta, guarda el historial reciente de cada conversación y responde con Claude."
+     },
+     "how": {
+      "en": "Python, FastAPI and the Anthropic SDK.",
+      "es": "Python, FastAPI y el SDK de Anthropic."
+     },
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/chatbot-experiments",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      }
+     ],
+     "slug": "chatbot-experiments",
+     "origin": "own"
     }
    ]
   },

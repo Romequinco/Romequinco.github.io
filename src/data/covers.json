@@ -201,7 +201,14 @@
     }
    }
   ],
-  "brand": "#38C3D6"
+  "tech": {
+   "en": "Vectors + BM25, every figure checked against XBRL",
+   "es": "Vectores + BM25, cada cifra comprobada contra XBRL"
+  },
+  "data": {
+   "en": "10-K filings of six companies, fiscal 2024 and 2025",
+   "es": "Informes 10-K de seis empresas, ejercicios 2024 y 2025"
+  }
  },
  "market-regimes": {
   "kpis": [
@@ -227,9 +234,13 @@
     }
    }
   ],
-  "keywords": {
-   "en": "regime detection, walk-forward, HMM, Markov switching",
-   "es": "detección de regímenes, walk-forward, HMM, Markov switching"
+  "tech": {
+   "en": "From simple rules to HMM and GARCH, walk-forward",
+   "es": "De reglas simples a HMM y GARCH, en walk-forward"
+  },
+  "data": {
+   "en": "S&P 500 crises and 41 causal features",
+   "es": "Crisis del S&P 500 y 41 variables causales"
   }
  },
  "stock-contest": {
@@ -257,9 +268,13 @@
     }
    }
   ],
-  "keywords": {
-   "en": "simulation, Monte Carlo, contest scoring",
-   "es": "simulación, Monte Carlo, puntuación del concurso"
+  "tech": {
+   "en": "Contest simulator, synthetic rivals, bootstrap",
+   "es": "Simulador del concurso, rivales sintéticos, bootstrap"
+  },
+  "data": {
+   "en": "Unadjusted Mercado Continuo prices, 2016–2026",
+   "es": "Precios sin ajustar del Mercado Continuo, 2016–2026"
   }
  },
  "polymarket": {
@@ -281,9 +296,13 @@
     }
    }
   ],
-  "keywords": {
-   "en": "prediction markets, momentum, look-ahead bias",
-   "es": "mercados de predicción, momentum, sesgo de anticipación"
+  "tech": {
+   "en": "Hypothesis testing, look-ahead guard test",
+   "es": "Contraste de hipótesis, test de sesgo de anticipación"
+  },
+  "data": {
+   "en": "Binance Bitcoin candles, 15-minute and one-hour",
+   "es": "Velas de bitcoin en Binance, 15 minutos y una hora"
   }
  },
  "ibex-newsletter": {
@@ -310,9 +329,13 @@
     }
    }
   ],
-  "keywords": {
-   "en": "multi-agent, reporting, newsletter",
-   "es": "multiagente, informes, newsletter"
+  "tech": {
+   "en": "Multi-agent: leader, researcher, analyst and writer",
+   "es": "Multiagente: líder, investigador, analista y redactor"
+  },
+  "data": {
+   "en": "IBEX 35 and macro indicators, yfinance and RSS",
+   "es": "IBEX 35 e indicadores macro, yfinance y RSS"
   }
  },
  "chatbot-experiments": {
@@ -325,9 +348,13 @@
     }
    }
   ],
-  "keywords": {
-   "en": "chatbot, FastAPI, Claude",
-   "es": "chatbot, FastAPI, Claude"
+  "tech": {
+   "en": "FastAPI backend that replies with Claude",
+   "es": "Backend en FastAPI que responde con Claude"
+  },
+  "data": {
+   "en": "Simulated messages, last 20 per conversation",
+   "es": "Mensajes simulados, últimos 20 por conversación"
   }
  },
  "fair-credit": {
