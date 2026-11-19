@@ -491,6 +491,15 @@
      "status": null,
      "images": [
       {
+       "src": "/img/p/market-regimes/portada.webp",
+       "w": 1600,
+       "h": 752,
+       "caption": {
+        "en": "What an agent sees with get_regimen since 2010: the S&amp;P 500, the days flagged as crisis and the crisis probability, out of sample",
+        "es": "Lo que ve un agente con get_regimen desde 2010: el S&amp;P 500, los días marcados como crisis y la probabilidad de crisis, fuera de muestra"
+       }
+      },
+      {
        "src": "/img/p/market-regimes/1.webp",
        "w": 1600,
        "h": 900,
@@ -509,18 +518,18 @@
        }
       },
       {
-       "src": "/img/p/market-regimes/3.webp",
-       "w": 1600,
-       "h": 793,
+       "src": "/img/p/market-regimes/move-vix.webp",
+       "w": 1320,
+       "h": 605,
        "caption": {
-        "en": "The Mahalanobis turbulence detector, out of sample",
-        "es": "El detector de turbulencia de Mahalanobis, fuera de muestra"
+        "en": "Bond volatility (MOVE) against equity volatility (VIX): in 2022–2023 the first spikes and the second does not",
+        "es": "Volatilidad de los bonos (MOVE) frente a la de la bolsa (VIX): en 2022–2023 la primera se dispara y la segunda no"
        }
       }
      ],
      "say": {
-      "en": "A test bench with no look-ahead leaks, and the first part of my master's thesis. A simple rule won: Mahalanobis turbulence caught 16 of 17 crises. Simple models beat the complex ones.",
-      "es": "Un banco de pruebas sin fugas de información futura, y la primera parte de mi TFM. Ganó una regla simple: la turbulencia de Mahalanobis detectó 16 de 17 crisis. Los modelos simples baten a los complejos."
+      "en": "A test bench with no look-ahead leaks, and the first phase of my master's thesis. A simple rule won: Mahalanobis turbulence caught 16 of 17 crises. Simple models beat the complex ones. The full thesis is a multi-agent RAG system that reads dated financial sources, knows which regime the market is in and proposes a portfolio explained in a memo with citations; the agent phases are in progress.",
+      "es": "Un banco de pruebas sin fugas de información futura, y la primera fase de mi TFM. Ganó una regla simple: la turbulencia de Mahalanobis detectó 16 de 17 crisis. Los modelos simples baten a los complejos. El TFM completo es un sistema multiagente con RAG que lee fuentes financieras con su fecha, sabe en qué régimen está el mercado y propone una cartera explicada en un memo con citas; las fases de agentes están en curso."
      },
      "how": {
       "en": "Walk-forward evaluation with hmmlearn, statsmodels and arch.",
@@ -528,7 +537,7 @@
      },
      "links": [
       {
-       "href": "https://github.com/Romequinco/PRUEBAS_DETECCION_REGIMENES_DE_MERCADO_TFM",
+       "href": "https://github.com/Romequinco/regime-aware-macro-equity",
        "label": {
         "en": "Code on GitHub",
         "es": "Código en GitHub"
@@ -865,6 +874,87 @@
       }
      ],
      "slug": "backtesting",
+     "origin": "master"
+    },
+    {
+     "name": {
+      "en": "RL for execution",
+      "es": "Ejecución con RL"
+     },
+     "short": {
+      "en": "An agent that learns to spread an order like a TWAP",
+      "es": "Un agente que aprende a repartir una orden como un TWAP"
+     },
+     "status": null,
+     "images": [
+      {
+       "src": "/img/p/rl-execution/orden-plan.webp",
+       "w": 1600,
+       "h": 980,
+       "caption": {
+        "en": "A real Repsol order spread along the plan: average price paid and volume bought against the market",
+        "es": "Una orden real de Repsol repartida sobre el plan: precio medio pagado y volumen comprado frente al mercado"
+       }
+      },
+      {
+       "src": "/img/p/rl-execution/exploracion.webp",
+       "w": 1600,
+       "h": 900,
+       "caption": {
+        "en": "Linear exploration against improvement-based exploration, in a stable and in an unstable training run",
+        "es": "Exploración lineal frente a exploración según la mejora, con un entrenamiento estable y con uno inestable"
+       }
+      },
+      {
+       "src": "/img/p/rl-execution/planes-exploracion.webp",
+       "w": 1600,
+       "h": 847,
+       "caption": {
+        "en": "Four exploration schedules on the same seeds, episodes and orders",
+        "es": "Cuatro planes de exploración con las mismas semillas, episodios y órdenes"
+       }
+      },
+      {
+       "src": "/img/p/rl-execution/orden-90.webp",
+       "w": 1600,
+       "h": 980,
+       "caption": {
+        "en": "A 75-share order that finishes at 90% of the time window",
+        "es": "Una orden de 75 títulos que termina al 90 % del plazo"
+       }
+      },
+      {
+       "src": "/img/p/rl-execution/ahorro-test.webp",
+       "w": 968,
+       "h": 449,
+       "caption": {
+        "en": "Saving per order against a TWAP at 90%, on test data: the agent that reads the market, a placebo and a simple rule",
+        "es": "Ahorro por orden frente a un TWAP al 90 %, en test: el agente que mira el mercado, un placebo y una regla simple"
+       }
+      }
+     ],
+     "say": {
+      "en": "The third reinforcement learning assignment. Every 5 seconds a Double DQN agent decides whether to buy one Repsol share or wait, on real order-book data. With the workshop's original reward it buys everything at the start; with a reward for following the plan it spreads the order just like a TWAP: an error of 0.90 shares and 27 of 27 orders completed. Reading the market saves 0.15 bp per order: real, but small. Team of 3.",
+      "es": "Tercer taller de aprendizaje por refuerzo. Un agente Double DQN decide cada 5 segundos si compra un título de Repsol o espera, sobre datos reales del libro de órdenes. Con la recompensa original del taller compra todo al principio; con una recompensa por seguir el plan reparte la orden igual que un TWAP: error de 0,90 títulos y 27 de 27 órdenes completas. Mirar el mercado ahorra 0,15 pb por orden: real, pero pequeño. Equipo de 3."
+     },
+     "how": null,
+     "links": [
+      {
+       "href": "https://github.com/Romequinco/rl-execution-agents",
+       "label": {
+        "en": "Code on GitHub",
+        "es": "Código en GitHub"
+       }
+      },
+      {
+       "href": "https://github.com/Romequinco/rl-execution-agents/blob/main/results/presentacion/presentacion.pdf",
+       "label": {
+        "en": "Slides (PDF)",
+        "es": "Presentación (PDF)"
+       }
+      }
+     ],
+     "slug": "rl-execution",
      "origin": "master"
     },
     {

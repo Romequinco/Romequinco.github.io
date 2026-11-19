@@ -871,5 +871,40 @@
    "en": "4 synthetic markets and the S&P 500",
    "es": "4 mercados sintéticos y el S&P 500"
   }
+ },
+ "rl-execution": {
+  "kpis": [
+   {
+    "v": "0.90",
+    "ves": "0,90",
+    "l": {
+     "en": "error, the same as a TWAP",
+     "es": "de error, igual que un TWAP"
+    }
+   },
+   {
+    "v": "27/27",
+    "l": {
+     "en": "orders completed",
+     "es": "órdenes completas"
+    }
+   },
+   {
+    "v": "+0.15 bp",
+    "ves": "+0,15 pb",
+    "l": {
+     "en": "reading the market",
+     "es": "mirando el mercado"
+    }
+   }
+  ],
+  "tech": {
+   "en": "Double DQN and a custom reward",
+   "es": "Double DQN y una recompensa a medida"
+  },
+  "data": {
+   "en": "Repsol order book, every 5 s",
+   "es": "Libro de órdenes de Repsol, cada 5 s"
+  }
  }
 }
