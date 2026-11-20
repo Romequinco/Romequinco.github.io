@@ -494,8 +494,8 @@
      "es": "Resultados"
     },
     "body": {
-     "en": "<p>The contest is still running. I'll publish the strategy I chose, the numbers behind it and the final result after it ends on 12 November.</p>",
-     "es": "<p>El concurso sigue en marcha. Publicaré la estrategia elegida, las cifras que la respaldan y el resultado final cuando termine, el 12 de noviembre.</p>"
+     "en": "<p>I finished <strong>4th in the final ranking</strong>, out of about 2,600 players. The strategy was the one the laboratory pointed to in every scenario: almost all cash, with the minimum turnover the weekly requirement demands, spread as one lot a day. It ran exactly as designed: 18 trades, €126 in commissions, the requirement met all three weeks, a final balance of €49,908.27 (−0.18%, against −0.24% in the backtest) and a daily volatility of 0.016% (0.018% in the backtest).</p><p>For a next edition: log the real fill price rather than the reference price (fills came in 12.5 bp worse on average), add retries and a backup channel for Telegram failures, and reconcile the ledger with the contest website every week.</p>",
+     "es": "<p>Terminé <strong>4.º en la clasificación final</strong>, entre unos 2.600 participantes. La estrategia fue la que el laboratorio señalaba en todos los escenarios: liquidez casi total, con la rotación mínima que exige el requisito semanal repartida en un lote al día. Se ejecutó tal como estaba diseñada: 18 operaciones, 126 € de comisiones, requisito cumplido las tres semanas, patrimonio final de 49.908,27 € (−0,18 %, frente al −0,24 % del backtest) y una volatilidad diaria del 0,016 % (0,018 % en el backtest).</p><p>Para una siguiente edición: apuntar el precio real de ejecución y no el de referencia (los fills salieron de media 12,5 pb peores), reintentos y un canal de respaldo ante fallos de Telegram, y conciliar cada semana el registro con la web del concurso.</p>"
     }
    }
   ]

@@ -967,8 +967,8 @@
       "es": "Busca el podio, no la rentabilidad"
      },
      "status": {
-      "en": "In progress",
-      "es": "En curso"
+      "en": "4th place",
+      "es": "4.º puesto"
      },
      "images": [
       {
@@ -1000,8 +1000,8 @@
       }
      ],
      "say": {
-      "en": "For El Concurso de Bolsa 2026. A simulator replays 452 historical windows of 23 sessions against thousands of synthetic rivals under the contest's exact scoring, so the strategy aims for the podium rather than for the highest return. Every day it sends the orders by Telegram and I place them by hand, because the rules don't allow bots. I'll publish the results after 12 November.",
-      "es": "Para El Concurso de Bolsa 2026. Un simulador repite 452 ventanas históricas de 23 sesiones contra miles de rivales sintéticos con la puntuación exacta del concurso, para que la estrategia busque el podio y no la máxima rentabilidad. Cada día manda las órdenes por Telegram y yo las meto a mano, porque las bases no permiten bots. Publicaré los resultados después del 12 de noviembre."
+      "en": "For El Concurso de Bolsa 2026. A simulator replays 452 historical windows of 23 sessions against thousands of synthetic rivals under the contest's exact scoring, so the strategy aims for the podium rather than for the highest return. Every day it sends the orders by Telegram and I place them by hand, because the rules don't allow bots. I finished 4th out of about 2,600 players: −0.18% with a daily volatility of 0.016%, in line with the backtest.",
+      "es": "Para El Concurso de Bolsa 2026. Un simulador repite 452 ventanas históricas de 23 sesiones contra miles de rivales sintéticos con la puntuación exacta del concurso, para que la estrategia busque el podio y no la máxima rentabilidad. Cada día manda las órdenes por Telegram y yo las meto a mano, porque las bases no permiten bots. Terminé 4.º de unos 2.600 participantes: −0,18 % con una volatilidad diaria del 0,016 %, en línea con el backtest."
      },
      "how": null,
      "links": [],
